@@ -20,5 +20,6 @@ CMakeFiles/speakMult.dir/main.cpp.o: Dutch.h
 CMakeFiles/speakMult.dir/main.cpp.o: English.h
 CMakeFiles/speakMult.dir/main.cpp.o: Italian.h
 CMakeFiles/speakMult.dir/main.cpp.o: Speaker.h
+CMakeFiles/speakMult.dir/main.cpp.o: TalkativeEnglish.h
 CMakeFiles/speakMult.dir/main.cpp.o: main.cpp
 
