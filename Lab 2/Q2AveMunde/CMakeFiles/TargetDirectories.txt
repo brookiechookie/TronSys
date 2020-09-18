@@ -1,0 +1,3 @@
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/CMakeFiles/rebuild_cache.dir
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/CMakeFiles/speakMult.dir
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/CMakeFiles/edit_cache.dir

@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/speakerMulti.dir/main.cpp.o CMakeFiles/speakerMulti.dir/Speaker.cpp.o CMakeFiles/speakerMulti.dir/English.cpp.o  -o speakerMulti 

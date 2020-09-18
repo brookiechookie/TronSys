@@ -1,0 +1,88 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Dutch.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+Dutch.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Dutch.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
+
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Dutch.h
+Dutch.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Dutch.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
+
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/English.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+English.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/English.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
+
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/English.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
+
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Italian.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+Italian.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Italian.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
+
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Italian.h
+Italian.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Italian.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
+
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+Speaker.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
+
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
+
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/main.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+Speaker.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
+English.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/English.h
+Italian.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Italian.h
+Dutch.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Dutch.h
+
