@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/speaker.dir/main.cpp.o  -o speaker 

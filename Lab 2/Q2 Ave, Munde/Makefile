@@ -111,17 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named speaker
+# Target rules for targets named speakerMulti
 
 # Build rule for target.
-speaker: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 speaker
-.PHONY : speaker
+speakerMulti: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 speakerMulti
+.PHONY : speakerMulti
 
 # fast build rule for target.
-speaker/fast:
-	$(MAKE) -f CMakeFiles/speaker.dir/build.make CMakeFiles/speaker.dir/build
-.PHONY : speaker/fast
+speakerMulti/fast:
+	$(MAKE) -f CMakeFiles/speakerMulti.dir/build.make CMakeFiles/speakerMulti.dir/build
+.PHONY : speakerMulti/fast
+
+English.o: English.cpp.o
+
+.PHONY : English.o
+
+# target to build an object file
+English.cpp.o:
+	$(MAKE) -f CMakeFiles/speakerMulti.dir/build.make CMakeFiles/speakerMulti.dir/English.cpp.o
+.PHONY : English.cpp.o
+
+English.i: English.cpp.i
+
+.PHONY : English.i
+
+# target to preprocess a source file
+English.cpp.i:
+	$(MAKE) -f CMakeFiles/speakerMulti.dir/build.make CMakeFiles/speakerMulti.dir/English.cpp.i
+.PHONY : English.cpp.i
+
+English.s: English.cpp.s
+
+.PHONY : English.s
+
+# target to generate assembly for a file
+English.cpp.s:
+	$(MAKE) -f CMakeFiles/speakerMulti.dir/build.make CMakeFiles/speakerMulti.dir/English.cpp.s
+.PHONY : English.cpp.s
+
+Speaker.o: Speaker.cpp.o
+
+.PHONY : Speaker.o
+
+# target to build an object file
+Speaker.cpp.o:
+	$(MAKE) -f CMakeFiles/speakerMulti.dir/build.make CMakeFiles/speakerMulti.dir/Speaker.cpp.o
+.PHONY : Speaker.cpp.o
+
+Speaker.i: Speaker.cpp.i
+
+.PHONY : Speaker.i
+
+# target to preprocess a source file
+Speaker.cpp.i:
+	$(MAKE) -f CMakeFiles/speakerMulti.dir/build.make CMakeFiles/speakerMulti.dir/Speaker.cpp.i
+.PHONY : Speaker.cpp.i
+
+Speaker.s: Speaker.cpp.s
+
+.PHONY : Speaker.s
+
+# target to generate assembly for a file
+Speaker.cpp.s:
+	$(MAKE) -f CMakeFiles/speakerMulti.dir/build.make CMakeFiles/speakerMulti.dir/Speaker.cpp.s
+.PHONY : Speaker.cpp.s
 
 main.o: main.cpp.o
 
@@ -129,7 +183,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/speaker.dir/build.make CMakeFiles/speaker.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/speakerMulti.dir/build.make CMakeFiles/speakerMulti.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +192,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/speaker.dir/build.make CMakeFiles/speaker.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/speakerMulti.dir/build.make CMakeFiles/speakerMulti.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,7 +201,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/speaker.dir/build.make CMakeFiles/speaker.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/speakerMulti.dir/build.make CMakeFiles/speakerMulti.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -157,8 +211,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... speaker"
+	@echo "... speakerMulti"
 	@echo "... edit_cache"
+	@echo "... English.o"
+	@echo "... English.i"
+	@echo "... English.s"
+	@echo "... Speaker.o"
+	@echo "... Speaker.i"
+	@echo "... Speaker.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

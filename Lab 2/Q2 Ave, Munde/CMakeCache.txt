@@ -187,12 +187,6 @@ Q2AveMunde_BINARY_DIR:STATIC=/home/brookie/github/TronSys/Lab 2/Q2 Ave, Munde
 //Value Computed by CMake
 Q2AveMunde_SOURCE_DIR:STATIC=/home/brookie/github/TronSys/Lab 2/Q2 Ave, Munde
 
-//Value Computed by CMake
-Q2_BINARY_DIR:STATIC=/home/brookie/github/TronSys/Lab 2/Q2 Ave, Munde
-
-//Value Computed by CMake
-Q2_SOURCE_DIR:STATIC=/home/brookie/github/TronSys/Lab 2/Q2 Ave, Munde
-
 
 ########################
 # INTERNAL cache entries

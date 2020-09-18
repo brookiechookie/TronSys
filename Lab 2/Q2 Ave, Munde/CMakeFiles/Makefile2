@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = "/home/brookie/github/TronSys/Lab 2/Q2 Ave, Munde"
 CMAKE_BINARY_DIR = "/home/brookie/github/TronSys/Lab 2/Q2 Ave, Munde"
 
 #=============================================================================
-# Target rules for target CMakeFiles/speaker.dir
+# Target rules for target CMakeFiles/speakerMulti.dir
 
 # All Build rule for target.
-CMakeFiles/speaker.dir/all:
-	$(MAKE) -f CMakeFiles/speaker.dir/build.make CMakeFiles/speaker.dir/depend
-	$(MAKE) -f CMakeFiles/speaker.dir/build.make CMakeFiles/speaker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brookie/github/TronSys/Lab 2/Q2 Ave, Munde/CMakeFiles" --progress-num=1,2 "Built target speaker"
-.PHONY : CMakeFiles/speaker.dir/all
+CMakeFiles/speakerMulti.dir/all:
+	$(MAKE) -f CMakeFiles/speakerMulti.dir/build.make CMakeFiles/speakerMulti.dir/depend
+	$(MAKE) -f CMakeFiles/speakerMulti.dir/build.make CMakeFiles/speakerMulti.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brookie/github/TronSys/Lab 2/Q2 Ave, Munde/CMakeFiles" --progress-num=1,2,3,4 "Built target speakerMulti"
+.PHONY : CMakeFiles/speakerMulti.dir/all
 
 # Include target in all.
-all: CMakeFiles/speaker.dir/all
+all: CMakeFiles/speakerMulti.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/speaker.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brookie/github/TronSys/Lab 2/Q2 Ave, Munde/CMakeFiles" 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/speaker.dir/all
+CMakeFiles/speakerMulti.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brookie/github/TronSys/Lab 2/Q2 Ave, Munde/CMakeFiles" 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/speakerMulti.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brookie/github/TronSys/Lab 2/Q2 Ave, Munde/CMakeFiles" 0
-.PHONY : CMakeFiles/speaker.dir/rule
+.PHONY : CMakeFiles/speakerMulti.dir/rule
 
 # Convenience name for target.
-speaker: CMakeFiles/speaker.dir/rule
+speakerMulti: CMakeFiles/speakerMulti.dir/rule
 
-.PHONY : speaker
-
-# clean rule for target.
-CMakeFiles/speaker.dir/clean:
-	$(MAKE) -f CMakeFiles/speaker.dir/build.make CMakeFiles/speaker.dir/clean
-.PHONY : CMakeFiles/speaker.dir/clean
+.PHONY : speakerMulti
 
 # clean rule for target.
-clean: CMakeFiles/speaker.dir/clean
+CMakeFiles/speakerMulti.dir/clean:
+	$(MAKE) -f CMakeFiles/speakerMulti.dir/build.make CMakeFiles/speakerMulti.dir/clean
+.PHONY : CMakeFiles/speakerMulti.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/speakerMulti.dir/clean
 
 .PHONY : clean
 
