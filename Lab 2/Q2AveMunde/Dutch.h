@@ -5,16 +5,15 @@
 #ifndef _DUTCH_H
 #define _DUTCH_H
 
-//#include "Dutch.h"
 #include "Speaker.h"
 
 class Dutch: public Speaker
 {
-
     public:
         Dutch( );
         ~Dutch( );
         void GreetUser( );
+        void GreetingReport( );
 };
 
 

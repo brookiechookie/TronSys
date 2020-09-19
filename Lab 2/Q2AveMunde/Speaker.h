@@ -5,13 +5,11 @@
 #ifndef _SPEAKER_H
 #define _SPEAKER_H
 
-#include "Speaker.h"
-
 class Speaker
 {
     public:
-        virtual void GreetUser( ) = 0;
-        //virtual void GreetingReport( ) = 0;
+        virtual void GreetUser( ) = 0;      // Note that with virtual functions, every derived class
+        virtual void GreetingReport( ) = 0; // must contain this function and an implementation of it
         virtual ~Speaker( );         // Allow destructor to be virtual so that derived class destructors
                                     // can be called
 

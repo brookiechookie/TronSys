@@ -5,7 +5,6 @@
 #ifndef _ENGLISH_H
 #define _ENGLISH_H
 
-//#include "English.h"
 #include "Speaker.h"
 
 class English: public Speaker
@@ -14,6 +13,7 @@ class English: public Speaker
         English( );
         ~English( );
         void GreetUser( );
+        void GreetingReport( );
 
 };
 

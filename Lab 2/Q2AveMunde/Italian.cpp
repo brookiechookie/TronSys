@@ -34,15 +34,13 @@ Italian::~Italian()
 // Greet the user in the persons respective language!
 void Italian::GreetUser()
 {
-      std::cout << "[GreetUser]: The Italian greeting is - " << _helloPhrase << std::endl;
+      std::cout << "[Greet]: The Italian greeting is - " << _helloPhrase << std::endl;
       _GreetingCount++;
 }
 
 //---------------------------------------------------------------
 // Count how many times the person has said a greeting
-void Italian::GreetingReport()
+void Italian::GreetingReport( )
 {
-    //return _GreetingCount;
-
     std::cout << "[Report]: Italian greeting count is: " << _GreetingCount << std::endl;
 }

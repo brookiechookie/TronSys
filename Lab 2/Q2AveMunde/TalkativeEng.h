@@ -5,7 +5,6 @@
 #ifndef _TALKATIVEENG_H
 #define _TALKATIVEENG_H
 
-//#include "TalkativeEnglish.h"
 #include "English.h"
 #include "Speaker.h"
 
@@ -15,6 +14,8 @@ class TalkativeEng: public English
     public:
         TalkativeEng( );
         ~TalkativeEng( );
+        void GreetUser( );
+        void GreetingReport( );
 };
 
 

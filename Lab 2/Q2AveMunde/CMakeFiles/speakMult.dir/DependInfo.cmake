@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/brookie/github/TronSys/Lab 2/Q2AveMunde/English.cpp" "/home/brookie/github/TronSys/Lab 2/Q2AveMunde/CMakeFiles/speakMult.dir/English.cpp.o"
   "/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Italian.cpp" "/home/brookie/github/TronSys/Lab 2/Q2AveMunde/CMakeFiles/speakMult.dir/Italian.cpp.o"
   "/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.cpp" "/home/brookie/github/TronSys/Lab 2/Q2AveMunde/CMakeFiles/speakMult.dir/Speaker.cpp.o"
-  "/home/brookie/github/TronSys/Lab 2/Q2AveMunde/TalkativeEnglish.cpp" "/home/brookie/github/TronSys/Lab 2/Q2AveMunde/CMakeFiles/speakMult.dir/TalkativeEnglish.cpp.o"
+  "/home/brookie/github/TronSys/Lab 2/Q2AveMunde/TalkativeEng.cpp" "/home/brookie/github/TronSys/Lab 2/Q2AveMunde/CMakeFiles/speakMult.dir/TalkativeEng.cpp.o"
   "/home/brookie/github/TronSys/Lab 2/Q2AveMunde/main.cpp" "/home/brookie/github/TronSys/Lab 2/Q2AveMunde/CMakeFiles/speakMult.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -231,32 +231,32 @@ Speaker.cpp.s:
 	$(MAKE) -f CMakeFiles/speakMult.dir/build.make CMakeFiles/speakMult.dir/Speaker.cpp.s
 .PHONY : Speaker.cpp.s
 
-TalkativeEnglish.o: TalkativeEnglish.cpp.o
+TalkativeEng.o: TalkativeEng.cpp.o
 
-.PHONY : TalkativeEnglish.o
+.PHONY : TalkativeEng.o
 
 # target to build an object file
-TalkativeEnglish.cpp.o:
-	$(MAKE) -f CMakeFiles/speakMult.dir/build.make CMakeFiles/speakMult.dir/TalkativeEnglish.cpp.o
-.PHONY : TalkativeEnglish.cpp.o
+TalkativeEng.cpp.o:
+	$(MAKE) -f CMakeFiles/speakMult.dir/build.make CMakeFiles/speakMult.dir/TalkativeEng.cpp.o
+.PHONY : TalkativeEng.cpp.o
 
-TalkativeEnglish.i: TalkativeEnglish.cpp.i
+TalkativeEng.i: TalkativeEng.cpp.i
 
-.PHONY : TalkativeEnglish.i
+.PHONY : TalkativeEng.i
 
 # target to preprocess a source file
-TalkativeEnglish.cpp.i:
-	$(MAKE) -f CMakeFiles/speakMult.dir/build.make CMakeFiles/speakMult.dir/TalkativeEnglish.cpp.i
-.PHONY : TalkativeEnglish.cpp.i
+TalkativeEng.cpp.i:
+	$(MAKE) -f CMakeFiles/speakMult.dir/build.make CMakeFiles/speakMult.dir/TalkativeEng.cpp.i
+.PHONY : TalkativeEng.cpp.i
 
-TalkativeEnglish.s: TalkativeEnglish.cpp.s
+TalkativeEng.s: TalkativeEng.cpp.s
 
-.PHONY : TalkativeEnglish.s
+.PHONY : TalkativeEng.s
 
 # target to generate assembly for a file
-TalkativeEnglish.cpp.s:
-	$(MAKE) -f CMakeFiles/speakMult.dir/build.make CMakeFiles/speakMult.dir/TalkativeEnglish.cpp.s
-.PHONY : TalkativeEnglish.cpp.s
+TalkativeEng.cpp.s:
+	$(MAKE) -f CMakeFiles/speakMult.dir/build.make CMakeFiles/speakMult.dir/TalkativeEng.cpp.s
+.PHONY : TalkativeEng.cpp.s
 
 main.o: main.cpp.o
 
@@ -306,9 +306,9 @@ help:
 	@echo "... Speaker.o"
 	@echo "... Speaker.i"
 	@echo "... Speaker.s"
-	@echo "... TalkativeEnglish.o"
-	@echo "... TalkativeEnglish.i"
-	@echo "... TalkativeEnglish.s"
+	@echo "... TalkativeEng.o"
+	@echo "... TalkativeEng.i"
+	@echo "... TalkativeEng.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
