@@ -15,7 +15,6 @@ class TalkativeEng: public English
     public:
         TalkativeEng( );
         ~TalkativeEng( );
-
 };
 
 

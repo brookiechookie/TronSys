@@ -12,8 +12,10 @@ class Italian: public Speaker
 {
     public:
         Italian( );
-        ~Italian();
-        void GreetUser();
+        ~Italian( );
+        void GreetUser( );
+        void GreetingReport( );
+
 };
 
 

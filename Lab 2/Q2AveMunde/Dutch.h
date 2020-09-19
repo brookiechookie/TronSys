@@ -13,8 +13,8 @@ class Dutch: public Speaker
 
     public:
         Dutch( );
-        ~Dutch();
-        void GreetUser();
+        ~Dutch( );
+        void GreetUser( );
 };
 
 

@@ -12,8 +12,8 @@ class English: public Speaker
 {
     public:
         English( );
-        ~English();
-        void GreetUser();
+        ~English( );
+        void GreetUser( );
 
 };
 

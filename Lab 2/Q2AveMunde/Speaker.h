@@ -10,12 +10,14 @@
 class Speaker
 {
     public:
-        virtual void GreetUser() = 0;
-        virtual ~Speaker();         // Allow destructor to be virtual so that derived class destructors
+        virtual void GreetUser( ) = 0;
+        //virtual void GreetingReport( ) = 0;
+        virtual ~Speaker( );         // Allow destructor to be virtual so that derived class destructors
                                     // can be called
 
     protected:                      // Protected classes allowed derived classes to access variables
         std::string _helloPhrase;   // The hello phrase in that speakers language
+        int _GreetingCount;
 };
 
 

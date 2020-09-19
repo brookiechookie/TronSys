@@ -24,9 +24,9 @@ int main()
 
     Speaker** pPeops;                       // Create a pointer array of people
     pPeops = new Speaker*[numOfSpeakers];   // pPeops pointer points to the array of speakers now
-    pPeops[0] = new English( );       // At the first element, create the english speaker Bob
-    pPeops[1] = new Italian( );     // Create Italian Speaker
-    pPeops[2] = new Dutch( );        // Create Dutch Speaker
+    pPeops[0] = new English( );             // At the first element, create the english speaker
+    pPeops[1] = new Italian( );             // Create Italian Speaker
+    pPeops[2] = new Dutch( );               // Create Dutch Speaker
     pPeops[3] = new TalkativeEng( );
 
 
@@ -36,6 +36,9 @@ int main()
         pPeops[i]->GreetUser();
     }
 
+    // Get le Italian to greet again
+    pPeops[1]->GreetUser();
+    //pPeops[1]->GreetingReport();
 
     for( int i = 0; i < numOfSpeakers; i++ )
     {

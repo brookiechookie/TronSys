@@ -18,6 +18,7 @@ Italian::Italian( )
     _helloPhrase = "Ciao, Mondo!";
     std::cout << "[CTor1]: The Italian Person has been initalised "
     << std::endl;
+    _GreetingCount = 0;
 
 }
 
@@ -34,4 +35,14 @@ Italian::~Italian()
 void Italian::GreetUser()
 {
       std::cout << "[GreetUser]: The Italian greeting is - " << _helloPhrase << std::endl;
+      _GreetingCount++;
+}
+
+//---------------------------------------------------------------
+// Count how many times the person has said a greeting
+void Italian::GreetingReport()
+{
+    //return _GreetingCount;
+
+    std::cout << "[Report]: Italian greeting count is: " << _GreetingCount << std::endl;
 }
