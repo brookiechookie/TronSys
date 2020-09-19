@@ -5,7 +5,7 @@ Creator:        Brooke Agostino
 Date created:   17/9/20
 Purpose:        Question 2 of lab 2; Ave, munde
 
-Modificatio
+Modifications:
 */
 
 #include <iostream>
@@ -16,23 +16,26 @@ Modificatio
 #include "English.h"
 #include "Italian.h"
 #include "Dutch.h"
-#include "TalkativeEnglish.h"
+#include "TalkativeEng.h"
 
 int main()
 {
-    int numOfSpeakers = 3;
+    int numOfSpeakers = 4;
 
     Speaker** pPeops;                       // Create a pointer array of people
     pPeops = new Speaker*[numOfSpeakers];   // pPeops pointer points to the array of speakers now
-    pPeops[0] = new English( "Bob" );       // At the first element, create the english speaker Bob
-    pPeops[1] = new Italian( "Mario" );     // Create Italian Speaker
-    pPeops[2] = new Dutch( "Eise" );        // Create Dutch Speaker
+    pPeops[0] = new English( );       // At the first element, create the english speaker Bob
+    pPeops[1] = new Italian( );     // Create Italian Speaker
+    pPeops[2] = new Dutch( );        // Create Dutch Speaker
+    pPeops[3] = new TalkativeEng( );
+
 
 
     for( int i = 0; i < numOfSpeakers; i++ )
     {
         pPeops[i]->GreetUser();
     }
+
 
     for( int i = 0; i < numOfSpeakers; i++ )
     {

@@ -5,17 +5,17 @@
 #ifndef _SPEAKER_H
 #define _SPEAKER_H
 
+#include "Speaker.h"
 
 class Speaker
 {
     public:
         virtual void GreetUser() = 0;
-        virtual ~Speaker();
+        virtual ~Speaker();         // Allow destructor to be virtual so that derived class destructors
+                                    // can be called
 
     protected:                      // Protected classes allowed derived classes to access variables
         std::string _helloPhrase;   // The hello phrase in that speakers language
-        std::string _personName;    // Every person no matter what language they speak has a name
-
 };
 
 

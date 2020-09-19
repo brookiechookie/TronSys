@@ -231,6 +231,33 @@ Speaker.cpp.s:
 	$(MAKE) -f CMakeFiles/speakMult.dir/build.make CMakeFiles/speakMult.dir/Speaker.cpp.s
 .PHONY : Speaker.cpp.s
 
+TalkativeEnglish.o: TalkativeEnglish.cpp.o
+
+.PHONY : TalkativeEnglish.o
+
+# target to build an object file
+TalkativeEnglish.cpp.o:
+	$(MAKE) -f CMakeFiles/speakMult.dir/build.make CMakeFiles/speakMult.dir/TalkativeEnglish.cpp.o
+.PHONY : TalkativeEnglish.cpp.o
+
+TalkativeEnglish.i: TalkativeEnglish.cpp.i
+
+.PHONY : TalkativeEnglish.i
+
+# target to preprocess a source file
+TalkativeEnglish.cpp.i:
+	$(MAKE) -f CMakeFiles/speakMult.dir/build.make CMakeFiles/speakMult.dir/TalkativeEnglish.cpp.i
+.PHONY : TalkativeEnglish.cpp.i
+
+TalkativeEnglish.s: TalkativeEnglish.cpp.s
+
+.PHONY : TalkativeEnglish.s
+
+# target to generate assembly for a file
+TalkativeEnglish.cpp.s:
+	$(MAKE) -f CMakeFiles/speakMult.dir/build.make CMakeFiles/speakMult.dir/TalkativeEnglish.cpp.s
+.PHONY : TalkativeEnglish.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -279,6 +306,9 @@ help:
 	@echo "... Speaker.o"
 	@echo "... Speaker.i"
 	@echo "... Speaker.s"
+	@echo "... TalkativeEnglish.o"
+	@echo "... TalkativeEnglish.i"
+	@echo "... TalkativeEnglish.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

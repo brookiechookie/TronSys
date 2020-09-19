@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/speakMult.dir/English.cpp.o"
   "CMakeFiles/speakMult.dir/Italian.cpp.o"
   "CMakeFiles/speakMult.dir/Dutch.cpp.o"
+  "CMakeFiles/speakMult.dir/TalkativeEnglish.cpp.o"
   "speakMult.pdb"
   "speakMult"
 )

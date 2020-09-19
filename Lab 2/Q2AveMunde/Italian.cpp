@@ -13,11 +13,10 @@
 
 //-----------------------------------------------------------------------------
 // Constructor for English derived class
-Italian::Italian( std::string Name )
+Italian::Italian( )
 {
-    _personName = Name;
     _helloPhrase = "Ciao, Mondo!";
-    std::cout << "[CTor1]: The Person " << _personName << " has been initalised "
+    std::cout << "[CTor1]: The Italian Person has been initalised "
     << std::endl;
 
 }
@@ -26,7 +25,7 @@ Italian::Italian( std::string Name )
 // We need a corresponding Deconstructor for the constructor of english speakers
 Italian::~Italian()
 {
-    std::cout << "[DTor1]: The Person " << _personName << " is signing off."
+    std::cout << "[DTor1]: The Italian Person is signing off."
     << std::endl;
 }
 
@@ -34,5 +33,5 @@ Italian::~Italian()
 // Greet the user in the persons respective language!
 void Italian::GreetUser()
 {
-      std::cout << "[GreetUser]: "<< _personName <<"'s greeting is - " << _helloPhrase << std::endl;
+      std::cout << "[GreetUser]: The Italian greeting is - " << _helloPhrase << std::endl;
 }

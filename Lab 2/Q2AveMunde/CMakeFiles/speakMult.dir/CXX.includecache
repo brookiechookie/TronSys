@@ -19,8 +19,6 @@ Speaker.h
 /home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
 
 /home/brookie/github/TronSys/Lab 2/Q2AveMunde/Dutch.h
-Dutch.h
-/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Dutch.h
 Speaker.h
 /home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
 
@@ -53,8 +51,6 @@ Speaker.h
 /home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
 
 /home/brookie/github/TronSys/Lab 2/Q2AveMunde/Italian.h
-Italian.h
-/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Italian.h
 Speaker.h
 /home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
 
@@ -68,6 +64,22 @@ string
 Speaker.h
 /home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
 
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
+
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/TalkativeEnglish.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+TalkativeEnglish.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/TalkativeEnglish.h
+English.h
+/home/brookie/github/TronSys/Lab 2/Q2AveMunde/English.h
+Speaker.h
 /home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
 
 /home/brookie/github/TronSys/Lab 2/Q2AveMunde/TalkativeEnglish.h

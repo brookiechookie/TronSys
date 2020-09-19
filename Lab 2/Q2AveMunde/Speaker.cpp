@@ -21,5 +21,6 @@ void Speaker::GreetUser()
 
 Speaker::~Speaker()
 {
+  
     //std::cout << "Speaker Destructor Called" << std::endl;
 }

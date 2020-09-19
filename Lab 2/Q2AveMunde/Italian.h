@@ -5,13 +5,13 @@
 #ifndef _ITALIAN_H
 #define _ITALIAN_H
 
-#include "Italian.h"
+//#include "Italian.h"
 #include "Speaker.h"
 
 class Italian: public Speaker
 {
     public:
-        Italian( std::string Name );
+        Italian( );
         ~Italian();
         void GreetUser();
 };

@@ -5,12 +5,13 @@
 #ifndef _ENGLISH_H
 #define _ENGLISH_H
 
+//#include "English.h"
 #include "Speaker.h"
 
 class English: public Speaker
 {
     public:
-        English( std::string Name );
+        English( );
         ~English();
         void GreetUser();
 

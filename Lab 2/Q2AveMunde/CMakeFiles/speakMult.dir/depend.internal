@@ -16,6 +16,11 @@ CMakeFiles/speakMult.dir/Italian.cpp.o
 CMakeFiles/speakMult.dir/Speaker.cpp.o
  /home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.cpp
  /home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
+CMakeFiles/speakMult.dir/TalkativeEnglish.cpp.o
+ /home/brookie/github/TronSys/Lab 2/Q2AveMunde/English.h
+ /home/brookie/github/TronSys/Lab 2/Q2AveMunde/Speaker.h
+ /home/brookie/github/TronSys/Lab 2/Q2AveMunde/TalkativeEnglish.cpp
+ /home/brookie/github/TronSys/Lab 2/Q2AveMunde/TalkativeEnglish.h
 CMakeFiles/speakMult.dir/main.cpp.o
  /home/brookie/github/TronSys/Lab 2/Q2AveMunde/Dutch.h
  /home/brookie/github/TronSys/Lab 2/Q2AveMunde/English.h
