@@ -7,6 +7,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
+//#include <cstdlib>    // For rand()
 
 #include "Doors.h"
 
@@ -16,6 +17,7 @@
 Doors::Doors()
 {
     // Assign the car behind a door
+
     _CarDoor = 1;
 
     // Assign zeros to all the doors (i.e. goats)
@@ -26,6 +28,7 @@ Doors::Doors()
 
     // In one of the doors, assign a one (i.e. the car)
     pDoors[_CarDoor] = 1;
+
 
     // See whats behind all the doors
     for(int i = 0; i < _NumberOfDoors; i++)

@@ -22,16 +22,24 @@ int main()
 {
     Doors   myDoors;
     Player  myPlayer( "UNO" );
-    //Host    myHost( &myPlayer, &myDoors );
     Host  myHost( &myPlayer );
-    //myHost.Init( &myPlayer, &myDoors );
 
+    // Start the game off
     myHost.TryingToGetDoors( &myDoors );
-
-
     myHost.StarterQuestion();
     myPlayer.PickDoor();
     myHost.RevealDoor();
+
+    // Allow the player to see what the option is to switch doors
+    int _TheDoorSwitcher;
+    _TheDoorSwitcher = myHost.DoorSwitchGetter();
+    myPlayer.SetSwitchDoorNumber( _TheDoorSwitcher );
+
+    // Now allow the player to switch or stay and tell them whether they have
+    // won or not
+    //myPlayer.PlayerWhoSwitches();
+    myPlayer.PlayerWhoStays();
+    myHost.WinOrLose();
 
 
     //int p;

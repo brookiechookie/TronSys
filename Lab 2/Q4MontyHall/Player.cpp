@@ -53,14 +53,12 @@ std::string Player::NameGetter()
     return _PlayerName;
 }
 
-/*
-void Player::SetHost( Host* WhichHost )
+void Player::SetSwitchDoorNumber( int s )
 {
-    _Host = WhichHost;
+    _SwitchDoorNumber = s;
 }
-*/
 
-/*
+
 //------------------------------------------------------------------------------
 // This is a function that implements the actions of the player who chooses to
 // always stick with their decision to stay
@@ -68,9 +66,9 @@ void Player::PlayerWhoStays()
 {
     // This player when given the choice, always chooses to STAY with the door
     // that they had originally chosen.
-    //_DoorSelection = _PickedDoor;
-    //std::cout << "[Player]: The player has decided to STAY with the selection of door " <<
-    //_DoorSelection << std::endl;
+    _DoorSelection = _PickedDoor;
+    std::cout << "[Player]: The player has decided to STAY with the selection of door " <<
+    _DoorSelection << std::endl;
 
 }
 
@@ -79,7 +77,14 @@ void Player::PlayerWhoStays()
 // to switch their decision on doors
 void Player::PlayerWhoSwitches()
 {
-  // This player when given the choice, always chooses to SWITCH doors
+    // This player when given the choice, always chooses to SWITCH doors.
+    _DoorSelection = _SwitchDoorNumber;
+    std::cout << "[Player]: The player has decided to SWITCH to door " <<
+    _DoorSelection << std::endl;
 
 }
-*/
+
+int Player::DoorSelectionGetter()
+{
+    return _DoorSelection;
+}

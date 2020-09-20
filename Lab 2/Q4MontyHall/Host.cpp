@@ -9,7 +9,7 @@
 #include <string>
 
 #include "Host.h"
-#include "Doors.h"
+//#include "Doors.h"
 
 /*
 //------------------------------------------------------------------------------
@@ -103,3 +103,22 @@ int Host::DoorSwitchGetter()
 {
     return _DoorSwitchPotential;
 }
+
+//------------------------------------------------------------------------------
+// This purpose of this function is to see if the player has won or lost
+void Host::WinOrLose()
+{
+    _PlayerDoorSelectV2 = _Player->DoorSelectionGetter();
+
+    if( StoredDoors[ _PlayerDoorSelectV2 ] == 1 )
+    {
+        std::cout << "[Host]: Congratulations Player " << _LePlayerName <<
+        " you have WON!!" << std::endl;
+    }
+    else if(  StoredDoors[ _PlayerDoorSelectV2 ] == 0 )
+    {
+        std::cout << "[Host]: Sorry Player " << _LePlayerName <<
+        " you have LOST!!" << std::endl;
+    }
+
+  }

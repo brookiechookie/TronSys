@@ -22,6 +22,7 @@ class Host
         void Answer();            // Tell the player whether they are right or wrong
         int DoorSwitchGetter();
         void TryingToGetDoors( Doors* WhichDoors );
+        void WinOrLose();
 
 
     private:
@@ -39,6 +40,7 @@ class Host
         int _CarDoor;             // Represents the door with the car
         int _DoorToBeRevealed;
         int _DoorSwitchPotential;
+        int _PlayerDoorSelectV2;
 
 };
 

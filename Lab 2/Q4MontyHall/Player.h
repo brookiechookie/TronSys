@@ -17,17 +17,19 @@ class Player
 {
     public:
         Player( std::string Name );
-        //Player( Host* WhichHost );
-        void PickDoor();        // Player chooses a door
-        //void PlayerWhoStays();    // Player who stays with their decision of doors
-        //void PlayerWhoSwitches();
+        void PickDoor();            // Player chooses a door
+        void PlayerWhoStays();    // Player who stays with their decision of doors
+        void PlayerWhoSwitches();
         int PickedDoorGetter();
         std::string NameGetter();
-        //void SetHost( Host* WhichHost );
+        void SetSwitchDoorNumber( int s );
+        int DoorSelectionGetter();
 
     private:
         std::string _PlayerName;
         int _PickedDoor;
+        int _SwitchDoorNumber;
+        int _DoorSelection;
 
 
 };
