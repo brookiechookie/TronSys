@@ -9,18 +9,26 @@
 #include <stdlib.h>
 #include <string>
 
+//#include "Host.h"
+//#include "Doors.h"
+
+
 class Player
 {
     public:
         Player( std::string Name );
+        //Player( Host* WhichHost );
         void PickDoor();        // Player chooses a door
-        void StayOrSwitch();    // Player decides whether they want to stick or switch doors
+        //void PlayerWhoStays();    // Player who stays with their decision of doors
+        //void PlayerWhoSwitches();
         int PickedDoorGetter();
         std::string NameGetter();
+        //void SetHost( Host* WhichHost );
 
     private:
         std::string _PlayerName;
         int _PickedDoor;
+
 
 };
 

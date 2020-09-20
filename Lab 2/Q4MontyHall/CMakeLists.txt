@@ -1,3 +1,3 @@
 cmake_minimum_required(VERSION 3.10)
 project(Q4MontyHall)
-add_executable(Run main.cpp Doors.cpp Game.cpp Host.cpp Player.cpp)
+add_executable(Running main.cpp Doors.cpp Game.cpp Host.cpp Player.cpp)

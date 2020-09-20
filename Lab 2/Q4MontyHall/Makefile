@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Run
+# Target rules for targets named Running
 
 # Build rule for target.
-Run: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Run
-.PHONY : Run
+Running: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Running
+.PHONY : Running
 
 # fast build rule for target.
-Run/fast:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/build
-.PHONY : Run/fast
+Running/fast:
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/build
+.PHONY : Running/fast
 
 Doors.o: Doors.cpp.o
 
@@ -129,7 +129,7 @@ Doors.o: Doors.cpp.o
 
 # target to build an object file
 Doors.cpp.o:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/Doors.cpp.o
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/Doors.cpp.o
 .PHONY : Doors.cpp.o
 
 Doors.i: Doors.cpp.i
@@ -138,7 +138,7 @@ Doors.i: Doors.cpp.i
 
 # target to preprocess a source file
 Doors.cpp.i:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/Doors.cpp.i
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/Doors.cpp.i
 .PHONY : Doors.cpp.i
 
 Doors.s: Doors.cpp.s
@@ -147,7 +147,7 @@ Doors.s: Doors.cpp.s
 
 # target to generate assembly for a file
 Doors.cpp.s:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/Doors.cpp.s
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/Doors.cpp.s
 .PHONY : Doors.cpp.s
 
 Game.o: Game.cpp.o
@@ -156,7 +156,7 @@ Game.o: Game.cpp.o
 
 # target to build an object file
 Game.cpp.o:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/Game.cpp.o
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/Game.cpp.o
 .PHONY : Game.cpp.o
 
 Game.i: Game.cpp.i
@@ -165,7 +165,7 @@ Game.i: Game.cpp.i
 
 # target to preprocess a source file
 Game.cpp.i:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/Game.cpp.i
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/Game.cpp.i
 .PHONY : Game.cpp.i
 
 Game.s: Game.cpp.s
@@ -174,7 +174,7 @@ Game.s: Game.cpp.s
 
 # target to generate assembly for a file
 Game.cpp.s:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/Game.cpp.s
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
 Host.o: Host.cpp.o
@@ -183,7 +183,7 @@ Host.o: Host.cpp.o
 
 # target to build an object file
 Host.cpp.o:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/Host.cpp.o
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/Host.cpp.o
 .PHONY : Host.cpp.o
 
 Host.i: Host.cpp.i
@@ -192,7 +192,7 @@ Host.i: Host.cpp.i
 
 # target to preprocess a source file
 Host.cpp.i:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/Host.cpp.i
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/Host.cpp.i
 .PHONY : Host.cpp.i
 
 Host.s: Host.cpp.s
@@ -201,7 +201,7 @@ Host.s: Host.cpp.s
 
 # target to generate assembly for a file
 Host.cpp.s:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/Host.cpp.s
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/Host.cpp.s
 .PHONY : Host.cpp.s
 
 Player.o: Player.cpp.o
@@ -210,7 +210,7 @@ Player.o: Player.cpp.o
 
 # target to build an object file
 Player.cpp.o:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/Player.cpp.o
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/Player.cpp.o
 .PHONY : Player.cpp.o
 
 Player.i: Player.cpp.i
@@ -219,7 +219,7 @@ Player.i: Player.cpp.i
 
 # target to preprocess a source file
 Player.cpp.i:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/Player.cpp.i
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/Player.cpp.i
 .PHONY : Player.cpp.i
 
 Player.s: Player.cpp.s
@@ -228,7 +228,7 @@ Player.s: Player.cpp.s
 
 # target to generate assembly for a file
 Player.cpp.s:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/Player.cpp.s
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
 main.o: main.cpp.o
@@ -237,7 +237,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -246,7 +246,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -255,7 +255,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/Run.dir/build.make CMakeFiles/Run.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -265,7 +265,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... Run"
+	@echo "... Running"
 	@echo "... edit_cache"
 	@echo "... Doors.o"
 	@echo "... Doors.i"

@@ -14,18 +14,28 @@ Modifications:
 
 #include "Doors.h"
 #include "Game.h"
-#include "Host.h"
 #include "Player.h"
+#include "Host.h"
+
 
 int main()
 {
     Doors   myDoors;
     Player  myPlayer( "UNO" );
-    Host    myHost( &myPlayer, &myDoors );
+    //Host    myHost( &myPlayer, &myDoors );
+    Host  myHost( &myPlayer );
+    //myHost.Init( &myPlayer, &myDoors );
 
+    myHost.TryingToGetDoors( &myDoors );
 
+/*
     myHost.StarterQuestion();
     myPlayer.PickDoor();
     myHost.RevealDoor();
+*/
+
+    //int p;
+    //p = myDoors.DoorsGetter();
+
 
 }

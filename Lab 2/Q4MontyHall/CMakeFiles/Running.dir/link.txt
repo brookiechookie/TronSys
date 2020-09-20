@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Running.dir/main.cpp.o CMakeFiles/Running.dir/Doors.cpp.o CMakeFiles/Running.dir/Game.cpp.o CMakeFiles/Running.dir/Host.cpp.o CMakeFiles/Running.dir/Player.cpp.o  -o Running 

@@ -17,6 +17,12 @@ Doors.h
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
 
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
+iostream
+-
+stdlib.h
+-
+string
+-
 
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.cpp
 iostream
@@ -39,8 +45,16 @@ string
 -
 Host.h
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
+Doors.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
 
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
+iostream
+-
+stdlib.h
+-
+string
+-
 Player.h
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
 Doors.h
@@ -63,8 +77,6 @@ stdlib.h
 -
 string
 -
-Host.h
-/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
 
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/main.cpp
 iostream
@@ -77,8 +89,8 @@ Doors.h
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
 Game.h
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.h
-Host.h
-/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
 Player.h
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+Host.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
 

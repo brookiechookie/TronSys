@@ -12,6 +12,8 @@ CMakeFiles/Run.dir/Host.cpp.o: Host.cpp
 CMakeFiles/Run.dir/Host.cpp.o: Host.h
 CMakeFiles/Run.dir/Host.cpp.o: Player.h
 
+CMakeFiles/Run.dir/Player.cpp.o: Doors.h
+CMakeFiles/Run.dir/Player.cpp.o: Host.h
 CMakeFiles/Run.dir/Player.cpp.o: Player.cpp
 CMakeFiles/Run.dir/Player.cpp.o: Player.h
 
