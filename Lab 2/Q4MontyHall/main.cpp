@@ -28,11 +28,11 @@ int main()
 
     myHost.TryingToGetDoors( &myDoors );
 
-/*
+
     myHost.StarterQuestion();
     myPlayer.PickDoor();
     myHost.RevealDoor();
-*/
+
 
     //int p;
     //p = myDoors.DoorsGetter();

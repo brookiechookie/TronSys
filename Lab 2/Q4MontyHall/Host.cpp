@@ -26,19 +26,20 @@ Host::Host( Player* WhichPlayer, Doors* WhichDoor )
 
 Host::Host( Player* WhichPlayer )
 {
-    std::cout << "[Host]: Infiltrated" << std::endl;
+    //std::cout << "[Host]: Infiltrated" << std::endl;
 
     _Player = WhichPlayer;
+    _LePlayerName = _Player->NameGetter();
 
 }
 
 void Host::TryingToGetDoors( Doors* WhichDoors )
 {
-    std::cout << "More Infiltration" << std::endl;
+    //std::cout << "More Infiltration" << std::endl;
     _Doors = WhichDoors;
 }
 
-/*
+
 //------------------------------------------------------------------------------
 // This is a function that contains the hosts initial question to be asked
 void Host::StarterQuestion()
@@ -102,4 +103,3 @@ int Host::DoorSwitchGetter()
 {
     return _DoorSwitchPotential;
 }
-*/
