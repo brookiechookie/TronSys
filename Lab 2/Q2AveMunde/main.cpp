@@ -29,14 +29,13 @@ int main()
     " the numbers 0-3 and you must only enter 6 numbers. Please separate your numbers by a space.\n"<<
     std::endl;
 
-    // Initialise the number of speakers and create an integer array to store the user input
+    //Steps:
+    // 1.  Initialise the number of speakers and create an integer array to store the user input
+    // 2. Take in the user input, storing it in each element of the integer array
+    // 3. Report back to the user what they have entered in
     int numOfSpeakers = 6;
     int* pInputString = new int[numOfSpeakers];
-
-    // Take in the user input, storing it in each element of the integer array
     std::cin >> pInputString[0] >> pInputString[1] >> pInputString[2] >> pInputString[3] >> pInputString[4] >> pInputString[5];
-
-    // Report back to the user what they have entered in
     std::cout << "The numbers entered were: " << pInputString[0] << ", " << pInputString[1] <<
     ", " << pInputString[2] << ", " << pInputString[3] << ", " << pInputString[4] <<
     " and " << pInputString[5] << std::endl;
@@ -69,7 +68,6 @@ int main()
             std::cout << "Invalid Input: Numbers entered are out of range!" << std::endl;
             exit(0);
         }
-
 
     }
 

@@ -1,4 +1,4 @@
-// Latin.cpp
+// Dutch.cpp
 //
 // Implementation file for the derived class: Latin
 

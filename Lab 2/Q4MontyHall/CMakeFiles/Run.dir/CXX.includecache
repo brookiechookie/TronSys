@@ -1,0 +1,84 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+Doors.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
+
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
+
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+Game.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.h
+
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.h
+
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+Host.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
+Player.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
+Player.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+Doors.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
+
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+Player.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+iostream
+-
+stdlib.h
+-
+string
+-
+
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/main.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+Doors.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
+Game.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.h
+Host.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
+Player.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+
