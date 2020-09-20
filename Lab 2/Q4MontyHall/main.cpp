@@ -24,13 +24,10 @@ int main()
     // they are a stayer or a switcher
     Game  GameUno;
     Game  GameDue;
-
     std::string Person1Name = "Switcher";
     std::string Person2Name = "Stayer";
 
-    //Game  newGame;
-    //newGame.RunGame( "Puval", 0 );
-
+    // Variables defining the game
     int NumberOfGames = 10000;
     double AverageScore;
     int PersonScore;

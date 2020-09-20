@@ -26,7 +26,7 @@ void Player::PickDoor()
     // Hard code this at first and then build it up
 
     //_PickedDoor = 1;
-    _PickedDoor = rand() % 3; 
+    _PickedDoor = rand() % _NumberOfDoors; 
 
     std::cout << "[Player]: Player " << _PlayerName << " has picked door " << _PickedDoor << std::endl;
 

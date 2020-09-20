@@ -14,7 +14,6 @@ class Game
 {
     public:
         void RunGame( std::string Name, int action );
-        int TotalScoreGetter();
         double AverageScoreReport( int NumberOfGames );
 
     private:

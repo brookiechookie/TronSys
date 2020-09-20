@@ -58,7 +58,6 @@ void Host::RevealDoor()
     _NumberOfDoors = _Doors->NumOfDoorsGetter();
     _CarDoor = _Doors->CarDoorGetter();
 
-    // std::cout << "[Host]: Player " << _LePlayerName << " has picked door " << _PlayerDoorPicked << std::endl;
 
     // 1. Host needs to see the doors and whats behind them
     StoredDoors = _Doors->DoorsGetter();
@@ -69,6 +68,7 @@ void Host::RevealDoor()
 
 
     // 2. Time to eliminate a door by revealing one with a goat behind it
+    /*
     for( int i = 0; i < _NumberOfDoors; i++ )
     {
         if( StoredDoors[i] != 1 && i != _PlayerDoorPicked )
@@ -77,8 +77,10 @@ void Host::RevealDoor()
         }
 
     }
+    */
 
     // 3. Find the door that the player can switch to
+    /*
     for( int i = 0; i < _NumberOfDoors; i++ )
     {
         if( i != _DoorToBeRevealed && i != _PlayerDoorPicked )
@@ -86,11 +88,44 @@ void Host::RevealDoor()
             _DoorSwitchPotential = i;
         }
     }
+    */
+    // Find the door with the car behind it
+    for( int i = 0; i < _NumberOfDoors; i++ )
+    {
+        // If the player has picked a door with a goat, then the potential door
+        // that they can switch to will be the door with the car
+        if( StoredDoors[i] == 1 && i != _PlayerDoorPicked )
+        {
+            _DoorSwitchPotential = i;
+        }
+        // If the player has picked the door with the car, give them the option
+        // to switch to another random door.
+        else if( StoredDoors[_PlayerDoorPicked] == 1 ) //
+        {
+            while ( _DoorToSwitchTo == _PlayerDoorPicked )
+            {
+                _DoorToSwitchTo = rand() % _NumberOfDoors;
+            }
+            _DoorSwitchPotential = _DoorToSwitchTo;
+        }
+    }
 
     // 4. Now reveal this door to the contest
+    /*
     std::cout << "[Host]: The host is revealing that door " << _DoorToBeRevealed <<
     " contains a goat. Player " << _LePlayerName << ", would you like to stay with door " <<
     _PlayerDoorPicked << " or would you like to switch to door " << _DoorSwitchPotential << "?"<< std::endl;
+    */
+
+    _DoorsRevealed = _NumberOfDoors - 2;
+
+    std::cout << "[Host]: The host reveals " << _DoorsRevealed << " doors. There are now " <<
+    "two doors remaining; door "<< _PlayerDoorPicked << " picked by the player and door " <<
+    _DoorSwitchPotential << ". Player " << _LePlayerName << ", would you like to stay with door " <<
+    _PlayerDoorPicked << ", or would you like to switch to door " << _DoorSwitchPotential << "?"<< std::endl;
+
+    //" contains a goat. Player " << _LePlayerName << ", would you like to stay with door " <<
+    //_PlayerDoorPicked << " or would you like to switch to door " << _DoorSwitchPotential << "?"<< std::endl;
 
 }
 

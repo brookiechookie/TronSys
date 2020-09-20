@@ -30,6 +30,7 @@ class Player
         int _PickedDoor;
         int _SwitchDoorNumber;
         int _DoorSelection;
+        int _NumberOfDoors = 3;
 
 
 };

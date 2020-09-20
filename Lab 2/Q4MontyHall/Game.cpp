@@ -54,12 +54,11 @@ void Game::RunGame( std::string Name, int action )
 
 }
 
-int Game::TotalScoreGetter()
-{
-    return _TotalScore;
-}
 
-
+//------------------------------------------------------------------------------
+// This function calculates the average success rate of a player in the game. It
+// requires the input of the number of games being played and will output the
+// success rate as a percentage
 double Game::AverageScoreReport( int NumberOfGames )
 {
     //std::cout << "Total score = " << _TotalScore << "\nGamesPlayed = " << NumberOfGames << std::endl;

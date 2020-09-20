@@ -42,6 +42,8 @@ class Host
         int _DoorSwitchPotential;
         int _PlayerDoorSelectV2;
         int _PlayerOutcome;
+        int _DoorsRevealed;
+        int _DoorToSwitchTo = 0;
 
 };
 
