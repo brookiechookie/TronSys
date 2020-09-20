@@ -1,6 +1,6 @@
-// Doors.h
+// Player.h
 //
-// Header file for the derived speaker class: Italian
+// Header file for the class: Player
 
 #ifndef _PLAYER_H
 #define _PLAYER_H
@@ -9,17 +9,13 @@
 #include <stdlib.h>
 #include <string>
 
-//#include "Host.h"
-//#include "Doors.h"
-
-
 class Player
 {
     public:
         Player( std::string Name );
-        void PickDoor();            // Player chooses a door
-        void PlayerWhoStays();    // Player who stays with their decision of doors
-        void PlayerWhoSwitches();
+        int UserPickedDoorSetter( int UserPickedDoor );   // User chooses a door for the player
+        void PlayerWhoStays();        // Player who stays with their decision of doors
+        void PlayerWhoSwitches();     // Player who switches with their decision of doors
         int PickedDoorGetter();
         std::string NameGetter();
         void SetSwitchDoorNumber( int s );
@@ -30,8 +26,7 @@ class Player
         int _PickedDoor;
         int _SwitchDoorNumber;
         int _DoorSelection;
-        int _NumberOfDoors = 3;
-
+        int _NumberOfDoors = 4;
 
 };
 

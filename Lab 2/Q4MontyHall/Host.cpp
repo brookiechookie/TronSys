@@ -1,6 +1,6 @@
 // Host.cpp
 //
-// Implementation file for the derived class: Latin
+// Implementation file for the class: Host
 
 
 
@@ -11,38 +11,28 @@
 #include "Host.h"
 //#include "Doors.h"
 
-/*
+
 //------------------------------------------------------------------------------
 // This is the constructor for host which draws information from other classes
-Host::Host( Player* WhichPlayer, Doors* WhichDoor )
-{
-    _Player = WhichPlayer;
-    _LePlayerName = _Player->NameGetter();
-
-    _Doors = WhichDoor;
-
-}
-*/
-
 Host::Host( Player* WhichPlayer )
 {
     _Player = WhichPlayer;
     _LePlayerName = _Player->NameGetter();
-
 }
 
+//------------------------------------------------------------------------------
+// This function gets the address of the relevant instantiated object class
 void Host::TryingToGetDoors( Doors* WhichDoors )
 {
     _Doors = WhichDoors;
 }
 
-
 //------------------------------------------------------------------------------
 // This is a function that contains the hosts initial question to be asked
+// We want the host to ask the player which door they would like to open
 void Host::StarterQuestion()
 {
     std::cout << "[Host]: Welcome to the Monty Hall Game!" << std::endl;
-    // We want the host to ask the player which door they would like to open
     std::cout << "[Host]: Player "<< _LePlayerName << ", which door would you like to open?" << std::endl;
 }
 
@@ -52,43 +42,14 @@ void Host::StarterQuestion()
 // out which door the person has the option to switch to
 void Host::RevealDoor()
 {
-    // The host has to know which door the player has picked and choose one of
-    // doors with a goat and reveal this door.
     _PlayerDoorPicked = _Player->PickedDoorGetter();
     _NumberOfDoors = _Doors->NumOfDoorsGetter();
     _CarDoor = _Doors->CarDoorGetter();
 
 
-    // 1. Host needs to see the doors and whats behind them
+    // Host needs to see the doors and whats behind them
     StoredDoors = _Doors->DoorsGetter();
 
-    // Now display whats at the doors...?
-    //std::cout << "[Host]: First, second, third elements in StoredDoors: " << StoredDoors[0] << ", " <<
-    //StoredDoors[1] << " and  "<< StoredDoors[2] << std::endl;
-
-
-    // 2. Time to eliminate a door by revealing one with a goat behind it
-    /*
-    for( int i = 0; i < _NumberOfDoors; i++ )
-    {
-        if( StoredDoors[i] != 1 && i != _PlayerDoorPicked )
-        {
-            _DoorToBeRevealed = i;
-        }
-
-    }
-    */
-
-    // 3. Find the door that the player can switch to
-    /*
-    for( int i = 0; i < _NumberOfDoors; i++ )
-    {
-        if( i != _DoorToBeRevealed && i != _PlayerDoorPicked )
-        {
-            _DoorSwitchPotential = i;
-        }
-    }
-    */
     // Find the door with the car behind it
     for( int i = 0; i < _NumberOfDoors; i++ )
     {
@@ -110,22 +71,13 @@ void Host::RevealDoor()
         }
     }
 
-    // 4. Now reveal this door to the contest
-    /*
-    std::cout << "[Host]: The host is revealing that door " << _DoorToBeRevealed <<
-    " contains a goat. Player " << _LePlayerName << ", would you like to stay with door " <<
-    _PlayerDoorPicked << " or would you like to switch to door " << _DoorSwitchPotential << "?"<< std::endl;
-    */
-
+    // 4. Now reveal the door options that they player has
     _DoorsRevealed = _NumberOfDoors - 2;
 
     std::cout << "[Host]: The host reveals " << _DoorsRevealed << " doors. There are now " <<
     "two doors remaining; door "<< _PlayerDoorPicked << " picked by the player and door " <<
     _DoorSwitchPotential << ". Player " << _LePlayerName << ", would you like to stay with door " <<
     _PlayerDoorPicked << ", or would you like to switch to door " << _DoorSwitchPotential << "?"<< std::endl;
-
-    //" contains a goat. Player " << _LePlayerName << ", would you like to stay with door " <<
-    //_PlayerDoorPicked << " or would you like to switch to door " << _DoorSwitchPotential << "?"<< std::endl;
 
 }
 

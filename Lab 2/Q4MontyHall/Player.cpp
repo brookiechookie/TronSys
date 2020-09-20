@@ -1,6 +1,6 @@
 // Player.cpp
 //
-// Implementation file for the derived class: Latin
+// Implementation file for the class: Player
 
 
 
@@ -20,24 +20,16 @@ Player::Player( std::string Name )
 
 //------------------------------------------------------------------------------
 // This function is where the player makes an initial door selection
-void Player::PickDoor()
+int Player::UserPickedDoorSetter( int UserPickedDoor )
 {
-    // Player has to choose a door to pick
-    // Hard code this at first and then build it up
-
-    //_PickedDoor = 1;
-    _PickedDoor = rand() % _NumberOfDoors; 
-
+    _PickedDoor = UserPickedDoor;
     std::cout << "[Player]: Player " << _PlayerName << " has picked door " << _PickedDoor << std::endl;
-
 }
 
 //------------------------------------------------------------------------------
 // This is a getter function which returns the door that the player has picked
 int Player::PickedDoorGetter()
 {
-    //std::cout << "[Player]: In getter func, door picked is " << _PickedDoor << std::endl;
-
     return _PickedDoor;
 }
 
@@ -48,19 +40,18 @@ std::string Player::NameGetter()
     return _PlayerName;
 }
 
+//------------------------------------------------------------------------------
+// This functions sets the door that the player can switch to
 void Player::SetSwitchDoorNumber( int s )
 {
     _SwitchDoorNumber = s;
 }
 
-
 //------------------------------------------------------------------------------
 // This is a function that implements the actions of the player who chooses to
-// always stick with their decision to stay
+// always stick with their decision to stay with the door that they had originally chosen.
 void Player::PlayerWhoStays()
 {
-    // This player when given the choice, always chooses to STAY with the door
-    // that they had originally chosen.
     _DoorSelection = _PickedDoor;
     std::cout << "[Player]: The player has decided to STAY with the selection of door " <<
     _DoorSelection << std::endl;
@@ -72,7 +63,6 @@ void Player::PlayerWhoStays()
 // to switch their decision on doors
 void Player::PlayerWhoSwitches()
 {
-    // This player when given the choice, always chooses to SWITCH doors.
     _DoorSelection = _SwitchDoorNumber;
     std::cout << "[Player]: The player has decided to SWITCH to door " <<
     _DoorSelection << std::endl;

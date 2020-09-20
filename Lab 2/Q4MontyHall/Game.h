@@ -1,6 +1,6 @@
 // Doors.h
 //
-// Header file for the derived speaker class: Italian
+// Header file for the class: Game
 
 #ifndef _GAME_H
 #define _GAME_H
@@ -13,7 +13,7 @@
 class Game
 {
     public:
-        void RunGame( std::string Name, int action );
+        void RunGame( std::string Name, int action, int UserPickedDoorSetter );
         double AverageScoreReport( int NumberOfGames );
 
     private:

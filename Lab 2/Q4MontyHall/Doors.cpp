@@ -1,6 +1,6 @@
 // Doors.cpp
 //
-// Implementation file for the derived class: Latin
+// Implementation file for the class: Doors
 
 
 
@@ -16,12 +16,10 @@
 // them and a car
 Doors::Doors()
 {
-    // Assign the car behind a random door between the numbers of 0 to 2.
-    // So the three doors possible are 0, 1 and 2.
-    _CarDoor = rand() % _NumberOfDoors ; //////
-    int hello;
-    int help;
-    int why;
+    // Assign the car behind a random door between the numbers of 0 to however
+    // many doors there are.
+    _CarDoor = rand() % _NumberOfDoors ;
+
     // Assign zeros to all the doors (i.e. goats)
     for(int i = 0; i < _NumberOfDoors; i++)
     {
@@ -31,27 +29,12 @@ Doors::Doors()
     // In one of the doors, assign a one (i.e. the car)
     pDoors[_CarDoor] = 1;
 
-
-    // See whats behind all the doors
-    for(int i = 0; i < _NumberOfDoors; i++)
-    {
-        std::cout << "[Doors]: The value at door " << i << " is " << pDoors[i] << std::endl;
-    }
-
 }
 
 //------------------------------------------------------------------------------
 // This function is to return the array of doors and what is behind them
 int* Doors::DoorsGetter()
 {
-    /*
-    std::cout << "The address of pDoors is " << pDoors << ". The first element can be expressed as: " <<
-    *pDoors << ", or " << pDoors[0] << std::endl;
-
-    std::cout << "[Doors]: First, second, third elements in StoredDoors: " << pDoors[0] << ", " <<
-    pDoors[1] << " and  "<< pDoors[2] << std::endl;
-    */
-
     return pDoors;
 }
 

@@ -1,6 +1,6 @@
 // Game.cpp
 //
-// Implementation file for the derived class: Latin
+// Implementation file for the class: Game
 
 
 
@@ -14,20 +14,21 @@
 // This function essentially runs the whole game. The two configurable aspects
 // of this function is the players name and whether they decide to stay or switch.
 // NB: an int action of 1 = a switcher, whilst 0 = stayer.
-void Game::RunGame( std::string Name, int action )
+void Game::RunGame( std::string Name, int action, int UserPickedDoor )
 {
     // Create separation between each game. Instantiate new objects of the class
-    std::cout << "-----------------------New Game---------------------" << std::endl;
+    std::cout << "\n-----------------------New Game---------------------" << std::endl;
     Doors   myDoors;
     Player  myPlayer( Name );
     Host    myHost( &myPlayer );
 
     _ThePlayerName = Name;
 
+
     // Start the game off
     myHost.TryingToGetDoors( &myDoors );
     myHost.StarterQuestion();
-    myPlayer.PickDoor();
+    myPlayer.UserPickedDoorSetter( UserPickedDoor );
     myHost.RevealDoor();
 
     // Allow the player to see what the option is to switch doors
@@ -46,11 +47,8 @@ void Game::RunGame( std::string Name, int action )
         myPlayer.PlayerWhoStays();
     }
 
-    // Tell the player whether they have won or not
-    _Outcome = myHost.WinOrLose();
-    //std::cout << "_Outcome in Game class has the value " << _Outcome << std::endl;
-
-    _TotalScore = _TotalScore + _Outcome;
+    _Outcome = myHost.WinOrLose();        // Tell the player whether they have won or not
+    _TotalScore = _TotalScore + _Outcome; // Count the players score
 
 }
 
@@ -61,7 +59,6 @@ void Game::RunGame( std::string Name, int action )
 // success rate as a percentage
 double Game::AverageScoreReport( int NumberOfGames )
 {
-    //std::cout << "Total score = " << _TotalScore << "\nGamesPlayed = " << NumberOfGames << std::endl;
     _AverageScore = ( double(_TotalScore) / double(NumberOfGames) ) * 100;
 
     std::cout << "\n**************FINAL REPORT**************\n[Report]: Report on Player " <<
