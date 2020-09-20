@@ -20,9 +20,10 @@ Modifications:
 
 int main()
 {
+    std::cout << "--------------------------------New Game--------------------------------" << std::endl;
     Doors   myDoors;
-    Player  myPlayer( "UNO" );
-    Host  myHost( &myPlayer );
+    Player  myPlayer( "Stayer" );
+    Host    myHost( &myPlayer );
 
     // Start the game off
     myHost.TryingToGetDoors( &myDoors );
@@ -37,20 +38,32 @@ int main()
 
     // Now allow the player to switch or stay and tell them whether they have
     // won or not
-    myPlayer.PlayerWhoSwitches();
-    //myPlayer.PlayerWhoStays();
+    //myPlayer.PlayerWhoSwitches();
+    myPlayer.PlayerWhoStays();
     myHost.WinOrLose();
 
-/*
-    int a = rand() % 3;
-    int b = rand() % 3;
-    int c = rand() % 3;  //
-    int d = rand() % 3;
-    int e = rand() % 3;
-    std::cout << "The random items are; " << a << ", "<< b << ", "<< c << ", "<< d <<" and "<< e << std::endl;
-*/
-    //int p;
-    //p = myDoors.DoorsGetter();
+//------------------------------------------------------------------------------
+    std::cout << "--------------------------------New Game--------------------------------" << std::endl;
+    Doors   Doors2;
+    Player  Player2( "Switcher" );
+    Host    Host2( &Player2 );
+
+    // Start the game off
+    Host2.TryingToGetDoors( &Doors2 );
+    Host2.StarterQuestion();
+    Player2.PickDoor();
+    Host2.RevealDoor();
+
+    // Allow the player to see what the option is to switch doors
+    int _TheDoorSwitcher2;
+    _TheDoorSwitcher2 = Host2.DoorSwitchGetter();
+    Player2.SetSwitchDoorNumber( _TheDoorSwitcher2 );
+
+    // Now allow the player to switch or stay and tell them whether they have
+    // won or not
+    Player2.PlayerWhoSwitches();
+    //myPlayer.PlayerWhoStays();
+    Host2.WinOrLose();
 
 
 }

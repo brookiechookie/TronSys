@@ -1,0 +1,8 @@
+/*
+    int a = rand() % 3;
+    int b = rand() % 3;
+    int c = rand() % 3;  //
+    int d = rand() % 3;
+    int e = rand() % 3;
+    std::cout << "The random items are; " << a << ", "<< b << ", "<< c << ", "<< d <<" and "<< e << std::endl;
+*/
