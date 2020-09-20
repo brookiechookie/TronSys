@@ -37,6 +37,14 @@ Game.h
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.h
 
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.h
+Doors.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
+Game.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.h
+Player.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+Host.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
 
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.cpp
 iostream

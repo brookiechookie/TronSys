@@ -20,11 +20,25 @@ Modifications:
 
 int main()
 {
+    // All that the game class has to know is the name of the player and whether
+    // they are a stayer or a switcher
+    Game  myGame;
+    myGame.RunGame( "Molly", 1 );
+
+    Game  newGame;
+    newGame.RunGame( "Puval", 0 );
+
+
+
+
+    /*
     std::cout << "--------------------------------New Game--------------------------------" << std::endl;
     Doors   myDoors;
     Player  myPlayer( "Stayer" );
     Host    myHost( &myPlayer );
+    */
 
+    /*
     // Start the game off
     myHost.TryingToGetDoors( &myDoors );
     myHost.StarterQuestion();
@@ -41,8 +55,10 @@ int main()
     //myPlayer.PlayerWhoSwitches();
     myPlayer.PlayerWhoStays();
     myHost.WinOrLose();
-
+    */
 //------------------------------------------------------------------------------
+
+    /*
     std::cout << "--------------------------------New Game--------------------------------" << std::endl;
     Doors   Doors2;
     Player  Player2( "Switcher" );
@@ -64,6 +80,9 @@ int main()
     Player2.PlayerWhoSwitches();
     //myPlayer.PlayerWhoStays();
     Host2.WinOrLose();
+
+    */
+
 
 
 }

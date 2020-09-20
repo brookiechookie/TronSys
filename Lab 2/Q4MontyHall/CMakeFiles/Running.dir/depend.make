@@ -4,8 +4,11 @@
 CMakeFiles/Running.dir/Doors.cpp.o: Doors.cpp
 CMakeFiles/Running.dir/Doors.cpp.o: Doors.h
 
+CMakeFiles/Running.dir/Game.cpp.o: Doors.h
 CMakeFiles/Running.dir/Game.cpp.o: Game.cpp
 CMakeFiles/Running.dir/Game.cpp.o: Game.h
+CMakeFiles/Running.dir/Game.cpp.o: Host.h
+CMakeFiles/Running.dir/Game.cpp.o: Player.h
 
 CMakeFiles/Running.dir/Host.cpp.o: Doors.h
 CMakeFiles/Running.dir/Host.cpp.o: Host.cpp

@@ -5,8 +5,11 @@ CMakeFiles/Running.dir/Doors.cpp.o
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.cpp
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
 CMakeFiles/Running.dir/Game.cpp.o
+ /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.cpp
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.h
+ /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
+ /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
 CMakeFiles/Running.dir/Host.cpp.o
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.cpp
