@@ -18,12 +18,6 @@ Player::Player( std::string Name )
 
 }
 
-/*
-Player::Player( Host* WhichHost )
-{
-    _Host = WhichHost;
-}
-*/
 //------------------------------------------------------------------------------
 // This function is where the player makes an initial door selection
 void Player::PickDoor()
@@ -31,7 +25,8 @@ void Player::PickDoor()
     // Player has to choose a door to pick
     // Hard code this at first and then build it up
 
-    _PickedDoor = 1;
+    //_PickedDoor = 1;
+    _PickedDoor = (rand() % 3) + 1; //
 
     std::cout << "[Player]: Player " << _PlayerName << " has picked door " << _PickedDoor << std::endl;
 

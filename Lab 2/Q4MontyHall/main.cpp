@@ -37,11 +37,18 @@ int main()
 
     // Now allow the player to switch or stay and tell them whether they have
     // won or not
-    //myPlayer.PlayerWhoSwitches();
-    myPlayer.PlayerWhoStays();
+    myPlayer.PlayerWhoSwitches();
+    //myPlayer.PlayerWhoStays();
     myHost.WinOrLose();
 
-
+/*
+    int a = rand() % 3;
+    int b = rand() % 3;
+    int c = rand() % 3;  //
+    int d = rand() % 3;
+    int e = rand() % 3;
+    std::cout << "The random items are; " << a << ", "<< b << ", "<< c << ", "<< d <<" and "<< e << std::endl;
+*/
     //int p;
     //p = myDoors.DoorsGetter();
 

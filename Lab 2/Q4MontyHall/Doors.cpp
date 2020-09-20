@@ -7,7 +7,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-//#include <cstdlib>    // For rand()
+#include <cstdlib>    // For rand()
 
 #include "Doors.h"
 
@@ -16,10 +16,12 @@
 // them and a car
 Doors::Doors()
 {
-    // Assign the car behind a door
-
-    _CarDoor = 1;
-
+    // Assign the car behind a random door between the numbers of 0 to 2.
+    // So the three doors possible are 0, 1 and 2.
+    _CarDoor = (rand() % 3) ; //////
+    int hello;
+    int help;
+    int why;
     // Assign zeros to all the doors (i.e. goats)
     for(int i = 0; i < _NumberOfDoors; i++)
     {

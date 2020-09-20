@@ -26,8 +26,6 @@ Host::Host( Player* WhichPlayer, Doors* WhichDoor )
 
 Host::Host( Player* WhichPlayer )
 {
-    //std::cout << "[Host]: Infiltrated" << std::endl;
-
     _Player = WhichPlayer;
     _LePlayerName = _Player->NameGetter();
 
@@ -35,7 +33,6 @@ Host::Host( Player* WhichPlayer )
 
 void Host::TryingToGetDoors( Doors* WhichDoors )
 {
-    //std::cout << "More Infiltration" << std::endl;
     _Doors = WhichDoors;
 }
 
@@ -44,6 +41,7 @@ void Host::TryingToGetDoors( Doors* WhichDoors )
 // This is a function that contains the hosts initial question to be asked
 void Host::StarterQuestion()
 {
+    std::cout << "[Host]: Welcome to the Monty Hall Game!" << std::endl;
     // We want the host to ask the player which door they would like to open
     std::cout << "[Host]: Player "<< _LePlayerName << ", which door would you like to open?" << std::endl;
 }
@@ -60,14 +58,14 @@ void Host::RevealDoor()
     _NumberOfDoors = _Doors->NumOfDoorsGetter();
     _CarDoor = _Doors->CarDoorGetter();
 
-    std::cout << "[Host]: Player " << _LePlayerName << " has picked door " << _PlayerDoorPicked << std::endl;
+    // std::cout << "[Host]: Player " << _LePlayerName << " has picked door " << _PlayerDoorPicked << std::endl;
 
     // 1. Host needs to see the doors and whats behind them
     StoredDoors = _Doors->DoorsGetter();
 
     // Now display whats at the doors...?
-    std::cout << "[Host]: First, second, third elements in StoredDoors: " << StoredDoors[0] << ", " <<
-    StoredDoors[1] << " and  "<< StoredDoors[2] << std::endl;
+    //std::cout << "[Host]: First, second, third elements in StoredDoors: " << StoredDoors[0] << ", " <<
+    //StoredDoors[1] << " and  "<< StoredDoors[2] << std::endl;
 
 
     // 2. Time to eliminate a door by revealing one with a goat behind it
@@ -91,7 +89,7 @@ void Host::RevealDoor()
 
     // 4. Now reveal this door to the contest
     std::cout << "[Host]: The host is revealing that door " << _DoorToBeRevealed <<
-    " contains a goat. Player " << _LePlayerName << " would you like to stay with door " <<
+    " contains a goat. Player " << _LePlayerName << ", would you like to stay with door " <<
     _PlayerDoorPicked << " or would you like to switch to door " << _DoorSwitchPotential << "?"<< std::endl;
 
 }
