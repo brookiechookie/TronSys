@@ -10,6 +10,8 @@ CMakeFiles/Running.dir/Game.cpp.o
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.h
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+ /home/brookie/github/TronSys/Lab 2/Q4MontyHall/StayPlayer.h
+ /home/brookie/github/TronSys/Lab 2/Q4MontyHall/SwitchPlayer.h
 CMakeFiles/Running.dir/Host.cpp.o
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.cpp
@@ -18,9 +20,19 @@ CMakeFiles/Running.dir/Host.cpp.o
 CMakeFiles/Running.dir/Player.cpp.o
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.cpp
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+CMakeFiles/Running.dir/StayPlayer.cpp.o
+ /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+ /home/brookie/github/TronSys/Lab 2/Q4MontyHall/StayPlayer.cpp
+ /home/brookie/github/TronSys/Lab 2/Q4MontyHall/StayPlayer.h
+CMakeFiles/Running.dir/SwitchPlayer.cpp.o
+ /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+ /home/brookie/github/TronSys/Lab 2/Q4MontyHall/SwitchPlayer.cpp
+ /home/brookie/github/TronSys/Lab 2/Q4MontyHall/SwitchPlayer.h
 CMakeFiles/Running.dir/main.cpp.o
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Doors.h
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.h
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+ /home/brookie/github/TronSys/Lab 2/Q4MontyHall/StayPlayer.h
+ /home/brookie/github/TronSys/Lab 2/Q4MontyHall/SwitchPlayer.h
  /home/brookie/github/TronSys/Lab 2/Q4MontyHall/main.cpp

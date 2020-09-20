@@ -9,6 +9,8 @@ CMakeFiles/Running.dir/Game.cpp.o: Game.cpp
 CMakeFiles/Running.dir/Game.cpp.o: Game.h
 CMakeFiles/Running.dir/Game.cpp.o: Host.h
 CMakeFiles/Running.dir/Game.cpp.o: Player.h
+CMakeFiles/Running.dir/Game.cpp.o: StayPlayer.h
+CMakeFiles/Running.dir/Game.cpp.o: SwitchPlayer.h
 
 CMakeFiles/Running.dir/Host.cpp.o: Doors.h
 CMakeFiles/Running.dir/Host.cpp.o: Host.cpp
@@ -18,9 +20,19 @@ CMakeFiles/Running.dir/Host.cpp.o: Player.h
 CMakeFiles/Running.dir/Player.cpp.o: Player.cpp
 CMakeFiles/Running.dir/Player.cpp.o: Player.h
 
+CMakeFiles/Running.dir/StayPlayer.cpp.o: Player.h
+CMakeFiles/Running.dir/StayPlayer.cpp.o: StayPlayer.cpp
+CMakeFiles/Running.dir/StayPlayer.cpp.o: StayPlayer.h
+
+CMakeFiles/Running.dir/SwitchPlayer.cpp.o: Player.h
+CMakeFiles/Running.dir/SwitchPlayer.cpp.o: SwitchPlayer.cpp
+CMakeFiles/Running.dir/SwitchPlayer.cpp.o: SwitchPlayer.h
+
 CMakeFiles/Running.dir/main.cpp.o: Doors.h
 CMakeFiles/Running.dir/main.cpp.o: Game.h
 CMakeFiles/Running.dir/main.cpp.o: Host.h
 CMakeFiles/Running.dir/main.cpp.o: Player.h
+CMakeFiles/Running.dir/main.cpp.o: StayPlayer.h
+CMakeFiles/Running.dir/main.cpp.o: SwitchPlayer.h
 CMakeFiles/Running.dir/main.cpp.o: main.cpp
 

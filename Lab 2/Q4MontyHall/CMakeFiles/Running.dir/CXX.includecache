@@ -45,6 +45,10 @@ Player.h
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
 Host.h
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
+StayPlayer.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/StayPlayer.h
+SwitchPlayer.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/SwitchPlayer.h
 
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.cpp
 iostream
@@ -86,6 +90,26 @@ stdlib.h
 string
 -
 
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/StayPlayer.cpp
+Player.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+StayPlayer.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/StayPlayer.h
+
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/StayPlayer.h
+Player.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/SwitchPlayer.cpp
+Player.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+SwitchPlayer.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/SwitchPlayer.h
+
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/SwitchPlayer.h
+Player.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
+
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/main.cpp
 iostream
 -
@@ -101,4 +125,8 @@ Player.h
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.h
 Host.h
 /home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.h
+StayPlayer.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/StayPlayer.h
+SwitchPlayer.h
+/home/brookie/github/TronSys/Lab 2/Q4MontyHall/SwitchPlayer.h
 

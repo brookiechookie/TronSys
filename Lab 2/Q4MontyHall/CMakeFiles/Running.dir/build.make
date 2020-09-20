@@ -177,13 +177,63 @@ CMakeFiles/Running.dir/Player.cpp.o.provides: CMakeFiles/Running.dir/Player.cpp.
 CMakeFiles/Running.dir/Player.cpp.o.provides.build: CMakeFiles/Running.dir/Player.cpp.o
 
 
+CMakeFiles/Running.dir/StayPlayer.cpp.o: CMakeFiles/Running.dir/flags.make
+CMakeFiles/Running.dir/StayPlayer.cpp.o: StayPlayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 2/Q4MontyHall/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Running.dir/StayPlayer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Running.dir/StayPlayer.cpp.o -c "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/StayPlayer.cpp"
+
+CMakeFiles/Running.dir/StayPlayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Running.dir/StayPlayer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/StayPlayer.cpp" > CMakeFiles/Running.dir/StayPlayer.cpp.i
+
+CMakeFiles/Running.dir/StayPlayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Running.dir/StayPlayer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/StayPlayer.cpp" -o CMakeFiles/Running.dir/StayPlayer.cpp.s
+
+CMakeFiles/Running.dir/StayPlayer.cpp.o.requires:
+
+.PHONY : CMakeFiles/Running.dir/StayPlayer.cpp.o.requires
+
+CMakeFiles/Running.dir/StayPlayer.cpp.o.provides: CMakeFiles/Running.dir/StayPlayer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/StayPlayer.cpp.o.provides.build
+.PHONY : CMakeFiles/Running.dir/StayPlayer.cpp.o.provides
+
+CMakeFiles/Running.dir/StayPlayer.cpp.o.provides.build: CMakeFiles/Running.dir/StayPlayer.cpp.o
+
+
+CMakeFiles/Running.dir/SwitchPlayer.cpp.o: CMakeFiles/Running.dir/flags.make
+CMakeFiles/Running.dir/SwitchPlayer.cpp.o: SwitchPlayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 2/Q4MontyHall/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Running.dir/SwitchPlayer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Running.dir/SwitchPlayer.cpp.o -c "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/SwitchPlayer.cpp"
+
+CMakeFiles/Running.dir/SwitchPlayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Running.dir/SwitchPlayer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/SwitchPlayer.cpp" > CMakeFiles/Running.dir/SwitchPlayer.cpp.i
+
+CMakeFiles/Running.dir/SwitchPlayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Running.dir/SwitchPlayer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/SwitchPlayer.cpp" -o CMakeFiles/Running.dir/SwitchPlayer.cpp.s
+
+CMakeFiles/Running.dir/SwitchPlayer.cpp.o.requires:
+
+.PHONY : CMakeFiles/Running.dir/SwitchPlayer.cpp.o.requires
+
+CMakeFiles/Running.dir/SwitchPlayer.cpp.o.provides: CMakeFiles/Running.dir/SwitchPlayer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/SwitchPlayer.cpp.o.provides.build
+.PHONY : CMakeFiles/Running.dir/SwitchPlayer.cpp.o.provides
+
+CMakeFiles/Running.dir/SwitchPlayer.cpp.o.provides.build: CMakeFiles/Running.dir/SwitchPlayer.cpp.o
+
+
 # Object files for target Running
 Running_OBJECTS = \
 "CMakeFiles/Running.dir/main.cpp.o" \
 "CMakeFiles/Running.dir/Doors.cpp.o" \
 "CMakeFiles/Running.dir/Game.cpp.o" \
 "CMakeFiles/Running.dir/Host.cpp.o" \
-"CMakeFiles/Running.dir/Player.cpp.o"
+"CMakeFiles/Running.dir/Player.cpp.o" \
+"CMakeFiles/Running.dir/StayPlayer.cpp.o" \
+"CMakeFiles/Running.dir/SwitchPlayer.cpp.o"
 
 # External object files for target Running
 Running_EXTERNAL_OBJECTS =
@@ -193,9 +243,11 @@ Running: CMakeFiles/Running.dir/Doors.cpp.o
 Running: CMakeFiles/Running.dir/Game.cpp.o
 Running: CMakeFiles/Running.dir/Host.cpp.o
 Running: CMakeFiles/Running.dir/Player.cpp.o
+Running: CMakeFiles/Running.dir/StayPlayer.cpp.o
+Running: CMakeFiles/Running.dir/SwitchPlayer.cpp.o
 Running: CMakeFiles/Running.dir/build.make
 Running: CMakeFiles/Running.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brookie/github/TronSys/Lab 2/Q4MontyHall/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Running"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brookie/github/TronSys/Lab 2/Q4MontyHall/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Running"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Running.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -208,6 +260,8 @@ CMakeFiles/Running.dir/requires: CMakeFiles/Running.dir/Doors.cpp.o.requires
 CMakeFiles/Running.dir/requires: CMakeFiles/Running.dir/Game.cpp.o.requires
 CMakeFiles/Running.dir/requires: CMakeFiles/Running.dir/Host.cpp.o.requires
 CMakeFiles/Running.dir/requires: CMakeFiles/Running.dir/Player.cpp.o.requires
+CMakeFiles/Running.dir/requires: CMakeFiles/Running.dir/StayPlayer.cpp.o.requires
+CMakeFiles/Running.dir/requires: CMakeFiles/Running.dir/SwitchPlayer.cpp.o.requires
 
 .PHONY : CMakeFiles/Running.dir/requires
 

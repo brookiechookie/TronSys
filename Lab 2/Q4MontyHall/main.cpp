@@ -16,6 +16,8 @@ Modifications:
 #include "Game.h"
 #include "Player.h"
 #include "Host.h"
+#include "StayPlayer.h"
+#include "SwitchPlayer.h"
 
 
 int main()
@@ -32,20 +34,23 @@ int main()
     double AverageScore;
     int PersonScore;
 
+    /*
     // Get a door from the user
     int _UserSelectedDoor1;
     int _UserSelectedDoor2;
+
 
     // Prompt the user to select doors for both the players
     std::cout << "Hi User! Please select a door for " << Person1Name << " and for " <<
     Person2Name << ".\nNB: The program is set to 4 doors so your door selection must be between 0-3."<< std::endl;
     std::cin >> _UserSelectedDoor1 >> _UserSelectedDoor2;
+    */
 
     // Run the game a certain number of times
     for( int k = 0; k < NumberOfGames; k++ )
     {
-        GameUno.RunGame( Person1Name, 1, _UserSelectedDoor1 );
-        GameDue.RunGame( Person2Name, 0, _UserSelectedDoor2 );
+        GameUno.RunGame( Person1Name, 1 );
+        GameDue.RunGame( Person2Name, 0 );
     }
 
     // Report the stats of each player to the user at the end of the cycles

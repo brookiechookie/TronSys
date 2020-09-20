@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Game.cpp" "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/CMakeFiles/Running.dir/Game.cpp.o"
   "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Host.cpp" "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/CMakeFiles/Running.dir/Host.cpp.o"
   "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/Player.cpp" "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/CMakeFiles/Running.dir/Player.cpp.o"
+  "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/StayPlayer.cpp" "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/CMakeFiles/Running.dir/StayPlayer.cpp.o"
+  "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/SwitchPlayer.cpp" "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/CMakeFiles/Running.dir/SwitchPlayer.cpp.o"
   "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/main.cpp" "/home/brookie/github/TronSys/Lab 2/Q4MontyHall/CMakeFiles/Running.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

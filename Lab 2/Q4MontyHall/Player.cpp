@@ -20,11 +20,22 @@ Player::Player( std::string Name )
 
 //------------------------------------------------------------------------------
 // This function is where the player makes an initial door selection
+/*
 int Player::UserPickedDoorSetter( int UserPickedDoor )
 {
     _PickedDoor = UserPickedDoor;
     std::cout << "[Player]: Player " << _PlayerName << " has picked door " << _PickedDoor << std::endl;
 }
+*/
+
+//------------------------------------------------------------------------------
+// This function is where the player makes an initial door selection
+void Player::PickDoor()
+{
+    _PickedDoor = rand() % _NumberOfDoors;
+    std::cout << "[Player]: Player " << _PlayerName << " has picked door " << _PickedDoor << std::endl;
+}
+
 
 //------------------------------------------------------------------------------
 // This is a getter function which returns the door that the player has picked
@@ -47,6 +58,7 @@ void Player::SetSwitchDoorNumber( int s )
     _SwitchDoorNumber = s;
 }
 
+
 //------------------------------------------------------------------------------
 // This is a function that implements the actions of the player who chooses to
 // always stick with their decision to stay with the door that they had originally chosen.
@@ -57,6 +69,7 @@ void Player::PlayerWhoStays()
     _DoorSelection << std::endl;
 
 }
+
 
 //------------------------------------------------------------------------------
 // This is a function that implements the actions of a player who always decides

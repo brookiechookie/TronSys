@@ -14,7 +14,7 @@
 // This function essentially runs the whole game. The two configurable aspects
 // of this function is the players name and whether they decide to stay or switch.
 // NB: an int action of 1 = a switcher, whilst 0 = stayer.
-void Game::RunGame( std::string Name, int action, int UserPickedDoor )
+void Game::RunGame( std::string Name, int action )
 {
     // Create separation between each game. Instantiate new objects of the class
     std::cout << "\n-----------------------New Game---------------------" << std::endl;
@@ -28,7 +28,8 @@ void Game::RunGame( std::string Name, int action, int UserPickedDoor )
     // Start the game off
     myHost.TryingToGetDoors( &myDoors );
     myHost.StarterQuestion();
-    myPlayer.UserPickedDoorSetter( UserPickedDoor );
+    //myPlayer.UserPickedDoorSetter( UserPickedDoor );
+    myPlayer.PickDoor();
     myHost.RevealDoor();
 
     // Allow the player to see what the option is to switch doors
@@ -41,10 +42,13 @@ void Game::RunGame( std::string Name, int action, int UserPickedDoor )
     if( action == 1)
     {
         myPlayer.PlayerWhoSwitches();
+
+
     }
     else if( action == 0 )
     {
         myPlayer.PlayerWhoStays();
+        //Stayer.PlayerWhoStays();
     }
 
     _Outcome = myHost.WinOrLose();        // Tell the player whether they have won or not

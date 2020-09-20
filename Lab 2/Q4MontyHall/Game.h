@@ -9,11 +9,13 @@
 #include "Game.h"
 #include "Player.h"
 #include "Host.h"
+#include "StayPlayer.h"
+#include "SwitchPlayer.h"
 
 class Game
 {
     public:
-        void RunGame( std::string Name, int action, int UserPickedDoorSetter );
+        void RunGame( std::string Name, int action );
         double AverageScoreReport( int NumberOfGames );
 
     private:

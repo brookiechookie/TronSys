@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Running.dir/Game.cpp.o"
   "CMakeFiles/Running.dir/Host.cpp.o"
   "CMakeFiles/Running.dir/Player.cpp.o"
+  "CMakeFiles/Running.dir/StayPlayer.cpp.o"
+  "CMakeFiles/Running.dir/SwitchPlayer.cpp.o"
   "Running.pdb"
   "Running"
 )

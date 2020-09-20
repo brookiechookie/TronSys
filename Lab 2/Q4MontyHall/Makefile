@@ -231,6 +231,60 @@ Player.cpp.s:
 	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
+StayPlayer.o: StayPlayer.cpp.o
+
+.PHONY : StayPlayer.o
+
+# target to build an object file
+StayPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/StayPlayer.cpp.o
+.PHONY : StayPlayer.cpp.o
+
+StayPlayer.i: StayPlayer.cpp.i
+
+.PHONY : StayPlayer.i
+
+# target to preprocess a source file
+StayPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/StayPlayer.cpp.i
+.PHONY : StayPlayer.cpp.i
+
+StayPlayer.s: StayPlayer.cpp.s
+
+.PHONY : StayPlayer.s
+
+# target to generate assembly for a file
+StayPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/StayPlayer.cpp.s
+.PHONY : StayPlayer.cpp.s
+
+SwitchPlayer.o: SwitchPlayer.cpp.o
+
+.PHONY : SwitchPlayer.o
+
+# target to build an object file
+SwitchPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/SwitchPlayer.cpp.o
+.PHONY : SwitchPlayer.cpp.o
+
+SwitchPlayer.i: SwitchPlayer.cpp.i
+
+.PHONY : SwitchPlayer.i
+
+# target to preprocess a source file
+SwitchPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/SwitchPlayer.cpp.i
+.PHONY : SwitchPlayer.cpp.i
+
+SwitchPlayer.s: SwitchPlayer.cpp.s
+
+.PHONY : SwitchPlayer.s
+
+# target to generate assembly for a file
+SwitchPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/Running.dir/build.make CMakeFiles/Running.dir/SwitchPlayer.cpp.s
+.PHONY : SwitchPlayer.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -279,6 +333,12 @@ help:
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"
+	@echo "... StayPlayer.o"
+	@echo "... StayPlayer.i"
+	@echo "... StayPlayer.s"
+	@echo "... SwitchPlayer.o"
+	@echo "... SwitchPlayer.i"
+	@echo "... SwitchPlayer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
