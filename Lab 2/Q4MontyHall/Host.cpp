@@ -104,7 +104,7 @@ int Host::DoorSwitchGetter()
 
 //------------------------------------------------------------------------------
 // This purpose of this function is to see if the player has won or lost
-void Host::WinOrLose()
+int Host::WinOrLose()
 {
     _PlayerDoorSelectV2 = _Player->DoorSelectionGetter();
 
@@ -112,11 +112,15 @@ void Host::WinOrLose()
     {
         std::cout << "[Host]: Congratulations Player " << _LePlayerName <<
         " you have WON!!" << std::endl;
+        _PlayerOutcome = 1;
     }
     else if(  StoredDoors[ _PlayerDoorSelectV2 ] == 0 )
     {
         std::cout << "[Host]: Sorry Player " << _LePlayerName <<
         " you have LOST!!" << std::endl;
+        _PlayerOutcome = 0;
     }
+
+    return _PlayerOutcome;
 
   }

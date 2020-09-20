@@ -10,13 +10,19 @@
 
 #include "Game.h"
 
-
+//------------------------------------------------------------------------------
+// This function essentially runs the whole game. The two configurable aspects
+// of this function is the players name and whether they decide to stay or switch.
+// NB: an int action of 1 = a switcher, whilst 0 = stayer.
 void Game::RunGame( std::string Name, int action )
 {
+    // Create separation between each game. Instantiate new objects of the class
     std::cout << "-----------------------New Game---------------------" << std::endl;
     Doors   myDoors;
     Player  myPlayer( Name );
     Host    myHost( &myPlayer );
+
+    _ThePlayerName = Name;
 
     // Start the game off
     myHost.TryingToGetDoors( &myDoors );
@@ -41,6 +47,27 @@ void Game::RunGame( std::string Name, int action )
     }
 
     // Tell the player whether they have won or not
-    myHost.WinOrLose();
+    _Outcome = myHost.WinOrLose();
+    //std::cout << "_Outcome in Game class has the value " << _Outcome << std::endl;
+
+    _TotalScore = _TotalScore + _Outcome;
+
+}
+
+int Game::TotalScoreGetter()
+{
+    return _TotalScore;
+}
+
+
+double Game::AverageScoreReport( int NumberOfGames )
+{
+    //std::cout << "Total score = " << _TotalScore << "\nGamesPlayed = " << NumberOfGames << std::endl;
+    _AverageScore = ( double(_TotalScore) / double(NumberOfGames) ) * 100;
+
+    std::cout << "\n**************FINAL REPORT**************\n[Report]: Report on Player " <<
+    _ThePlayerName << "\n[Report]: Total Games Played = " << NumberOfGames <<
+    "\n[Report]: Total Games won " << _TotalScore << "\n[Report]:" <<
+    _ThePlayerName << "'s average score = " << _AverageScore << "%"<< std::endl;
 
 }

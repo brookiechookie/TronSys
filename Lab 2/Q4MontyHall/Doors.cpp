@@ -18,7 +18,7 @@ Doors::Doors()
 {
     // Assign the car behind a random door between the numbers of 0 to 2.
     // So the three doors possible are 0, 1 and 2.
-    _CarDoor = (rand() % 3) ; //////
+    _CarDoor = rand() % 3 ; //////
     int hello;
     int help;
     int why;

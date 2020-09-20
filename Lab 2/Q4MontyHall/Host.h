@@ -22,7 +22,7 @@ class Host
         void Answer();            // Tell the player whether they are right or wrong
         int DoorSwitchGetter();
         void TryingToGetDoors( Doors* WhichDoors );
-        void WinOrLose();
+        int WinOrLose();
 
 
     private:
@@ -41,6 +41,7 @@ class Host
         int _DoorToBeRevealed;
         int _DoorSwitchPotential;
         int _PlayerDoorSelectV2;
+        int _PlayerOutcome;
 
 };
 
