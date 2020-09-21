@@ -1,0 +1,3 @@
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles/rebuild_cache.dir
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles/Conv.dir
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles/edit_cache.dir

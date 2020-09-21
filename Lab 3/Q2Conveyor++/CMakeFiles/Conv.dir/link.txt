@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Conv.dir/main.cpp.o CMakeFiles/Conv.dir/Conveyor.cpp.o CMakeFiles/Conv.dir/LoadingRobot.cpp.o CMakeFiles/Conv.dir/ProcessingRobot.cpp.o  -o Conv 
