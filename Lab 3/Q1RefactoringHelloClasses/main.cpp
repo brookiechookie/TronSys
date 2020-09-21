@@ -5,7 +5,8 @@
 // Purpose:       Main file for lab 1 assignment.
 //                Example of how classes interact and creating a multi file
 //                project. Computers can say hello to people but not vice versa.
-// Modifications:
+// Modifications: 21.9.20 Code refactored and structure restyled in response to
+//                feedback from lab 1.
 //
 
 

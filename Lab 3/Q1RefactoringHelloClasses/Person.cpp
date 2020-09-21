@@ -9,7 +9,6 @@
 //
 
 
-
 #include <iostream>
 #include <string>
 
@@ -17,6 +16,7 @@
 
 
 //---Class implementation for Person---------------------------
+// Constructor created to initialise person 
 // Init zeroes the hello count, and assigns a name
 Person::Person( std::string Name )
 {
@@ -102,21 +102,9 @@ void Person::ReceiveHello(Person* pSource)
 
 }
 
+//-------------------------------------------------------------
+// This a getter function which returns the name of a person
 std::string Person::NameGetter()
 {
     return _name;
 }
-
-/*
-//-------------------------------------------------------------
-// Within the Person class, allow a computer to say hello to a person.
-// Print the greeting to the screen
-void Person::Greeting( Computer* Cpoint )
-{
-    std::cout << "[SendHello]: " << Cpoint->_CompName
-        << " is saying hello " << _name << std::endl;
-
-    ReceiveHello();
-
-}
-*/
