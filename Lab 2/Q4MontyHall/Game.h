@@ -1,4 +1,4 @@
-// Doors.h
+// Game.h
 //
 // Header file for the class: Game
 
