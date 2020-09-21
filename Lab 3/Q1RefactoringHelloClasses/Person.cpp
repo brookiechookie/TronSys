@@ -102,6 +102,12 @@ void Person::ReceiveHello(Person* pSource)
 
 }
 
+std::string Person::NameGetter()
+{
+    return _name;
+}
+
+/*
 //-------------------------------------------------------------
 // Within the Person class, allow a computer to say hello to a person.
 // Print the greeting to the screen
@@ -113,3 +119,4 @@ void Person::Greeting( Computer* Cpoint )
     ReceiveHello();
 
 }
+*/

@@ -19,19 +19,11 @@
 //-------------------------------------------------------------
 int main()
 {
-
+    // Instantiate new objects for people and computer
     Person Alice( "Alice" ); // Alice is an instance of the class Person
     Person Bob( "Bob" );   // Bob is another instance of Person
     Person Carol( "Carol" ); // Make Carol!
     Computer Hal( "Hal" ); // Hal is an instance of the class computer
-
-/*
-    // Assign names to each object
-    Alice.Init( "Alice" );
-    Bob.Init( "Bob" );
-    Carol.Init( "Carol" );
-    Hal.Creator( "Hal" );   // Give the instance of Hal an official name
-*/
 
     // Let's introduce Alice and Bob
     Alice.SendHello( &Bob );
@@ -44,7 +36,9 @@ int main()
     Carol.SendHello( &Alice );
     Carol.SendHello( &Bob );
 
-    // Introduce Hal the computer and Carol
-    Carol.Greeting( &Hal );
+    // Get the Computer to say hello to Carol, note that Carol's hello count
+    // must go up but the computer itself does not have a hello count.
+    Hal.SendHelloComp( &Carol );
+    Carol.ReceiveHello();
 
 }

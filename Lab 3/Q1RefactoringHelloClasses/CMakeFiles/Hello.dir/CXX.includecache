@@ -15,8 +15,8 @@ Computer.h
 /home/brookie/github/TronSys/Lab 3/Q1RefactoringHelloClasses/Computer.h
 
 /home/brookie/github/TronSys/Lab 3/Q1RefactoringHelloClasses/Computer.h
-Computer.h
-/home/brookie/github/TronSys/Lab 3/Q1RefactoringHelloClasses/Computer.h
+Person.h
+/home/brookie/github/TronSys/Lab 3/Q1RefactoringHelloClasses/Person.h
 
 /home/brookie/github/TronSys/Lab 3/Q1RefactoringHelloClasses/Person.cpp
 iostream
@@ -27,10 +27,6 @@ Person.h
 /home/brookie/github/TronSys/Lab 3/Q1RefactoringHelloClasses/Person.h
 
 /home/brookie/github/TronSys/Lab 3/Q1RefactoringHelloClasses/Person.h
-Person.h
-/home/brookie/github/TronSys/Lab 3/Q1RefactoringHelloClasses/Person.h
-Computer.h
-/home/brookie/github/TronSys/Lab 3/Q1RefactoringHelloClasses/Computer.h
 
 /home/brookie/github/TronSys/Lab 3/Q1RefactoringHelloClasses/main.cpp
 iostream

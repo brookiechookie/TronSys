@@ -25,3 +25,14 @@ Computer::Computer( std::string ComputerName )
         << std::endl;
 
 }
+
+//-------------------------------------------------------------
+// This function allows the computer to say hello to a person
+void Computer::SendHelloComp( Person* WhichPerson )
+{
+    _Person = WhichPerson;
+
+    std::cout << "[SendHello]: " << _CompName
+        << " is saying hello to " << _Person->NameGetter() << std::endl;
+
+}
