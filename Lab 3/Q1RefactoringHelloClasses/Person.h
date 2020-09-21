@@ -19,8 +19,8 @@
 class Person
 {
     public:
-      // initialise a person with a given name
-      void Init( std::string Name );
+
+      Person( std::string Name );   // initialise a person with a given name
 
       // say hello to another person;
       // the second person is specified using a pointer

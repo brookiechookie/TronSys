@@ -18,7 +18,7 @@
 
 //---Class implementation for Person---------------------------
 // Init zeroes the hello count, and assigns a name
-void Person::Init( std::string Name )
+Person::Person( std::string Name )
 {
     _helloCount = 0;
     _name = Name;

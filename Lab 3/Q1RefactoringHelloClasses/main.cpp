@@ -20,15 +20,17 @@
 int main()
 {
 
-    Person Alice; // Alice is an instance of the class Person
-    Person Bob;   // Bob is another instance of Person
-    Person Carol; // Make Carol!
+    Person Alice( "Alice" ); // Alice is an instance of the class Person
+    Person Bob( "Bob" );   // Bob is another instance of Person
+    Person Carol( "Carol" ); // Make Carol!
     Computer Hal; // Hal is an instance of the class computer
 
+/*
     // Assign names to each object
     Alice.Init( "Alice" );
     Bob.Init( "Bob" );
     Carol.Init( "Carol" );
+*/
     Hal.Creator( "Hal" );   // Give the instance of Hal an official name
 
     // Let's introduce Alice and Bob

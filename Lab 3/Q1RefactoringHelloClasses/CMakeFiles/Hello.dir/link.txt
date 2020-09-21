@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Hello.dir/main.cpp.o CMakeFiles/Hello.dir/Computer.cpp.o CMakeFiles/Hello.dir/Person.cpp.o  -o Hello 

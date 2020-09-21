@@ -1,0 +1,3 @@
+/home/brookie/github/TronSys/Lab 3/Q1RefactoringHelloClasses/CMakeFiles/rebuild_cache.dir
+/home/brookie/github/TronSys/Lab 3/Q1RefactoringHelloClasses/CMakeFiles/Hello.dir
+/home/brookie/github/TronSys/Lab 3/Q1RefactoringHelloClasses/CMakeFiles/edit_cache.dir
