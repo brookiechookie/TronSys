@@ -16,7 +16,7 @@
 //----------------------------------------------------------------------
 // Create an initalise method that gives a Computer an official name and
 // prints their name to the screen
-void Computer::Creator( std::string ComputerName )
+Computer::Computer( std::string ComputerName )
 {
     _CompName = ComputerName;
 

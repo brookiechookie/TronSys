@@ -16,7 +16,7 @@
 class Computer
 {
     public:
-        void Creator( std::string ComputerName );
+        Computer( std::string ComputerName );   // Constructor for computer
         std::string _CompName; // The Computers name
 
 };
