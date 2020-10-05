@@ -7,15 +7,22 @@
 #ifndef _ITEM_H
 #define _ITEM_H
 
+#include "Conveyor.h"
+#include <vector>     // Vector STL
+#include <iostream>     // std::cout
+#include <cstdlib>      // For rand()
+
 class Item
 {
     public:
-        Item();
+        Item( );
+        Item( Conveyor* WhichConveyor );
         //void NewItem();
+        //virtual ~Item( );
 
     protected:                // Protected classes allow derived classes to access the variable
-        //Conveyor* _Conveyor;
-        //int _ItemID;
+        Conveyor* _Conveyor;
+        std::vector<int> TheHugeVector;
 
 };
 

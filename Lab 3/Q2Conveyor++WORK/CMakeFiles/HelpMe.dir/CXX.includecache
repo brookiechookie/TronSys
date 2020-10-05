@@ -25,20 +25,28 @@ Item.h
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
 Conveyor.h
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.h
+iostream
+-
 cstdlib
 -
 
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/IndiItem.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
 
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.cpp
 Item.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
+
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
 Conveyor.h
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.h
 vector
 -
-
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
+iostream
+-
+cstdlib
+-
 
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/LoadingRobot.cpp
 cstdlib

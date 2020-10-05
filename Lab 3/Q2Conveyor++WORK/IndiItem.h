@@ -5,14 +5,18 @@
 #ifndef _INDIITEM_H
 #define _INDIITEM_H
 
-class IndiItem
+#include "Item.h"
+
+
+class IndiItem: public Item
 {
 
     public:
-        IndiItem();
+        IndiItem( int NItemsAdded );
 
     private:
         int _ItemID;
+
 };
 
 

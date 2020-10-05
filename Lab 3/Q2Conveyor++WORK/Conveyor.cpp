@@ -23,11 +23,13 @@ int Conveyor::AddItems( int n )
 {
     _NumItemsOnConveyor += n;
 
+    /*
     for(int i = 1; i <= n; i++ )
     {
         MyListOfItems.push_back( i );
         std::cout << "[Item]: New Item " << i << " added" << std::endl;
     }
+    */
 
     _CycleCount++;
     std::cout << "Current Cycle: " << _CycleCount << std::endl;

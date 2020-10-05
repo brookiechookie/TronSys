@@ -23,9 +23,14 @@ int main()
     LoadingRobot myLoader;
     ProcessingRobot myProcessor;
 
+
+
     myConveyor.Init();
     myLoader.Init( &myConveyor );
     myProcessor.Init( &myConveyor );
+
+    Item *myItem = new Item( &myConveyor );
+
 
     while( 1 )
     {
