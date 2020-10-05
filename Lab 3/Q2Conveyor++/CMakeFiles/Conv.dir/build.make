@@ -57,130 +57,184 @@ include CMakeFiles/Conv.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Conv.dir/flags.make
 
-CMakeFiles/Conv.dir/main.cpp.o: CMakeFiles/Conv.dir/flags.make
-CMakeFiles/Conv.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Conv.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Conv.dir/main.cpp.o -c "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/main.cpp"
+CMakeFiles/Conv.dir/src/main.cpp.o: CMakeFiles/Conv.dir/flags.make
+CMakeFiles/Conv.dir/src/main.cpp.o: src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Conv.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Conv.dir/src/main.cpp.o -c "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/main.cpp"
 
-CMakeFiles/Conv.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Conv.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/main.cpp" > CMakeFiles/Conv.dir/main.cpp.i
+CMakeFiles/Conv.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Conv.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/main.cpp" > CMakeFiles/Conv.dir/src/main.cpp.i
 
-CMakeFiles/Conv.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Conv.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/main.cpp" -o CMakeFiles/Conv.dir/main.cpp.s
+CMakeFiles/Conv.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Conv.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/main.cpp" -o CMakeFiles/Conv.dir/src/main.cpp.s
 
-CMakeFiles/Conv.dir/main.cpp.o.requires:
+CMakeFiles/Conv.dir/src/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/Conv.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/Conv.dir/src/main.cpp.o.requires
 
-CMakeFiles/Conv.dir/main.cpp.o.provides: CMakeFiles/Conv.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/Conv.dir/main.cpp.o.provides
+CMakeFiles/Conv.dir/src/main.cpp.o.provides: CMakeFiles/Conv.dir/src/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/main.cpp.o.provides.build
+.PHONY : CMakeFiles/Conv.dir/src/main.cpp.o.provides
 
-CMakeFiles/Conv.dir/main.cpp.o.provides.build: CMakeFiles/Conv.dir/main.cpp.o
-
-
-CMakeFiles/Conv.dir/Conveyor.cpp.o: CMakeFiles/Conv.dir/flags.make
-CMakeFiles/Conv.dir/Conveyor.cpp.o: Conveyor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Conv.dir/Conveyor.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Conv.dir/Conveyor.cpp.o -c "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/Conveyor.cpp"
-
-CMakeFiles/Conv.dir/Conveyor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Conv.dir/Conveyor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/Conveyor.cpp" > CMakeFiles/Conv.dir/Conveyor.cpp.i
-
-CMakeFiles/Conv.dir/Conveyor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Conv.dir/Conveyor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/Conveyor.cpp" -o CMakeFiles/Conv.dir/Conveyor.cpp.s
-
-CMakeFiles/Conv.dir/Conveyor.cpp.o.requires:
-
-.PHONY : CMakeFiles/Conv.dir/Conveyor.cpp.o.requires
-
-CMakeFiles/Conv.dir/Conveyor.cpp.o.provides: CMakeFiles/Conv.dir/Conveyor.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/Conveyor.cpp.o.provides.build
-.PHONY : CMakeFiles/Conv.dir/Conveyor.cpp.o.provides
-
-CMakeFiles/Conv.dir/Conveyor.cpp.o.provides.build: CMakeFiles/Conv.dir/Conveyor.cpp.o
+CMakeFiles/Conv.dir/src/main.cpp.o.provides.build: CMakeFiles/Conv.dir/src/main.cpp.o
 
 
-CMakeFiles/Conv.dir/LoadingRobot.cpp.o: CMakeFiles/Conv.dir/flags.make
-CMakeFiles/Conv.dir/LoadingRobot.cpp.o: LoadingRobot.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Conv.dir/LoadingRobot.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Conv.dir/LoadingRobot.cpp.o -c "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/LoadingRobot.cpp"
+CMakeFiles/Conv.dir/src/Conveyor.cpp.o: CMakeFiles/Conv.dir/flags.make
+CMakeFiles/Conv.dir/src/Conveyor.cpp.o: src/Conveyor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Conv.dir/src/Conveyor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Conv.dir/src/Conveyor.cpp.o -c "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Conveyor.cpp"
 
-CMakeFiles/Conv.dir/LoadingRobot.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Conv.dir/LoadingRobot.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/LoadingRobot.cpp" > CMakeFiles/Conv.dir/LoadingRobot.cpp.i
+CMakeFiles/Conv.dir/src/Conveyor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Conv.dir/src/Conveyor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Conveyor.cpp" > CMakeFiles/Conv.dir/src/Conveyor.cpp.i
 
-CMakeFiles/Conv.dir/LoadingRobot.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Conv.dir/LoadingRobot.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/LoadingRobot.cpp" -o CMakeFiles/Conv.dir/LoadingRobot.cpp.s
+CMakeFiles/Conv.dir/src/Conveyor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Conv.dir/src/Conveyor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Conveyor.cpp" -o CMakeFiles/Conv.dir/src/Conveyor.cpp.s
 
-CMakeFiles/Conv.dir/LoadingRobot.cpp.o.requires:
+CMakeFiles/Conv.dir/src/Conveyor.cpp.o.requires:
 
-.PHONY : CMakeFiles/Conv.dir/LoadingRobot.cpp.o.requires
+.PHONY : CMakeFiles/Conv.dir/src/Conveyor.cpp.o.requires
 
-CMakeFiles/Conv.dir/LoadingRobot.cpp.o.provides: CMakeFiles/Conv.dir/LoadingRobot.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/LoadingRobot.cpp.o.provides.build
-.PHONY : CMakeFiles/Conv.dir/LoadingRobot.cpp.o.provides
+CMakeFiles/Conv.dir/src/Conveyor.cpp.o.provides: CMakeFiles/Conv.dir/src/Conveyor.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/Conveyor.cpp.o.provides.build
+.PHONY : CMakeFiles/Conv.dir/src/Conveyor.cpp.o.provides
 
-CMakeFiles/Conv.dir/LoadingRobot.cpp.o.provides.build: CMakeFiles/Conv.dir/LoadingRobot.cpp.o
+CMakeFiles/Conv.dir/src/Conveyor.cpp.o.provides.build: CMakeFiles/Conv.dir/src/Conveyor.cpp.o
 
 
-CMakeFiles/Conv.dir/ProcessingRobot.cpp.o: CMakeFiles/Conv.dir/flags.make
-CMakeFiles/Conv.dir/ProcessingRobot.cpp.o: ProcessingRobot.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Conv.dir/ProcessingRobot.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Conv.dir/ProcessingRobot.cpp.o -c "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/ProcessingRobot.cpp"
+CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o: CMakeFiles/Conv.dir/flags.make
+CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o: src/LoadingRobot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o -c "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/LoadingRobot.cpp"
 
-CMakeFiles/Conv.dir/ProcessingRobot.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Conv.dir/ProcessingRobot.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/ProcessingRobot.cpp" > CMakeFiles/Conv.dir/ProcessingRobot.cpp.i
+CMakeFiles/Conv.dir/src/LoadingRobot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Conv.dir/src/LoadingRobot.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/LoadingRobot.cpp" > CMakeFiles/Conv.dir/src/LoadingRobot.cpp.i
 
-CMakeFiles/Conv.dir/ProcessingRobot.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Conv.dir/ProcessingRobot.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/ProcessingRobot.cpp" -o CMakeFiles/Conv.dir/ProcessingRobot.cpp.s
+CMakeFiles/Conv.dir/src/LoadingRobot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Conv.dir/src/LoadingRobot.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/LoadingRobot.cpp" -o CMakeFiles/Conv.dir/src/LoadingRobot.cpp.s
 
-CMakeFiles/Conv.dir/ProcessingRobot.cpp.o.requires:
+CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o.requires:
 
-.PHONY : CMakeFiles/Conv.dir/ProcessingRobot.cpp.o.requires
+.PHONY : CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o.requires
 
-CMakeFiles/Conv.dir/ProcessingRobot.cpp.o.provides: CMakeFiles/Conv.dir/ProcessingRobot.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/ProcessingRobot.cpp.o.provides.build
-.PHONY : CMakeFiles/Conv.dir/ProcessingRobot.cpp.o.provides
+CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o.provides: CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o.provides.build
+.PHONY : CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o.provides
 
-CMakeFiles/Conv.dir/ProcessingRobot.cpp.o.provides.build: CMakeFiles/Conv.dir/ProcessingRobot.cpp.o
+CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o.provides.build: CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o
+
+
+CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o: CMakeFiles/Conv.dir/flags.make
+CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o: src/ProcessingRobot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o -c "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/ProcessingRobot.cpp"
+
+CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/ProcessingRobot.cpp" > CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.i
+
+CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/ProcessingRobot.cpp" -o CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.s
+
+CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o.requires:
+
+.PHONY : CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o.requires
+
+CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o.provides: CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o.provides.build
+.PHONY : CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o.provides
+
+CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o.provides.build: CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o
+
+
+CMakeFiles/Conv.dir/src/Item.cpp.o: CMakeFiles/Conv.dir/flags.make
+CMakeFiles/Conv.dir/src/Item.cpp.o: src/Item.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Conv.dir/src/Item.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Conv.dir/src/Item.cpp.o -c "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Item.cpp"
+
+CMakeFiles/Conv.dir/src/Item.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Conv.dir/src/Item.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Item.cpp" > CMakeFiles/Conv.dir/src/Item.cpp.i
+
+CMakeFiles/Conv.dir/src/Item.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Conv.dir/src/Item.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Item.cpp" -o CMakeFiles/Conv.dir/src/Item.cpp.s
+
+CMakeFiles/Conv.dir/src/Item.cpp.o.requires:
+
+.PHONY : CMakeFiles/Conv.dir/src/Item.cpp.o.requires
+
+CMakeFiles/Conv.dir/src/Item.cpp.o.provides: CMakeFiles/Conv.dir/src/Item.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/Item.cpp.o.provides.build
+.PHONY : CMakeFiles/Conv.dir/src/Item.cpp.o.provides
+
+CMakeFiles/Conv.dir/src/Item.cpp.o.provides.build: CMakeFiles/Conv.dir/src/Item.cpp.o
+
+
+CMakeFiles/Conv.dir/src/IndiItem.cpp.o: CMakeFiles/Conv.dir/flags.make
+CMakeFiles/Conv.dir/src/IndiItem.cpp.o: src/IndiItem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Conv.dir/src/IndiItem.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Conv.dir/src/IndiItem.cpp.o -c "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/IndiItem.cpp"
+
+CMakeFiles/Conv.dir/src/IndiItem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Conv.dir/src/IndiItem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/IndiItem.cpp" > CMakeFiles/Conv.dir/src/IndiItem.cpp.i
+
+CMakeFiles/Conv.dir/src/IndiItem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Conv.dir/src/IndiItem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/IndiItem.cpp" -o CMakeFiles/Conv.dir/src/IndiItem.cpp.s
+
+CMakeFiles/Conv.dir/src/IndiItem.cpp.o.requires:
+
+.PHONY : CMakeFiles/Conv.dir/src/IndiItem.cpp.o.requires
+
+CMakeFiles/Conv.dir/src/IndiItem.cpp.o.provides: CMakeFiles/Conv.dir/src/IndiItem.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/IndiItem.cpp.o.provides.build
+.PHONY : CMakeFiles/Conv.dir/src/IndiItem.cpp.o.provides
+
+CMakeFiles/Conv.dir/src/IndiItem.cpp.o.provides.build: CMakeFiles/Conv.dir/src/IndiItem.cpp.o
 
 
 # Object files for target Conv
 Conv_OBJECTS = \
-"CMakeFiles/Conv.dir/main.cpp.o" \
-"CMakeFiles/Conv.dir/Conveyor.cpp.o" \
-"CMakeFiles/Conv.dir/LoadingRobot.cpp.o" \
-"CMakeFiles/Conv.dir/ProcessingRobot.cpp.o"
+"CMakeFiles/Conv.dir/src/main.cpp.o" \
+"CMakeFiles/Conv.dir/src/Conveyor.cpp.o" \
+"CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o" \
+"CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o" \
+"CMakeFiles/Conv.dir/src/Item.cpp.o" \
+"CMakeFiles/Conv.dir/src/IndiItem.cpp.o"
 
 # External object files for target Conv
 Conv_EXTERNAL_OBJECTS =
 
-Conv: CMakeFiles/Conv.dir/main.cpp.o
-Conv: CMakeFiles/Conv.dir/Conveyor.cpp.o
-Conv: CMakeFiles/Conv.dir/LoadingRobot.cpp.o
-Conv: CMakeFiles/Conv.dir/ProcessingRobot.cpp.o
-Conv: CMakeFiles/Conv.dir/build.make
-Conv: CMakeFiles/Conv.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Conv"
+bin/Conv: CMakeFiles/Conv.dir/src/main.cpp.o
+bin/Conv: CMakeFiles/Conv.dir/src/Conveyor.cpp.o
+bin/Conv: CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o
+bin/Conv: CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o
+bin/Conv: CMakeFiles/Conv.dir/src/Item.cpp.o
+bin/Conv: CMakeFiles/Conv.dir/src/IndiItem.cpp.o
+bin/Conv: CMakeFiles/Conv.dir/build.make
+bin/Conv: CMakeFiles/Conv.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable bin/Conv"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Conv.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Conv.dir/build: Conv
+CMakeFiles/Conv.dir/build: bin/Conv
 
 .PHONY : CMakeFiles/Conv.dir/build
 
-CMakeFiles/Conv.dir/requires: CMakeFiles/Conv.dir/main.cpp.o.requires
-CMakeFiles/Conv.dir/requires: CMakeFiles/Conv.dir/Conveyor.cpp.o.requires
-CMakeFiles/Conv.dir/requires: CMakeFiles/Conv.dir/LoadingRobot.cpp.o.requires
-CMakeFiles/Conv.dir/requires: CMakeFiles/Conv.dir/ProcessingRobot.cpp.o.requires
+CMakeFiles/Conv.dir/requires: CMakeFiles/Conv.dir/src/main.cpp.o.requires
+CMakeFiles/Conv.dir/requires: CMakeFiles/Conv.dir/src/Conveyor.cpp.o.requires
+CMakeFiles/Conv.dir/requires: CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o.requires
+CMakeFiles/Conv.dir/requires: CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o.requires
+CMakeFiles/Conv.dir/requires: CMakeFiles/Conv.dir/src/Item.cpp.o.requires
+CMakeFiles/Conv.dir/requires: CMakeFiles/Conv.dir/src/IndiItem.cpp.o.requires
 
 .PHONY : CMakeFiles/Conv.dir/requires
 

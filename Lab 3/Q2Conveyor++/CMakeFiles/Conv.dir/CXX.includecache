@@ -6,53 +6,89 @@
 
 #IncludeRegexTransform: 
 
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/Conveyor.cpp
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Conveyor.cpp
 iostream
 -
 algorithm
 -
 Conveyor.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Conveyor.h
 
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/Conveyor.h
-
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/LoadingRobot.cpp
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/IndiItem.cpp
+IndiItem.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/IndiItem.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Item.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Conveyor.h
 cstdlib
+-
+
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Item.cpp
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Item.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Conveyor.h
+vector
+-
+
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/LoadingRobot.cpp
+cstdlib
+-
+iostream
+-
+string
 -
 LoadingRobot.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/LoadingRobot.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/LoadingRobot.h
 Conveyor.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Conveyor.h
 
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/LoadingRobot.h
-Conveyor.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/Conveyor.h
-
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/ProcessingRobot.cpp
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/ProcessingRobot.cpp
 iostream
 -
 cstdlib
 -
 algorithm
+-
+vector
 -
 ProcessingRobot.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/ProcessingRobot.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/ProcessingRobot.h
 
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/ProcessingRobot.h
-Conveyor.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/Conveyor.h
-
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/main.cpp
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/main.cpp
 iostream
 -
 cstdlib
 -
 algorithm
 -
+stdlib.h
+-
 Conveyor.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Conveyor.h
 LoadingRobot.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/LoadingRobot.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/LoadingRobot.h
 ProcessingRobot.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/ProcessingRobot.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/ProcessingRobot.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Item.h
+IndiItem.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/IndiItem.h
+
+include/Conveyor.h
+vector
+-
+
+include/IndiItem.h
+
+include/Item.h
+
+include/LoadingRobot.h
+Conveyor.h
+include/Conveyor.h
+
+include/ProcessingRobot.h
+Conveyor.h
+include/Conveyor.h
 

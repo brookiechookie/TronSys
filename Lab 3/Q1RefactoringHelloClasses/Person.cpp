@@ -5,7 +5,7 @@
 // Purpose:       Implementation for the class of Person.
 //                The methods include; greetings from one person to another,
 //                error checking and reporting
-// Modifications:
+// Modifications: 21.9.20 Code refactored and constructors added.  
 //
 
 
@@ -16,7 +16,7 @@
 
 
 //---Class implementation for Person---------------------------
-// Constructor created to initialise person 
+// Constructor created to initialise person
 // Init zeroes the hello count, and assigns a name
 Person::Person( std::string Name )
 {

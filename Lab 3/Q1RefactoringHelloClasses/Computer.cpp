@@ -4,7 +4,10 @@
 // Creator:       Brooke Agostino
 // Purpose:       Implementation for the class of Computer.
 //                Computers can say hello to people but not vice versa.
-// Modifications:
+// Modifications: 21.9.20 Code refactored and structure restyled in response to
+//                feedback from lab 1. Computer now has a send hello function
+//                instead of Person having the computer hello function. constructors
+//                also used.
 //
 
 

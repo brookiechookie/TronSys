@@ -13,12 +13,26 @@
 void Conveyor::Init()
 {
     _NumItemsOnConveyor = 0;
+    _CycleCount = 0;
 }
 
 //---------------------------------------------------------------
-void Conveyor::AddItems( int n )
+// Adds items to the conveyor and also doubles as a getter function
+// to return the number of items that were just added to the conveyor
+int Conveyor::AddItems( int n )
 {
     _NumItemsOnConveyor += n;
+
+    for(int i = 1; i <= n; i++ )
+    {
+        MyListOfItems.push_back( i );
+        std::cout << "[Item]: New Item " << i << " added" << std::endl;
+    }
+
+    _CycleCount++;
+    std::cout << "Current Cycle: " << _CycleCount << std::endl;
+
+    return n;
 }
 
 //---------------------------------------------------------------
@@ -32,5 +46,6 @@ void Conveyor::RemoveItems( int n )
 void Conveyor::Report()
 {
     std::cout << "Items on conveyor: " << _NumItemsOnConveyor << std::endl;
-}
 
+
+}

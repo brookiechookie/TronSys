@@ -4,15 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/Conveyor.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles/Conv.dir/Conveyor.cpp.o"
-  "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/LoadingRobot.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles/Conv.dir/LoadingRobot.cpp.o"
-  "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/ProcessingRobot.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles/Conv.dir/ProcessingRobot.cpp.o"
-  "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/main.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles/Conv.dir/main.cpp.o"
+  "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Conveyor.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles/Conv.dir/src/Conveyor.cpp.o"
+  "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/IndiItem.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles/Conv.dir/src/IndiItem.cpp.o"
+  "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/Item.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles/Conv.dir/src/Item.cpp.o"
+  "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/LoadingRobot.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o"
+  "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/ProcessingRobot.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o"
+  "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/src/main.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++/CMakeFiles/Conv.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "src"
+  "include"
   )
 
 # Targets to which this target links.

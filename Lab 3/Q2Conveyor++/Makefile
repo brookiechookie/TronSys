@@ -123,113 +123,167 @@ Conv/fast:
 	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/build
 .PHONY : Conv/fast
 
-Conveyor.o: Conveyor.cpp.o
+src/Conveyor.o: src/Conveyor.cpp.o
 
-.PHONY : Conveyor.o
-
-# target to build an object file
-Conveyor.cpp.o:
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/Conveyor.cpp.o
-.PHONY : Conveyor.cpp.o
-
-Conveyor.i: Conveyor.cpp.i
-
-.PHONY : Conveyor.i
-
-# target to preprocess a source file
-Conveyor.cpp.i:
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/Conveyor.cpp.i
-.PHONY : Conveyor.cpp.i
-
-Conveyor.s: Conveyor.cpp.s
-
-.PHONY : Conveyor.s
-
-# target to generate assembly for a file
-Conveyor.cpp.s:
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/Conveyor.cpp.s
-.PHONY : Conveyor.cpp.s
-
-LoadingRobot.o: LoadingRobot.cpp.o
-
-.PHONY : LoadingRobot.o
+.PHONY : src/Conveyor.o
 
 # target to build an object file
-LoadingRobot.cpp.o:
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/LoadingRobot.cpp.o
-.PHONY : LoadingRobot.cpp.o
+src/Conveyor.cpp.o:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/Conveyor.cpp.o
+.PHONY : src/Conveyor.cpp.o
 
-LoadingRobot.i: LoadingRobot.cpp.i
+src/Conveyor.i: src/Conveyor.cpp.i
 
-.PHONY : LoadingRobot.i
+.PHONY : src/Conveyor.i
 
 # target to preprocess a source file
-LoadingRobot.cpp.i:
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/LoadingRobot.cpp.i
-.PHONY : LoadingRobot.cpp.i
+src/Conveyor.cpp.i:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/Conveyor.cpp.i
+.PHONY : src/Conveyor.cpp.i
 
-LoadingRobot.s: LoadingRobot.cpp.s
+src/Conveyor.s: src/Conveyor.cpp.s
 
-.PHONY : LoadingRobot.s
+.PHONY : src/Conveyor.s
 
 # target to generate assembly for a file
-LoadingRobot.cpp.s:
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/LoadingRobot.cpp.s
-.PHONY : LoadingRobot.cpp.s
+src/Conveyor.cpp.s:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/Conveyor.cpp.s
+.PHONY : src/Conveyor.cpp.s
 
-ProcessingRobot.o: ProcessingRobot.cpp.o
+src/IndiItem.o: src/IndiItem.cpp.o
 
-.PHONY : ProcessingRobot.o
+.PHONY : src/IndiItem.o
 
 # target to build an object file
-ProcessingRobot.cpp.o:
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/ProcessingRobot.cpp.o
-.PHONY : ProcessingRobot.cpp.o
+src/IndiItem.cpp.o:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/IndiItem.cpp.o
+.PHONY : src/IndiItem.cpp.o
 
-ProcessingRobot.i: ProcessingRobot.cpp.i
+src/IndiItem.i: src/IndiItem.cpp.i
 
-.PHONY : ProcessingRobot.i
+.PHONY : src/IndiItem.i
 
 # target to preprocess a source file
-ProcessingRobot.cpp.i:
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/ProcessingRobot.cpp.i
-.PHONY : ProcessingRobot.cpp.i
+src/IndiItem.cpp.i:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/IndiItem.cpp.i
+.PHONY : src/IndiItem.cpp.i
 
-ProcessingRobot.s: ProcessingRobot.cpp.s
+src/IndiItem.s: src/IndiItem.cpp.s
 
-.PHONY : ProcessingRobot.s
+.PHONY : src/IndiItem.s
 
 # target to generate assembly for a file
-ProcessingRobot.cpp.s:
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/ProcessingRobot.cpp.s
-.PHONY : ProcessingRobot.cpp.s
+src/IndiItem.cpp.s:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/IndiItem.cpp.s
+.PHONY : src/IndiItem.cpp.s
 
-main.o: main.cpp.o
+src/Item.o: src/Item.cpp.o
 
-.PHONY : main.o
+.PHONY : src/Item.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/Item.cpp.o:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/Item.cpp.o
+.PHONY : src/Item.cpp.o
 
-main.i: main.cpp.i
+src/Item.i: src/Item.cpp.i
 
-.PHONY : main.i
+.PHONY : src/Item.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/Item.cpp.i:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/Item.cpp.i
+.PHONY : src/Item.cpp.i
 
-main.s: main.cpp.s
+src/Item.s: src/Item.cpp.s
 
-.PHONY : main.s
+.PHONY : src/Item.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/Item.cpp.s:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/Item.cpp.s
+.PHONY : src/Item.cpp.s
+
+src/LoadingRobot.o: src/LoadingRobot.cpp.o
+
+.PHONY : src/LoadingRobot.o
+
+# target to build an object file
+src/LoadingRobot.cpp.o:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/LoadingRobot.cpp.o
+.PHONY : src/LoadingRobot.cpp.o
+
+src/LoadingRobot.i: src/LoadingRobot.cpp.i
+
+.PHONY : src/LoadingRobot.i
+
+# target to preprocess a source file
+src/LoadingRobot.cpp.i:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/LoadingRobot.cpp.i
+.PHONY : src/LoadingRobot.cpp.i
+
+src/LoadingRobot.s: src/LoadingRobot.cpp.s
+
+.PHONY : src/LoadingRobot.s
+
+# target to generate assembly for a file
+src/LoadingRobot.cpp.s:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/LoadingRobot.cpp.s
+.PHONY : src/LoadingRobot.cpp.s
+
+src/ProcessingRobot.o: src/ProcessingRobot.cpp.o
+
+.PHONY : src/ProcessingRobot.o
+
+# target to build an object file
+src/ProcessingRobot.cpp.o:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.o
+.PHONY : src/ProcessingRobot.cpp.o
+
+src/ProcessingRobot.i: src/ProcessingRobot.cpp.i
+
+.PHONY : src/ProcessingRobot.i
+
+# target to preprocess a source file
+src/ProcessingRobot.cpp.i:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.i
+.PHONY : src/ProcessingRobot.cpp.i
+
+src/ProcessingRobot.s: src/ProcessingRobot.cpp.s
+
+.PHONY : src/ProcessingRobot.s
+
+# target to generate assembly for a file
+src/ProcessingRobot.cpp.s:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/ProcessingRobot.cpp.s
+.PHONY : src/ProcessingRobot.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/Conv.dir/build.make CMakeFiles/Conv.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -240,18 +294,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Conv"
 	@echo "... edit_cache"
-	@echo "... Conveyor.o"
-	@echo "... Conveyor.i"
-	@echo "... Conveyor.s"
-	@echo "... LoadingRobot.o"
-	@echo "... LoadingRobot.i"
-	@echo "... LoadingRobot.s"
-	@echo "... ProcessingRobot.o"
-	@echo "... ProcessingRobot.i"
-	@echo "... ProcessingRobot.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Conveyor.o"
+	@echo "... src/Conveyor.i"
+	@echo "... src/Conveyor.s"
+	@echo "... src/IndiItem.o"
+	@echo "... src/IndiItem.i"
+	@echo "... src/IndiItem.s"
+	@echo "... src/Item.o"
+	@echo "... src/Item.i"
+	@echo "... src/Item.s"
+	@echo "... src/LoadingRobot.o"
+	@echo "... src/LoadingRobot.i"
+	@echo "... src/LoadingRobot.s"
+	@echo "... src/ProcessingRobot.o"
+	@echo "... src/ProcessingRobot.i"
+	@echo "... src/ProcessingRobot.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

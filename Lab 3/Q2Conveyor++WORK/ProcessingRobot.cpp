@@ -7,6 +7,7 @@
 #include <iostream>
 #include <cstdlib>      // rand
 #include <algorithm>    // std::max
+#include <vector>       // vector 
 
 #include "ProcessingRobot.h"
 
@@ -21,5 +22,3 @@ void ProcessingRobot::ProcessItems()
 {
     _Conveyor->RemoveItems( 5 );
 }
-
-

@@ -7,6 +7,8 @@
 #ifndef _CONVEYOR_H
 #define _CONVEYOR_H
 
+#include <vector>     // Vector STL
+
 //---------------------------------------------------------------
 // Simulate a conveyor belt. This version just counts how many
 // objects are on the belt, and accepts requests to add and remove
@@ -15,12 +17,14 @@ class Conveyor
 {
     public:
         void Init();
-        void AddItems( int n );
+        int AddItems( int n );
         void RemoveItems( int n );
         void Report();
 
     private:
         int _NumItemsOnConveyor;
+        std::vector<int> MyListOfItems;
+        int _CycleCount;
 };
 
 

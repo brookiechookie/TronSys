@@ -6,6 +6,8 @@
 
 
 #include <cstdlib>      // rand
+#include <iostream>
+#include <string>
 
 #include "LoadingRobot.h"
 #include "Conveyor.h"
@@ -22,4 +24,3 @@ void LoadingRobot::AddItems()
 {
     _Conveyor->AddItems( rand() % 10 );
 }
-
