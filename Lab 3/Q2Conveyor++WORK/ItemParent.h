@@ -16,18 +16,21 @@
 class ItemParent
 {
     public:
-        ItemParent( );
+        ItemParent();
+        //ItemParent( int NewItemsAdded );
         ItemParent( Conveyor* WhichConveyor, ProcessingRobot* WhichProcessor, int NumberOfItemsToBeRemoved );
-        //void NewItem();
-        //virtual ~Item( );
         void AmountOfItemsRemoved();
+        void DeleshItems();
+        void print_container(const std::vector<int>& insertVector );
+
 
     protected:                // Protected classes allow derived classes to access the variable
         Conveyor* _Conveyor;
         ProcessingRobot* _ProcessingRobot;
         std::vector<int> TheHugeVector;
         int _NumItemsRemoved;
-        
+        int _ItemID;
+        int ItemsRemoving;
 
 
 };

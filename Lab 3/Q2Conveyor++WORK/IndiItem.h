@@ -13,7 +13,7 @@ class IndiItem: public ItemParent
 
     public:
         IndiItem( int NItemsAdded );
-        void RemoveIndiItem();
+
 
     private:
         int _ItemID;

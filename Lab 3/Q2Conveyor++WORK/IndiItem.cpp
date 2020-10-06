@@ -17,11 +17,13 @@ IndiItem::IndiItem( int NItemsAdded )
 
     for(int i = 1; i <= NItemsAdded; i++ )
     {
-        TheHugeVector.push_back( i );
-        _ItemID = rand() % 999999;
+        _ItemID = rand() % 999;
+        TheHugeVector.push_back( _ItemID );
 
-        std::cout << "[Item]: New Item " << i << " added to HugeVec. Item ID: " <<
+        std::cout << "[ItemP]: New Item " << i << " added to HugeVec. Item ID: " <<
         _ItemID << std::endl;
     }
+
+    print_container( TheHugeVector );
 
 }

@@ -37,6 +37,8 @@ ItemParent.h
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.cpp
 ItemParent.h
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.h
+vector
+-
 
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.h
 Conveyor.h
@@ -90,6 +92,8 @@ cstdlib
 algorithm
 -
 stdlib.h
+-
+vector
 -
 Conveyor.h
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.h

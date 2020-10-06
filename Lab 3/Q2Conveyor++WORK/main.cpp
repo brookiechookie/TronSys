@@ -8,6 +8,7 @@
 #include <cstdlib>      // rand
 #include <algorithm>    // std::max
 #include <stdlib.h>
+#include <vector>       // Vector STL
 
 #include "Conveyor.h"
 #include "LoadingRobot.h"
@@ -15,6 +16,7 @@
 #include "ItemParent.h"
 #include "IndiItem.h"
 
+void print_container(const std::vector<int>& insertVector);
 
 int main()
 {
@@ -24,32 +26,69 @@ int main()
     ProcessingRobot myProcessor;
 
 
-    int NumberOfItemsToBeRemoved = 5;
+    int NumberOfItemsToBeRemoved = 2;
     myConveyor.Init();
     myLoader.Init( &myConveyor );
     myProcessor.Init( &myConveyor, NumberOfItemsToBeRemoved );
 
     ItemParent *myItem = new ItemParent( &myConveyor, &myProcessor, NumberOfItemsToBeRemoved );
 
+    int i = 0;
+    std::vector<int> myVector;
 
-    while( 1 )
+    while( i < 10 )
     {
         std::cout << "___________________________" << std::endl;
         int ItemsBeingAdded = myLoader.AddItems();
-        IndiItem *theNewItem = new IndiItem( ItemsBeingAdded );
+
+        //IndiItem *theNewItem = new IndiItem( ItemsBeingAdded );
+//        //ItemParent  NewItem( ItemsBeingAdded );
+        //NewItem.ItemParent( ItemsBeingAdded );
+
+        //IndiItem NewItem( ItemsBeingAdded );
+        for(int i = 1; i <= ItemsBeingAdded; i++ )
+        {
+            int _ItemID = rand() % 999;
+            myVector.push_back( _ItemID );
+
+            std::cout << "[Main]: New Item " << i << " added to HugeVec. Item ID: " <<
+            _ItemID << std::endl;
+        }
+        print_container( myVector );
 
         myConveyor.Report();
         myProcessor.RemovalItemReport();
         myProcessor.ProcessItems();
-        myItem->AmountOfItemsRemoved();
+        //myItem->AmountOfItemsRemoved();
 
         myConveyor.Report();
+
+        int ItemsRemoving = myProcessor.GetProcessedItems();
+        std::cout << "[Main]: The number of items to remove is " << ItemsRemoving << std::endl;
+        for( int i = 0; i < ItemsRemoving; i++ )
+        {
+            std::cout << "[Main]: Index " << i << ", Item ID " << myVector.at(i) <<
+            " is being removed" << std::endl;
+
+        }
+        myVector.erase( myVector.begin(), myVector.begin() + ItemsRemoving );
+        print_container( myVector );
+
+        //myItem->DeleshItems();
+
+        i++;
     }
 
 
 
 }
 
-
-// Steps:
-//    1. I want to create a vector that is going to load
+//------------------------------------------------------------------------------
+void print_container(const std::vector<int>& insertVector )
+{
+    for (auto &i : insertVector )
+    {
+        std::cout << i << " ";
+    }
+    std::cout << '\n';
+}
