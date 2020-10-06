@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/HelpMe.dir/Conveyor.cpp.o"
   "CMakeFiles/HelpMe.dir/LoadingRobot.cpp.o"
   "CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o"
-  "CMakeFiles/HelpMe.dir/Item.cpp.o"
+  "CMakeFiles/HelpMe.dir/ItemParent.cpp.o"
   "CMakeFiles/HelpMe.dir/IndiItem.cpp.o"
   "HelpMe.pdb"
   "HelpMe"

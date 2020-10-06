@@ -20,6 +20,7 @@ class Conveyor
         int AddItems( int n );
         void RemoveItems( int n );
         void Report();
+        int GetNumItemsOnConveyor();
 
     private:
         int _NumItemsOnConveyor;

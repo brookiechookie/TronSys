@@ -16,10 +16,16 @@
 class ProcessingRobot
 {
     public:
-        void Init( Conveyor* WhichConveyor );
+        void Init( Conveyor* WhichConveyor, int NumItemsToBeRemoved );
         void ProcessItems();
+        int GetProcessedItems();
+        void RemovalItemReport();
+
     private:
         Conveyor* _Conveyor;
+        int _MaxItemRemoval;
+        int _NumItemsOnConv;
+        int _ProcessedItems;
 };
 
 #endif

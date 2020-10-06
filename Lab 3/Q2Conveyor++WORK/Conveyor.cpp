@@ -47,7 +47,13 @@ void Conveyor::RemoveItems( int n )
 //---------------------------------------------------------------
 void Conveyor::Report()
 {
-    std::cout << "Items on conveyor: " << _NumItemsOnConveyor << std::endl;
+    std::cout << "[Conveyor]: Items on conveyor: " << _NumItemsOnConveyor << std::endl;
 
+}
 
+//---------------------------------------------------------------
+// Getter function which returns the number of items on conveyor
+int Conveyor::GetNumItemsOnConveyor()
+{
+    return _NumItemsOnConveyor;
 }

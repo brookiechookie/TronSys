@@ -12,7 +12,7 @@
 #include "Conveyor.h"
 #include "LoadingRobot.h"
 #include "ProcessingRobot.h"
-#include "Item.h"
+#include "ItemParent.h"
 #include "IndiItem.h"
 
 
@@ -24,20 +24,25 @@ int main()
     ProcessingRobot myProcessor;
 
 
-
+    int NumberOfItemsToBeRemoved = 5;
     myConveyor.Init();
     myLoader.Init( &myConveyor );
-    myProcessor.Init( &myConveyor );
+    myProcessor.Init( &myConveyor, NumberOfItemsToBeRemoved );
 
-    Item *myItem = new Item( &myConveyor );
+    ItemParent *myItem = new ItemParent( &myConveyor, &myProcessor, NumberOfItemsToBeRemoved );
 
 
     while( 1 )
     {
         std::cout << "___________________________" << std::endl;
-        myLoader.AddItems();
+        int ItemsBeingAdded = myLoader.AddItems();
+        IndiItem *theNewItem = new IndiItem( ItemsBeingAdded );
+
         myConveyor.Report();
+        myProcessor.RemovalItemReport();
         myProcessor.ProcessItems();
+        myItem->AmountOfItemsRemoved();
+
         myConveyor.Report();
     }
 

@@ -3,7 +3,7 @@
 // Implementation file for an individual Item on the conveyor belt
 
 #include "IndiItem.h"
-#include "Item.h"
+#include "ItemParent.h"
 
 #include "Conveyor.h"
 
@@ -18,13 +18,10 @@ IndiItem::IndiItem( int NItemsAdded )
     for(int i = 1; i <= NItemsAdded; i++ )
     {
         TheHugeVector.push_back( i );
-        std::cout << "[Item]: New Item " << i << " added to HugeVec" << std::endl;
+        _ItemID = rand() % 999999;
+
+        std::cout << "[Item]: New Item " << i << " added to HugeVec. Item ID: " <<
+        _ItemID << std::endl;
     }
-
-    /*
-    // Assign a new ID to each object of Item that gets created
-    _ItemID = rand() % 999999;
-    */
-
 
 }

@@ -177,32 +177,32 @@ IndiItem.cpp.s:
 	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/IndiItem.cpp.s
 .PHONY : IndiItem.cpp.s
 
-Item.o: Item.cpp.o
+ItemParent.o: ItemParent.cpp.o
 
-.PHONY : Item.o
+.PHONY : ItemParent.o
 
 # target to build an object file
-Item.cpp.o:
-	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/Item.cpp.o
-.PHONY : Item.cpp.o
+ItemParent.cpp.o:
+	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/ItemParent.cpp.o
+.PHONY : ItemParent.cpp.o
 
-Item.i: Item.cpp.i
+ItemParent.i: ItemParent.cpp.i
 
-.PHONY : Item.i
+.PHONY : ItemParent.i
 
 # target to preprocess a source file
-Item.cpp.i:
-	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/Item.cpp.i
-.PHONY : Item.cpp.i
+ItemParent.cpp.i:
+	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/ItemParent.cpp.i
+.PHONY : ItemParent.cpp.i
 
-Item.s: Item.cpp.s
+ItemParent.s: ItemParent.cpp.s
 
-.PHONY : Item.s
+.PHONY : ItemParent.s
 
 # target to generate assembly for a file
-Item.cpp.s:
-	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/Item.cpp.s
-.PHONY : Item.cpp.s
+ItemParent.cpp.s:
+	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/ItemParent.cpp.s
+.PHONY : ItemParent.cpp.s
 
 LoadingRobot.o: LoadingRobot.cpp.o
 
@@ -300,9 +300,9 @@ help:
 	@echo "... IndiItem.o"
 	@echo "... IndiItem.i"
 	@echo "... IndiItem.s"
-	@echo "... Item.o"
-	@echo "... Item.i"
-	@echo "... Item.s"
+	@echo "... ItemParent.o"
+	@echo "... ItemParent.i"
+	@echo "... ItemParent.s"
 	@echo "... LoadingRobot.o"
 	@echo "... LoadingRobot.i"
 	@echo "... LoadingRobot.s"

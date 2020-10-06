@@ -4,25 +4,31 @@
 // Initial revision: Donald G Dansereau, 2019
 // Completed by:
 
-#ifndef _ITEM_H
-#define _ITEM_H
+#ifndef _ITEMPARENT_H
+#define _ITEMPARENT_H
 
 #include "Conveyor.h"
+#include "ProcessingRobot.h"
 #include <vector>     // Vector STL
 #include <iostream>     // std::cout
 #include <cstdlib>      // For rand()
 
-class Item
+class ItemParent
 {
     public:
-        Item( );
-        Item( Conveyor* WhichConveyor );
+        ItemParent( );
+        ItemParent( Conveyor* WhichConveyor, ProcessingRobot* WhichProcessor, int NumberOfItemsToBeRemoved );
         //void NewItem();
         //virtual ~Item( );
+        void AmountOfItemsRemoved();
 
     protected:                // Protected classes allow derived classes to access the variable
         Conveyor* _Conveyor;
+        ProcessingRobot* _ProcessingRobot;
         std::vector<int> TheHugeVector;
+        int _NumItemsRemoved;
+        
+
 
 };
 

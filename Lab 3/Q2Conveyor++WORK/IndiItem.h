@@ -5,14 +5,15 @@
 #ifndef _INDIITEM_H
 #define _INDIITEM_H
 
-#include "Item.h"
+#include "ItemParent.h"
 
 
-class IndiItem: public Item
+class IndiItem: public ItemParent
 {
 
     public:
         IndiItem( int NItemsAdded );
+        void RemoveIndiItem();
 
     private:
         int _ItemID;

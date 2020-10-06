@@ -6,7 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/CMakeFiles/HelpMe.dir/Conveyor.cpp.o"
   "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/IndiItem.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/CMakeFiles/HelpMe.dir/IndiItem.cpp.o"
-  "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/CMakeFiles/HelpMe.dir/Item.cpp.o"
+  "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/CMakeFiles/HelpMe.dir/ItemParent.cpp.o"
   "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/LoadingRobot.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/CMakeFiles/HelpMe.dir/LoadingRobot.cpp.o"
   "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ProcessingRobot.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o"
   "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/main.cpp" "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/CMakeFiles/HelpMe.dir/main.cpp.o"

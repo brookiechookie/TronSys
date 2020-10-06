@@ -32,14 +32,22 @@ int main()
   std::vector<double> v;
   for (int i = 0; i < 10; ++i)
   {
-    v.push_back(i + 0.14159);
+    v.push_back(i);
   }
 
   // range-based for loop to iterate (C++11)
   for( const double n : v )
   std::cout << n << std::endl;
-  
+
+  v.erase(v.begin());
+
+  // range-based for loop to iterate (C++11)
+  for( const double n : v )
+  std::cout << n << std::endl;
+  /*
   // the same using an automatic type (C++11)
   for( const auto n : v )
   std::cout << n << std::endl;
+  */
+
 }

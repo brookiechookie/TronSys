@@ -19,9 +19,10 @@ class LoadingRobot
 {
     public:
         void Init( Conveyor* WhichConveyor );
-        void AddItems();
+        int AddItems();
     private:
         Conveyor* _Conveyor;
+        int _ItemsToAdd;
 };
 
 
