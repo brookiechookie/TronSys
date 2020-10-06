@@ -23,7 +23,7 @@ void ProcessingRobot::Init( Conveyor* WhichConveyor, int NumItemsToBeRemoved )
 // This function removes items from the conveyor
 void ProcessingRobot::ProcessItems()
 {
-    _Conveyor->RemoveItems( _MaxItemRemoval );
+    _Conveyor->RemoveItems( _ProcessedItems );
 }
 
 

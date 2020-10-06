@@ -26,5 +26,6 @@ Item::Item( int index )
 // Class Item Destructor
 Item::~Item()
 {
-
+    std::cout << "[DTor]: Item " << _ItemID << " is signing off."
+    << std::endl;
 }

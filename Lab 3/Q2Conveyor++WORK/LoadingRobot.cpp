@@ -24,6 +24,6 @@ int LoadingRobot::AddItems()
 {
     _ItemsToAdd = rand() % 5;
     _Conveyor->AddItems( _ItemsToAdd );
-    std::cout << "[LoadingRob]: " << _ItemsToAdd << " items added to conveyor" << std::endl;
+    //std::cout << "[LoadingRob]: " << _ItemsToAdd << " items added to conveyor" << std::endl;
     return _ItemsToAdd;
 }

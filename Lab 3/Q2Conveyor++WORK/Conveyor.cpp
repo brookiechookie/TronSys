@@ -60,6 +60,29 @@ void Conveyor::RemoveItems( int n )
 {
     // Note that we cannot have a negative number of items on belt
     _NumItemsOnConveyor = std::max(0, _NumItemsOnConveyor-n);
+
+    std::cout << "[Conv]: Remove " << n << " items" << std::endl;
+
+    // Delete the item
+    // Delete the element where the item was
+
+    /*
+    for( vector<Item*>::iterator pObj = MyListOfItems.begin(); pObj < ( MyListOfItems.begin() + n ); ++pObj  )
+    {
+        delete *pObj;
+    }
+*/
+    _TotalItemsInPointer = _TotalItemsInPointer - n;
+
+    for( std::vector<Item*>::iterator pObj = MyListOfItems.begin(); pObj < ( MyListOfItems.begin() + n ) ; ++pObj  )
+    {
+
+        delete *pObj; // Deletes the item in the vector
+    }
+
+    MyListOfItems.erase( MyListOfItems.begin(), MyListOfItems.begin() + n );
+
+
 }
 
 //---------------------------------------------------------------
