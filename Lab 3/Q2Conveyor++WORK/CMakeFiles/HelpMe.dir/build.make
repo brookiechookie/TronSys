@@ -153,52 +153,28 @@ CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o.provides: CMakeFiles/HelpMe.dir/Proc
 CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o.provides.build: CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o
 
 
-CMakeFiles/HelpMe.dir/ItemParent.cpp.o: CMakeFiles/HelpMe.dir/flags.make
-CMakeFiles/HelpMe.dir/ItemParent.cpp.o: ItemParent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HelpMe.dir/ItemParent.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HelpMe.dir/ItemParent.cpp.o -c "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.cpp"
+CMakeFiles/HelpMe.dir/Item.cpp.o: CMakeFiles/HelpMe.dir/flags.make
+CMakeFiles/HelpMe.dir/Item.cpp.o: Item.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HelpMe.dir/Item.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HelpMe.dir/Item.cpp.o -c "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.cpp"
 
-CMakeFiles/HelpMe.dir/ItemParent.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelpMe.dir/ItemParent.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.cpp" > CMakeFiles/HelpMe.dir/ItemParent.cpp.i
+CMakeFiles/HelpMe.dir/Item.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelpMe.dir/Item.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.cpp" > CMakeFiles/HelpMe.dir/Item.cpp.i
 
-CMakeFiles/HelpMe.dir/ItemParent.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelpMe.dir/ItemParent.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.cpp" -o CMakeFiles/HelpMe.dir/ItemParent.cpp.s
+CMakeFiles/HelpMe.dir/Item.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelpMe.dir/Item.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.cpp" -o CMakeFiles/HelpMe.dir/Item.cpp.s
 
-CMakeFiles/HelpMe.dir/ItemParent.cpp.o.requires:
+CMakeFiles/HelpMe.dir/Item.cpp.o.requires:
 
-.PHONY : CMakeFiles/HelpMe.dir/ItemParent.cpp.o.requires
+.PHONY : CMakeFiles/HelpMe.dir/Item.cpp.o.requires
 
-CMakeFiles/HelpMe.dir/ItemParent.cpp.o.provides: CMakeFiles/HelpMe.dir/ItemParent.cpp.o.requires
-	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/ItemParent.cpp.o.provides.build
-.PHONY : CMakeFiles/HelpMe.dir/ItemParent.cpp.o.provides
+CMakeFiles/HelpMe.dir/Item.cpp.o.provides: CMakeFiles/HelpMe.dir/Item.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/Item.cpp.o.provides.build
+.PHONY : CMakeFiles/HelpMe.dir/Item.cpp.o.provides
 
-CMakeFiles/HelpMe.dir/ItemParent.cpp.o.provides.build: CMakeFiles/HelpMe.dir/ItemParent.cpp.o
-
-
-CMakeFiles/HelpMe.dir/IndiItem.cpp.o: CMakeFiles/HelpMe.dir/flags.make
-CMakeFiles/HelpMe.dir/IndiItem.cpp.o: IndiItem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HelpMe.dir/IndiItem.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HelpMe.dir/IndiItem.cpp.o -c "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/IndiItem.cpp"
-
-CMakeFiles/HelpMe.dir/IndiItem.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelpMe.dir/IndiItem.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/IndiItem.cpp" > CMakeFiles/HelpMe.dir/IndiItem.cpp.i
-
-CMakeFiles/HelpMe.dir/IndiItem.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelpMe.dir/IndiItem.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/IndiItem.cpp" -o CMakeFiles/HelpMe.dir/IndiItem.cpp.s
-
-CMakeFiles/HelpMe.dir/IndiItem.cpp.o.requires:
-
-.PHONY : CMakeFiles/HelpMe.dir/IndiItem.cpp.o.requires
-
-CMakeFiles/HelpMe.dir/IndiItem.cpp.o.provides: CMakeFiles/HelpMe.dir/IndiItem.cpp.o.requires
-	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/IndiItem.cpp.o.provides.build
-.PHONY : CMakeFiles/HelpMe.dir/IndiItem.cpp.o.provides
-
-CMakeFiles/HelpMe.dir/IndiItem.cpp.o.provides.build: CMakeFiles/HelpMe.dir/IndiItem.cpp.o
+CMakeFiles/HelpMe.dir/Item.cpp.o.provides.build: CMakeFiles/HelpMe.dir/Item.cpp.o
 
 
 # Object files for target HelpMe
@@ -207,8 +183,7 @@ HelpMe_OBJECTS = \
 "CMakeFiles/HelpMe.dir/Conveyor.cpp.o" \
 "CMakeFiles/HelpMe.dir/LoadingRobot.cpp.o" \
 "CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o" \
-"CMakeFiles/HelpMe.dir/ItemParent.cpp.o" \
-"CMakeFiles/HelpMe.dir/IndiItem.cpp.o"
+"CMakeFiles/HelpMe.dir/Item.cpp.o"
 
 # External object files for target HelpMe
 HelpMe_EXTERNAL_OBJECTS =
@@ -217,11 +192,10 @@ HelpMe: CMakeFiles/HelpMe.dir/main.cpp.o
 HelpMe: CMakeFiles/HelpMe.dir/Conveyor.cpp.o
 HelpMe: CMakeFiles/HelpMe.dir/LoadingRobot.cpp.o
 HelpMe: CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o
-HelpMe: CMakeFiles/HelpMe.dir/ItemParent.cpp.o
-HelpMe: CMakeFiles/HelpMe.dir/IndiItem.cpp.o
+HelpMe: CMakeFiles/HelpMe.dir/Item.cpp.o
 HelpMe: CMakeFiles/HelpMe.dir/build.make
 HelpMe: CMakeFiles/HelpMe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable HelpMe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable HelpMe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HelpMe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -233,8 +207,7 @@ CMakeFiles/HelpMe.dir/requires: CMakeFiles/HelpMe.dir/main.cpp.o.requires
 CMakeFiles/HelpMe.dir/requires: CMakeFiles/HelpMe.dir/Conveyor.cpp.o.requires
 CMakeFiles/HelpMe.dir/requires: CMakeFiles/HelpMe.dir/LoadingRobot.cpp.o.requires
 CMakeFiles/HelpMe.dir/requires: CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o.requires
-CMakeFiles/HelpMe.dir/requires: CMakeFiles/HelpMe.dir/ItemParent.cpp.o.requires
-CMakeFiles/HelpMe.dir/requires: CMakeFiles/HelpMe.dir/IndiItem.cpp.o.requires
+CMakeFiles/HelpMe.dir/requires: CMakeFiles/HelpMe.dir/Item.cpp.o.requires
 
 .PHONY : CMakeFiles/HelpMe.dir/requires
 

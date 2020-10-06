@@ -3,28 +3,24 @@
 
 CMakeFiles/HelpMe.dir/Conveyor.cpp.o: Conveyor.cpp
 CMakeFiles/HelpMe.dir/Conveyor.cpp.o: Conveyor.h
+CMakeFiles/HelpMe.dir/Conveyor.cpp.o: Item.h
 
-CMakeFiles/HelpMe.dir/IndiItem.cpp.o: Conveyor.h
-CMakeFiles/HelpMe.dir/IndiItem.cpp.o: IndiItem.cpp
-CMakeFiles/HelpMe.dir/IndiItem.cpp.o: IndiItem.h
-CMakeFiles/HelpMe.dir/IndiItem.cpp.o: ItemParent.h
-CMakeFiles/HelpMe.dir/IndiItem.cpp.o: ProcessingRobot.h
-
-CMakeFiles/HelpMe.dir/ItemParent.cpp.o: Conveyor.h
-CMakeFiles/HelpMe.dir/ItemParent.cpp.o: ItemParent.cpp
-CMakeFiles/HelpMe.dir/ItemParent.cpp.o: ItemParent.h
-CMakeFiles/HelpMe.dir/ItemParent.cpp.o: ProcessingRobot.h
+CMakeFiles/HelpMe.dir/Item.cpp.o: Item.cpp
+CMakeFiles/HelpMe.dir/Item.cpp.o: Item.h
 
 CMakeFiles/HelpMe.dir/LoadingRobot.cpp.o: Conveyor.h
+CMakeFiles/HelpMe.dir/LoadingRobot.cpp.o: Item.h
 CMakeFiles/HelpMe.dir/LoadingRobot.cpp.o: LoadingRobot.cpp
 CMakeFiles/HelpMe.dir/LoadingRobot.cpp.o: LoadingRobot.h
 
 CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o: Conveyor.h
+CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o: Item.h
 CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o: ProcessingRobot.cpp
 CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o: ProcessingRobot.h
 
 CMakeFiles/HelpMe.dir/main.cpp.o: Conveyor.h
 CMakeFiles/HelpMe.dir/main.cpp.o: IndiItem.h
+CMakeFiles/HelpMe.dir/main.cpp.o: Item.h
 CMakeFiles/HelpMe.dir/main.cpp.o: ItemParent.h
 CMakeFiles/HelpMe.dir/main.cpp.o: LoadingRobot.h
 CMakeFiles/HelpMe.dir/main.cpp.o: ProcessingRobot.h

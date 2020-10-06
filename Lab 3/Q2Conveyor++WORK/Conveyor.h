@@ -8,6 +8,7 @@
 #define _CONVEYOR_H
 
 #include <vector>     // Vector STL
+#include "Item.h"
 
 //---------------------------------------------------------------
 // Simulate a conveyor belt. This version just counts how many
@@ -24,8 +25,13 @@ class Conveyor
 
     private:
         int _NumItemsOnConveyor;
-        std::vector<int> MyListOfItems;
+        //std::vector<int> MyListOfItems;
+        std::vector<Item*> MyListOfItems;
         int _CycleCount;
+        Item* pItems;
+        int _TotalItemsInPointer;
+        int _index;
+        int _UniqueID;
 };
 
 

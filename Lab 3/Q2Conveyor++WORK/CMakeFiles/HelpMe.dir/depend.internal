@@ -4,28 +4,24 @@
 CMakeFiles/HelpMe.dir/Conveyor.cpp.o
  /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.cpp
  /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.h
-CMakeFiles/HelpMe.dir/IndiItem.cpp.o
- /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.h
- /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/IndiItem.cpp
- /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/IndiItem.h
- /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.h
- /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ProcessingRobot.h
-CMakeFiles/HelpMe.dir/ItemParent.cpp.o
- /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.h
- /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.cpp
- /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.h
- /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ProcessingRobot.h
+ /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
+CMakeFiles/HelpMe.dir/Item.cpp.o
+ /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.cpp
+ /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
 CMakeFiles/HelpMe.dir/LoadingRobot.cpp.o
  /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.h
+ /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
  /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/LoadingRobot.cpp
  /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/LoadingRobot.h
 CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o
  /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.h
+ /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
  /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ProcessingRobot.cpp
  /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ProcessingRobot.h
 CMakeFiles/HelpMe.dir/main.cpp.o
  /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.h
  /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/IndiItem.h
+ /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
  /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.h
  /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/LoadingRobot.h
  /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ProcessingRobot.h

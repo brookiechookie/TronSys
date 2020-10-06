@@ -16,7 +16,6 @@
 #include "ItemParent.h"
 #include "IndiItem.h"
 
-void print_container(const std::vector<int>& insertVector);
 
 int main()
 {
@@ -31,22 +30,25 @@ int main()
     myLoader.Init( &myConveyor );
     myProcessor.Init( &myConveyor, NumberOfItemsToBeRemoved );
 
-    ItemParent *myItem = new ItemParent( &myConveyor, &myProcessor, NumberOfItemsToBeRemoved );
+    //ItemParent *myItem = new ItemParent( &myConveyor, &myProcessor, NumberOfItemsToBeRemoved );
 
     int i = 0;
-    std::vector<int> myVector;
+    //std::vector<int> myVector;
 
     while( i < 10 )
     {
         std::cout << "___________________________" << std::endl;
-        int ItemsBeingAdded = myLoader.AddItems();
+        //int ItemsBeingAdded = myLoader.AddItems();
 
+        myLoader.AddItems();
         //IndiItem *theNewItem = new IndiItem( ItemsBeingAdded );
 //        //ItemParent  NewItem( ItemsBeingAdded );
         //NewItem.ItemParent( ItemsBeingAdded );
 
         //IndiItem NewItem( ItemsBeingAdded );
-        for(int i = 1; i <= ItemsBeingAdded; i++ )
+
+        /*
+        for( int i = 1; i <= ItemsBeingAdded; i++ )
         {
             int _ItemID = rand() % 999;
             myVector.push_back( _ItemID );
@@ -55,6 +57,8 @@ int main()
             _ItemID << std::endl;
         }
         print_container( myVector );
+        */
+
 
         myConveyor.Report();
         myProcessor.RemovalItemReport();
@@ -63,6 +67,7 @@ int main()
 
         myConveyor.Report();
 
+/*
         int ItemsRemoving = myProcessor.GetProcessedItems();
         std::cout << "[Main]: The number of items to remove is " << ItemsRemoving << std::endl;
         for( int i = 0; i < ItemsRemoving; i++ )
@@ -73,6 +78,7 @@ int main()
         }
         myVector.erase( myVector.begin(), myVector.begin() + ItemsRemoving );
         print_container( myVector );
+*/
 
         //myItem->DeleshItems();
 
@@ -83,8 +89,10 @@ int main()
 
 }
 
+
+/*
 //------------------------------------------------------------------------------
-void print_container(const std::vector<int>& insertVector )
+void Conveyor::print_container(const std::vector<Object*>& insertVector )
 {
     for (auto &i : insertVector )
     {
@@ -92,3 +100,4 @@ void print_container(const std::vector<int>& insertVector )
     }
     std::cout << '\n';
 }
+*/

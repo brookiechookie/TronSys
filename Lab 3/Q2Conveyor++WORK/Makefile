@@ -150,59 +150,32 @@ Conveyor.cpp.s:
 	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/Conveyor.cpp.s
 .PHONY : Conveyor.cpp.s
 
-IndiItem.o: IndiItem.cpp.o
+Item.o: Item.cpp.o
 
-.PHONY : IndiItem.o
-
-# target to build an object file
-IndiItem.cpp.o:
-	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/IndiItem.cpp.o
-.PHONY : IndiItem.cpp.o
-
-IndiItem.i: IndiItem.cpp.i
-
-.PHONY : IndiItem.i
-
-# target to preprocess a source file
-IndiItem.cpp.i:
-	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/IndiItem.cpp.i
-.PHONY : IndiItem.cpp.i
-
-IndiItem.s: IndiItem.cpp.s
-
-.PHONY : IndiItem.s
-
-# target to generate assembly for a file
-IndiItem.cpp.s:
-	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/IndiItem.cpp.s
-.PHONY : IndiItem.cpp.s
-
-ItemParent.o: ItemParent.cpp.o
-
-.PHONY : ItemParent.o
+.PHONY : Item.o
 
 # target to build an object file
-ItemParent.cpp.o:
-	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/ItemParent.cpp.o
-.PHONY : ItemParent.cpp.o
+Item.cpp.o:
+	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/Item.cpp.o
+.PHONY : Item.cpp.o
 
-ItemParent.i: ItemParent.cpp.i
+Item.i: Item.cpp.i
 
-.PHONY : ItemParent.i
+.PHONY : Item.i
 
 # target to preprocess a source file
-ItemParent.cpp.i:
-	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/ItemParent.cpp.i
-.PHONY : ItemParent.cpp.i
+Item.cpp.i:
+	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/Item.cpp.i
+.PHONY : Item.cpp.i
 
-ItemParent.s: ItemParent.cpp.s
+Item.s: Item.cpp.s
 
-.PHONY : ItemParent.s
+.PHONY : Item.s
 
 # target to generate assembly for a file
-ItemParent.cpp.s:
-	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/ItemParent.cpp.s
-.PHONY : ItemParent.cpp.s
+Item.cpp.s:
+	$(MAKE) -f CMakeFiles/HelpMe.dir/build.make CMakeFiles/HelpMe.dir/Item.cpp.s
+.PHONY : Item.cpp.s
 
 LoadingRobot.o: LoadingRobot.cpp.o
 
@@ -297,12 +270,9 @@ help:
 	@echo "... Conveyor.o"
 	@echo "... Conveyor.i"
 	@echo "... Conveyor.s"
-	@echo "... IndiItem.o"
-	@echo "... IndiItem.i"
-	@echo "... IndiItem.s"
-	@echo "... ItemParent.o"
-	@echo "... ItemParent.i"
-	@echo "... ItemParent.s"
+	@echo "... Item.o"
+	@echo "... Item.i"
+	@echo "... Item.s"
 	@echo "... LoadingRobot.o"
 	@echo "... LoadingRobot.i"
 	@echo "... LoadingRobot.s"

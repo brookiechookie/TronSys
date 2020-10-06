@@ -8,13 +8,18 @@
 #include <algorithm>    // std::max
 
 #include "Conveyor.h"
+#include "Item.h"
 
-//---------------------------------------------------------------
+//------------------------------------------------------------------------------
 void Conveyor::Init()
 {
     _NumItemsOnConveyor = 0;
     _CycleCount = 0;
+    _TotalItemsInPointer = 0;
+    _index = 0;
+    _UniqueID = 0;
 }
+
 
 //---------------------------------------------------------------
 // Adds items to the conveyor and also doubles as a getter function
@@ -23,19 +28,32 @@ int Conveyor::AddItems( int n )
 {
     _NumItemsOnConveyor += n;
 
-    /*
-    for(int i = 1; i <= n; i++ )
+    std::cout << "[Conv]: " <<  n << " items added to the conveyor" << std::endl;
+
+    for( _index = _TotalItemsInPointer ; _index < (n + _TotalItemsInPointer) ; _index++ )
     {
-        MyListOfItems.push_back( i );
-        std::cout << "[Item]: New Item " << i << " added" << std::endl;
+        // 1. Create a new object Item with an ID
+        // 2. Add this object to the vector
+
+        std::cout << "[Conv]: Enterred For Loop. Index " << _index << std::endl;
+
+        pItems = new Item( _UniqueID );
+        MyListOfItems.push_back( pItems );
+        _UniqueID++;
+
     }
-    */
+
+    _TotalItemsInPointer = _TotalItemsInPointer + n;
+
 
     _CycleCount++;
-    std::cout << "Current Cycle: " << _CycleCount << std::endl;
+
+    std::cout << "[Conv]: Current Cycle: " << _CycleCount << std::endl;
 
     return n;
 }
+
+
 
 //---------------------------------------------------------------
 void Conveyor::RemoveItems( int n )
