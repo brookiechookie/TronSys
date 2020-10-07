@@ -30,7 +30,7 @@ class Conveyor
         int _CycleCount;
         Item* pItems;
         int _TotalItemsInPointer;
-        int _index;
+        int _i;
         int _UniqueID;
 };
 

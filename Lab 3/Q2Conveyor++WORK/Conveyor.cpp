@@ -16,7 +16,7 @@ void Conveyor::Init()
     _NumItemsOnConveyor = 0;
     _CycleCount = 0;
     _TotalItemsInPointer = 0;
-    _index = 0;
+    _i = 0;
     _UniqueID = 0;
 }
 
@@ -30,24 +30,21 @@ int Conveyor::AddItems( int n )
 
     std::cout << "[Conv]: " <<  n << " items added to the conveyor" << std::endl;
 
-    for( _index = _TotalItemsInPointer ; _index < (n + _TotalItemsInPointer) ; _index++ )
+    for( _i = _TotalItemsInPointer ; _i < (n + _TotalItemsInPointer) ; _i++ )
     {
         // 1. Create a new object Item with an ID
         // 2. Add this object to the vector
 
-        std::cout << "[Conv]: Enterred For Loop. Index " << _index << std::endl;
+        std::cout << "[Conv]: At Index " << _i << std::endl;
 
-        pItems = new Item( _UniqueID );
-        MyListOfItems.push_back( pItems );
+        pItems = new Item( _UniqueID );     // Creating new item object
+        MyListOfItems.push_back( pItems );  // Put a pointer to this object in the vector
         _UniqueID++;
 
     }
 
     _TotalItemsInPointer = _TotalItemsInPointer + n;
-
-
     _CycleCount++;
-
     std::cout << "[Conv]: Current Cycle: " << _CycleCount << std::endl;
 
     return n;
@@ -61,34 +58,27 @@ void Conveyor::RemoveItems( int n )
     // Note that we cannot have a negative number of items on belt
     _NumItemsOnConveyor = std::max(0, _NumItemsOnConveyor-n);
 
-    std::cout << "[Conv]: Remove " << n << " items" << std::endl;
+    std::cout << "[Conv]: " << n << " items being removed" << std::endl;
 
     // Delete the item
     // Delete the element where the item was
 
-    /*
-    for( vector<Item*>::iterator pObj = MyListOfItems.begin(); pObj < ( MyListOfItems.begin() + n ); ++pObj  )
-    {
-        delete *pObj;
-    }
-*/
     _TotalItemsInPointer = _TotalItemsInPointer - n;
 
     for( std::vector<Item*>::iterator pObj = MyListOfItems.begin(); pObj < ( MyListOfItems.begin() + n ) ; ++pObj  )
     {
 
-        delete *pObj; // Deletes the item in the vector
+        delete *pObj; // Deletes the item object
     }
 
-    MyListOfItems.erase( MyListOfItems.begin(), MyListOfItems.begin() + n );
-
+    MyListOfItems.erase( MyListOfItems.begin(), MyListOfItems.begin() + n );  // Deletes the element in the vector
 
 }
 
 //---------------------------------------------------------------
 void Conveyor::Report()
 {
-    std::cout << "[Conveyor]: Items on conveyor: " << _NumItemsOnConveyor << std::endl;
+    std::cout << "[Conv]: Items on conveyor: " << _NumItemsOnConveyor << std::endl;
 
 }
 

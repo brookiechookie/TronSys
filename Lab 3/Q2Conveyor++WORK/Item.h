@@ -13,7 +13,7 @@
 class Item
 {
     public:
-        Item( int index );
+        Item( int SpecialID );
         ~Item();
 
     private:

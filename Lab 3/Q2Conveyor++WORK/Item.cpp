@@ -9,23 +9,16 @@
 
 //------------------------------------------------------------------------------
 // Class Item Constructor
-Item::Item( int index )
+Item::Item( int SpecialID )
 {
-    //_ItemID = rand() % 999;
-    _ItemID = index;
-    std::cout << "[ItemCon]: Item with ID " << _ItemID << " added" << std::endl;
-
-    /*
-    _ItemID = rand() % 999;
-    MyVectorOfItems.push_back( _ItemID );
-    std::cout << "[Item]: New Item added" << std::endl;
-    */
+    _ItemID = SpecialID;
+    std::cout << "[Item]: Item with ID " << _ItemID << " added" << std::endl;
 }
 
 //------------------------------------------------------------------------------
 // Class Item Destructor
 Item::~Item()
 {
-    std::cout << "[DTor]: Item " << _ItemID << " is signing off."
+    std::cout << "[DTor]: Item with ID " << _ItemID << " is signing off."
     << std::endl;
 }

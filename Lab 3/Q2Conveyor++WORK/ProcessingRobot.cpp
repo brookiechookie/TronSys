@@ -50,5 +50,5 @@ void ProcessingRobot::RemovalItemReport()
         _ProcessedItems = _MaxItemRemoval;
     }
 
-    std::cout << "[Processor]: " << _ProcessedItems << " items removed" << std::endl;
+    std::cout << "[Proc]: Please remove " << _ProcessedItems << " items" << std::endl;
 }
