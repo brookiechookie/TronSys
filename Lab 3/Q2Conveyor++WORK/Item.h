@@ -1,6 +1,9 @@
 // Item.h
 //
-// Header file ffor Item class in Simulated Conveyor Belt
+// Creator:   Brookie
+// Date:      6.10.20
+// Purpose:   Header file for Item class in Simulated Conveyor Belt
+
 
 #ifndef _ITEM_H
 #define _ITEM_H
@@ -22,14 +25,12 @@ class Item
         float TimeONgetter();
 
     private:
-        int _ItemID;
+        int   _ItemID;
         float _ProcTime;
         float _TimeON;
         float _TimeOFF;
 
-
 };
-
 
 
 

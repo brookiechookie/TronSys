@@ -1,8 +1,9 @@
 // Conveyor.cpp
 //
-// Implementation file for a simulated conveyor belt
-// Initial revision: Donald G Dansereau, 2019
-// Completed by:
+// Creator:   Brookie
+// Date:      6.10.20
+// Purpose:   Implementation file for the Conveyor class
+
 
 #include <iostream>     // std::cout
 #include <algorithm>    // std::max
@@ -11,21 +12,24 @@
 #include "Item.h"
 
 //------------------------------------------------------------------------------
-void Conveyor::Init( float MaxProcessingTime )
+// Constructor for Conveyor, setting various variables
+Conveyor::Conveyor( float MaxProcessingTime, int ErrorValue )
 {
-    _NumItemsOnConveyor = 0;
-    _CycleCount = 0;
-    _TotalItemsInPointer = 0;
-    _i = 0;
-    _UniqueID = 0;
-    _MaxProcessingTime = MaxProcessingTime;
+    _NumItemsOnConveyor   = 0;
+    _CycleCount           = 0;
+    _TotalItemsInPointer  = 0;
+    _i                    = 0;
+    _UniqueID             = 0;
+    _MaxProcessingTime    = MaxProcessingTime;
+    _ErrorValue           = ErrorValue;
 }
 
 
 //------------------------------------------------------------------------------
-// Adds items to the conveyor and also doubles as a getter function
-// to return the number of items that were just added to the conveyor
-int Conveyor::AddItems( int n )
+// This function adds items to the conveyor, keeps track of the cycle count and
+// also creates objects for all the new items being added and stores them in
+// a vector of class item
+void Conveyor::AddItems( int n )
 {
     _NumItemsOnConveyor += n;
     _CycleCount++;
@@ -41,8 +45,8 @@ int Conveyor::AddItems( int n )
 
         pItems = new Item( _UniqueID );     // Creating new item object
         MyListOfItems.push_back( pItems );  // Put a pointer to this object in the vector
-        _TimeONCalculated = _CycleCount * _MaxProcessingTime;
-        pItems->TimeONSetter( _TimeONCalculated );
+        _TimeONCalculated = _CycleCount * _MaxProcessingTime; // Record the time that the
+        pItems->TimeONSetter( _TimeONCalculated );            // item was loaded onto conveyor
 
         std::cout << "[Conv]: Time ON = " << _TimeONCalculated << std::endl;
         _UniqueID++;
@@ -52,20 +56,19 @@ int Conveyor::AddItems( int n )
     _TotalItemsInPointer = _TotalItemsInPointer + n;
 
     std::cout << "[Conv]: Current Cycle: " << _CycleCount << std::endl;
-
-    return n;
 }
 
 
 
 //------------------------------------------------------------------------------
+// This function removes items from the conveyor belt, and at the same time also
+// deletes the object item and removes it from the vector storing all the items
 void Conveyor::RemoveItems( int n )
 {
     // Note that we cannot have a negative number of items on belt
     _NumItemsOnConveyor = std::max(0, _NumItemsOnConveyor-n);
 
     std::cout << "[Conv]: " << n << " items being removed" << std::endl;
-
 
     // Delete the item
     // Delete the element where the item was
@@ -74,24 +77,20 @@ void Conveyor::RemoveItems( int n )
 
     for( std::vector<Item*>::iterator pObj = MyListOfItems.begin(); pObj < ( MyListOfItems.begin() + n ) ; ++pObj  )
     {
-
         delete *pObj; // Deletes the item object
     }
 
-    MyListOfItems.erase( MyListOfItems.begin(), MyListOfItems.begin() + n );  // Deletes the element in the vector
-
-
+    // Deletes the element in the vector
+    MyListOfItems.erase( MyListOfItems.begin(), MyListOfItems.begin() + n );
 }
-
 
 
 //------------------------------------------------------------------------------
+// This simply reports the number of items currenly on the conveyor
 void Conveyor::Report()
 {
     std::cout << "[Conv]: Items on conveyor: " << _NumItemsOnConveyor << std::endl;
-
 }
-
 
 
 //------------------------------------------------------------------------------
@@ -100,7 +99,6 @@ int Conveyor::GetNumItemsOnConveyor()
 {
     return _NumItemsOnConveyor;
 }
-
 
 
 //------------------------------------------------------------------------------
@@ -123,7 +121,7 @@ float Conveyor::GetItemProcTime( int _ItemIndex )
     }
     else
     {
-        _ProcTimeReturning = 999;
+        _ProcTimeReturning = _ErrorValue;
     }
 
     return _ProcTimeReturning;
@@ -140,7 +138,9 @@ int Conveyor::CycleCountGetter()
 
 
 //------------------------------------------------------------------------------
-//
+// This function sets the off time for an item. In order to do this, we must
+// know the index of the item in the vector, and also the time that the item
+// was taken off the conveyor
 void Conveyor::SettingItemTimeOFF( int currentIndex, float TimeOFFcalculated )
 {
     Item* pLilItem = MyListOfItems.at( currentIndex );
@@ -149,7 +149,9 @@ void Conveyor::SettingItemTimeOFF( int currentIndex, float TimeOFFcalculated )
 
 
 //------------------------------------------------------------------------------
-//
+// This function is essentially a double getter function as it is first getting
+// the timeon variable from item and then the function itself is a getter which
+// returns the timeOn value 
 float Conveyor::TimeONGetGet( int currentIndex )
 {
     Item* pAnothItem = MyListOfItems.at( currentIndex );

@@ -1,8 +1,8 @@
 // Conveyor.h
 //
-// Header file for a simulated conveyor belt
-// Initial revision: Donald G Dansereau, 2019
-// Completed by:
+// Creator:   Brookie
+// Date:      6.10.20
+// Purpose:   Header file for Conveyor class in Simulated Conveyor Belt
 
 #ifndef _CONVEYOR_H
 #define _CONVEYOR_H
@@ -17,8 +17,8 @@
 class Conveyor
 {
     public:
-        void Init( float MaxProcessingTime );
-        int AddItems( int n );
+        Conveyor( float MaxProcessingTime, int ErrorValue );
+        void AddItems( int n );
         void RemoveItems( int n );
         void Report();
         int GetNumItemsOnConveyor();
@@ -29,18 +29,18 @@ class Conveyor
 
 
     private:
-        int _NumItemsOnConveyor;
         std::vector<Item*> MyListOfItems;
-        int _CycleCount;
+        int   _NumItemsOnConveyor;
+        int   _CycleCount;
         Item* pItems;
-        int _TotalItemsInPointer;
-        int _i;
-        int _UniqueID;
+        int   _TotalItemsInPointer;
+        int   _i;
+        int   _UniqueID;
         float _ProcTimeReturning;
         float _MaxProcessingTime;
         float _TimeONCalculated;
         float _ItemTimeON;
-
+        int   _ErrorValue;
 
 };
 

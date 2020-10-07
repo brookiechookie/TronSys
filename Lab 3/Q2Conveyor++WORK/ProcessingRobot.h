@@ -1,8 +1,8 @@
 // ProcessingRobot.h
 //
-// Header file for a robot that processes items off a conveyor belt
-// Initial revision: Donald G Dansereau, 2019
-// Completed by:
+// Creator:   Brookie
+// Date:      6.10.20
+// Purpose:   Header file for ProcessingRobot class in Simulated Conveyor Belt
 
 #ifndef _PROCESSINGROBOT_H
 #define _PROCESSINGROBOT_H
@@ -17,10 +17,9 @@
 class ProcessingRobot
 {
     public:
-        void Init( Conveyor* WhichConveyor, int NumItemsToBeRemoved, float MaxProcessingTime );
+        ProcessingRobot( Conveyor* WhichConveyor, float MaxProcessingTime, int ErrorVal );
         void ProcessItems();
         int GetProcessedItems();
-        void RemovalItemReport();
         void ProccessItemsTimed();
         void AvgArmUtil();
         void CalcWaitTime( int currentIndex );
@@ -29,26 +28,27 @@ class ProcessingRobot
 
     private:
         Conveyor* _Conveyor;
-        int _MaxItemRemoval;
-        int _NumItemsOnConv;
-        int _ProcessedItems;
-        Item* _Item;
-        float _IndividualItemProcTime;
-        float _TotalTime;
-        int   _UnderTimeLimit;
-        int _CurrentIndex;
-        float _CurrentItemTime;
-        float _MaxTotalProcTime;
-        int _CycleCount;
-        float _RobotArmUsageTime;
-        float _AvgArmUtilTime;
-        float _TotalRunTime;
-        float _TimeOFFCalculated;
-        float _ItemTimeON;
-        int _TotNumProcItem;
-        float _ItemWaitTime;
-        float _TotalWaitTime;
-        float _AVGWaitTime;
+        int       _MaxItemRemoval;
+        int       _NumItemsOnConv;
+        int       _ProcessedItems;
+        Item*     _Item;
+        float     _IndividualItemProcTime;
+        float     _TotalTime;
+        int       _UnderTimeLimit;
+        int       _CurrentIndex;
+        float     _CurrentItemTime;
+        float     _MaxTotalProcTime;
+        int       _CycleCount;
+        float     _RobotArmUsageTime;
+        float     _AvgArmUtilTime;
+        float     _TotalRunTime;
+        float     _TimeOFFCalculated;
+        float     _ItemTimeON;
+        int       _TotNumProcItem;
+        float     _ItemWaitTime;
+        float     _TotalWaitTime;
+        float     _AVGWaitTime;
+        int       _ErrorValue;
 
 };
 

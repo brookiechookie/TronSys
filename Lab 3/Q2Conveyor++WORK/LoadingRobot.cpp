@@ -1,8 +1,9 @@
 // LoadingRobot.cpp
 //
-// Implementation file for a robot that can load items onto a conveyor belt
-// Initial revision: Donald G Dansereau, 2019
-// Completed by:
+// Creator:   Brookie
+// Date:      6.10.20
+// Purpose:   Implementation file for the LoadingRobot class
+
 
 
 #include <cstdlib>      // rand
@@ -13,17 +14,19 @@
 #include "Conveyor.h"
 
 
-//---------------------------------------------------------------
-void LoadingRobot::Init( Conveyor* WhichConveyor )
+//------------------------------------------------------------------------------
+// Constructor for Loading Robot
+LoadingRobot::LoadingRobot( Conveyor* WhichConveyor )
 {
     _Conveyor = WhichConveyor;
 }
 
-//---------------------------------------------------------------
+//------------------------------------------------------------------------------
+// This function is responsible for loading a "random" number of items onto the
+// conveyor 
 int LoadingRobot::AddItems()
 {
     _ItemsToAdd = rand() % 10;
     _Conveyor->AddItems( _ItemsToAdd );
-    //std::cout << "[LoadingRob]: " << _ItemsToAdd << " items added to conveyor" << std::endl;
     return _ItemsToAdd;
 }

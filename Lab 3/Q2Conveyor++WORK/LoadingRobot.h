@@ -1,8 +1,8 @@
 // LoadingRobot.h
 //
-// Header file for a robot that can load items onto a conveyor belt
-// Initial revision: Donald G Dansereau, 2019
-// Completed by:
+// Creator:   Brookie
+// Date:      6.10.20
+// Purpose:   Header file for LoadingRobot class in Simulated Conveyor Belt
 
 #ifndef _LOADINGROBOT_H
 #define _LOADINGROBOT_H
@@ -18,7 +18,7 @@
 class LoadingRobot
 {
     public:
-        void Init( Conveyor* WhichConveyor );
+        LoadingRobot( Conveyor* WhichConveyor );
         int AddItems();
     private:
         Conveyor* _Conveyor;
