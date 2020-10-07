@@ -11,13 +11,14 @@
 #include "Item.h"
 
 //------------------------------------------------------------------------------
-void Conveyor::Init()
+void Conveyor::Init( float MaxProcessingTime )
 {
     _NumItemsOnConveyor = 0;
     _CycleCount = 0;
     _TotalItemsInPointer = 0;
     _i = 0;
     _UniqueID = 0;
+    _MaxProcessingTime = MaxProcessingTime;
 }
 
 
@@ -27,6 +28,7 @@ void Conveyor::Init()
 int Conveyor::AddItems( int n )
 {
     _NumItemsOnConveyor += n;
+    _CycleCount++;
 
     std::cout << "[Conv]: " <<  n << " items added to the conveyor" << std::endl;
 
@@ -39,12 +41,16 @@ int Conveyor::AddItems( int n )
 
         pItems = new Item( _UniqueID );     // Creating new item object
         MyListOfItems.push_back( pItems );  // Put a pointer to this object in the vector
+        _TimeONCalculated = _CycleCount * _MaxProcessingTime;
+        pItems->TimeONSetter( _TimeONCalculated );
+
+        std::cout << "[Conv]: Time ON = " << _TimeONCalculated << std::endl;
         _UniqueID++;
 
     }
 
     _TotalItemsInPointer = _TotalItemsInPointer + n;
-    _CycleCount++;
+
     std::cout << "[Conv]: Current Cycle: " << _CycleCount << std::endl;
 
     return n;
@@ -60,6 +66,7 @@ void Conveyor::RemoveItems( int n )
 
     std::cout << "[Conv]: " << n << " items being removed" << std::endl;
 
+
     // Delete the item
     // Delete the element where the item was
 
@@ -72,6 +79,7 @@ void Conveyor::RemoveItems( int n )
     }
 
     MyListOfItems.erase( MyListOfItems.begin(), MyListOfItems.begin() + n );  // Deletes the element in the vector
+
 
 }
 
@@ -128,4 +136,23 @@ float Conveyor::GetItemProcTime( int _ItemIndex )
 int Conveyor::CycleCountGetter()
 {
     return _CycleCount;
+}
+
+
+//------------------------------------------------------------------------------
+//
+void Conveyor::SettingItemTimeOFF( int currentIndex, float TimeOFFcalculated )
+{
+    Item* pLilItem = MyListOfItems.at( currentIndex );
+    pLilItem->TimeOFFSetter( TimeOFFcalculated );
+}
+
+
+//------------------------------------------------------------------------------
+//
+float Conveyor::TimeONGetGet( int currentIndex )
+{
+    Item* pAnothItem = MyListOfItems.at( currentIndex );
+    _ItemTimeON = pAnothItem->TimeONgetter();
+    return _ItemTimeON;
 }

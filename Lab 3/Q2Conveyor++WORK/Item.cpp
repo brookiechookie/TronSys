@@ -40,3 +40,25 @@ float Item::ProcTimeGetter()
 {
     return _ProcTime;
 }
+
+
+//------------------------------------------------------------------------------
+//
+float Item::TimeONSetter( float TimeON )
+{
+    _TimeON = TimeON;
+}
+
+//------------------------------------------------------------------------------
+//
+float Item::TimeOFFSetter( float TimeOFF )
+{
+    _TimeOFF = TimeOFF;
+}
+
+//------------------------------------------------------------------------------
+//
+float Item::TimeONgetter()
+{
+    return _TimeON;
+}

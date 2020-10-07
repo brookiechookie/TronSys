@@ -17,18 +17,19 @@
 class Conveyor
 {
     public:
-        void Init();
+        void Init( float MaxProcessingTime );
         int AddItems( int n );
         void RemoveItems( int n );
         void Report();
         int GetNumItemsOnConveyor();
         float GetItemProcTime( int _ItemIndex );
         int CycleCountGetter();
+        void SettingItemTimeOFF( int currentIndex, float TimeOFFcalculated );
+        float TimeONGetGet( int currentIndex );
 
 
     private:
         int _NumItemsOnConveyor;
-        //std::vector<int> MyListOfItems;
         std::vector<Item*> MyListOfItems;
         int _CycleCount;
         Item* pItems;
@@ -36,6 +37,11 @@ class Conveyor
         int _i;
         int _UniqueID;
         float _ProcTimeReturning;
+        float _MaxProcessingTime;
+        float _TimeONCalculated;
+        float _ItemTimeON;
+
+
 };
 
 

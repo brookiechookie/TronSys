@@ -28,7 +28,7 @@ int main()
     int NumberOfItemsToBeRemoved = 2;
     float MaxProcessingTime = 16.1;
 
-    myConveyor.Init();
+    myConveyor.Init( MaxProcessingTime );
     myLoader.Init( &myConveyor );
     myProcessor.Init( &myConveyor, NumberOfItemsToBeRemoved, MaxProcessingTime );
 
@@ -37,9 +37,9 @@ int main()
     int i = 0;
     //std::vector<int> myVector;
 
-    while( i < 10 )
+    while( i < 10000 )
     {
-        std::cout << "___________________________" << std::endl;
+        std::cout << "___________________________ " << std::endl;
 
         myLoader.AddItems();
 
@@ -53,10 +53,11 @@ int main()
         i++;
     }
 
-    
+
     std::cout << "***************************************************" << std::endl;
     std::cout << "                  Final Report                     " << std::endl;
     myProcessor.AvgArmUtil();
+    myProcessor.AvgItemWaitTime();
     std::cout << "***************************************************" << std::endl;
 
 

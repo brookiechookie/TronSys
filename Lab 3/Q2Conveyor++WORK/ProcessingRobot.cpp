@@ -21,6 +21,8 @@ void ProcessingRobot::Init( Conveyor* WhichConveyor, int NumItemsToBeRemoved, fl
     _MaxTotalProcTime   = MaxProcessingTime;
     _CycleCount         = 0;
     _RobotArmUsageTime  = 0;
+    _TotNumProcItem     = 0;
+    _TotalWaitTime      = 0;
 
 }
 
@@ -30,6 +32,10 @@ void ProcessingRobot::Init( Conveyor* WhichConveyor, int NumItemsToBeRemoved, fl
 void ProcessingRobot::ProcessItems()
 {
     _Conveyor->RemoveItems( _CurrentIndex );
+
+    // Count the number of items that have been processed
+    _TotNumProcItem = _TotNumProcItem + _CurrentIndex;
+    std::cout << "[Proc]: Total number of proc items = " << _TotNumProcItem << std::endl;
 }
 
 
@@ -82,6 +88,7 @@ void ProcessingRobot::ProccessItemsTimed()
     _CurrentIndex     = 0;
     _CurrentItemTime  = 0;
 
+    _CycleCount = _Conveyor->CycleCountGetter();
     //std::cout << "[Proc]: New Func Enterred " << std::endl;
 
 
@@ -104,18 +111,30 @@ void ProcessingRobot::ProccessItemsTimed()
         {
             //std::cout << "[Proc]: Total time is currently less than max time " << std::endl;
             //std::cout << "[Proc]: Max Time = "<< _MaxTotalProcTime << std::endl;
-            std::cout << "[Proc]: Total Time = "<< _TotalTime << std::endl;
+            //std::cout << "[Proc]: Total Time = "<< _TotalTime << std::endl;
 
             if( (_TotalTime + _CurrentItemTime) <= _MaxTotalProcTime )
             {
                 _TotalTime = _TotalTime + _CurrentItemTime;
-                _CurrentIndex++;
+
                 std::cout << "[Proc]: Safe to add next time, new tot time = " << _TotalTime << std::endl;
+
+                _TimeOFFCalculated = ( _CycleCount * _MaxTotalProcTime ) + _TotalTime;
+                _Conveyor->SettingItemTimeOFF( _CurrentIndex, _TimeOFFCalculated );
+                std::cout << "[Proc]: Item Time OFF = " << _TimeOFFCalculated << std::endl;
+
+                // Before we get rid of the item we quickly want to store the
+                // amount of time that this item waited before being processed.
+                CalcWaitTime( _CurrentIndex );
+
+
+
+                _CurrentIndex++;
             }
             else
             {
                 _UnderTimeLimit = 0;
-                std::cout << "[Proc]: Not safe to process next time" << std::endl;
+                std::cout << "[Proc]: Not safe to process next item" << std::endl;
             }
         }
 
@@ -130,10 +149,12 @@ void ProcessingRobot::ProccessItemsTimed()
 
 
 //------------------------------------------------------------------------------
-//
+// This function calculates the average amount of time that the robot arm is
+// being used. In order to do this a time count of how much the arm is being
+// used per cycle is stored and divided by the total amount of time that has
+// passed in the system.
 void ProcessingRobot::AvgArmUtil()
 {
-    _CycleCount = _Conveyor->CycleCountGetter();
     _TotalRunTime = _CycleCount*_MaxTotalProcTime;
 
     _AvgArmUtilTime = ( _RobotArmUsageTime/_TotalRunTime ) * 100;
@@ -143,4 +164,24 @@ void ProcessingRobot::AvgArmUtil()
     std::cout << "Avg Arm Util Time = " << _AvgArmUtilTime << std::endl;
 
     std::cout << "[Proc]: Average Arm Util Time = "<< _AvgArmUtilTime << "%" << std::endl;
+}
+
+//------------------------------------------------------------------------------
+//
+void ProcessingRobot::CalcWaitTime( int currentIndex )
+{
+    _ItemTimeON = _Conveyor->TimeONGetGet( currentIndex );
+    _ItemWaitTime = _TimeOFFCalculated - _ItemTimeON;
+
+    _TotalWaitTime = _TotalWaitTime + _ItemWaitTime;
+}
+
+//------------------------------------------------------------------------------
+// To calculate the average wait time, we must the total weight time of all the
+// items by the number of items that has been processed
+void ProcessingRobot::AvgItemWaitTime()
+{
+    _AVGWaitTime = _TotalWaitTime/float(_TotNumProcItem);
+    std::cout << "[Proc]: AVG Item wait time = "<< _AVGWaitTime << " sec"<< std::endl;
+
 }

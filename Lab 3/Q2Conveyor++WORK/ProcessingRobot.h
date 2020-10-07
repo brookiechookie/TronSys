@@ -23,6 +23,9 @@ class ProcessingRobot
         void RemovalItemReport();
         void ProccessItemsTimed();
         void AvgArmUtil();
+        void CalcWaitTime( int currentIndex );
+        void AvgItemWaitTime();
+
 
     private:
         Conveyor* _Conveyor;
@@ -40,6 +43,12 @@ class ProcessingRobot
         float _RobotArmUsageTime;
         float _AvgArmUtilTime;
         float _TotalRunTime;
+        float _TimeOFFCalculated;
+        float _ItemTimeON;
+        int _TotNumProcItem;
+        float _ItemWaitTime;
+        float _TotalWaitTime;
+        float _AVGWaitTime;
 
 };
 
