@@ -8,6 +8,7 @@
 
 #include <iostream>     // std::cout
 #include <cstdlib>      // For rand()
+#include <random>       // For uniform number generation
 
 
 class Item
@@ -15,9 +16,11 @@ class Item
     public:
         Item( int SpecialID );
         ~Item();
+        float ProcTimeGetter();
 
     private:
         int _ItemID;
+        float _ProcTime;
 
 
 };

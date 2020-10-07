@@ -22,6 +22,9 @@ class Conveyor
         void RemoveItems( int n );
         void Report();
         int GetNumItemsOnConveyor();
+        float GetItemProcTime( int _ItemIndex );
+        int CycleCountGetter();
+
 
     private:
         int _NumItemsOnConveyor;
@@ -32,6 +35,7 @@ class Conveyor
         int _TotalItemsInPointer;
         int _i;
         int _UniqueID;
+        float _ProcTimeReturning;
 };
 
 

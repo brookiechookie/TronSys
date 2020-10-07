@@ -35,6 +35,8 @@ iostream
 -
 cstdlib
 -
+random
+-
 
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.h
 Conveyor.h
@@ -75,10 +77,16 @@ vector
 -
 ProcessingRobot.h
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ProcessingRobot.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
 
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ProcessingRobot.h
 Conveyor.h
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
 
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/main.cpp
 iostream

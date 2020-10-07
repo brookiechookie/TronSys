@@ -26,9 +26,11 @@ int main()
 
 
     int NumberOfItemsToBeRemoved = 2;
+    float MaxProcessingTime = 16.1;
+
     myConveyor.Init();
     myLoader.Init( &myConveyor );
-    myProcessor.Init( &myConveyor, NumberOfItemsToBeRemoved );
+    myProcessor.Init( &myConveyor, NumberOfItemsToBeRemoved, MaxProcessingTime );
 
     //ItemParent *myItem = new ItemParent( &myConveyor, &myProcessor, NumberOfItemsToBeRemoved );
 
@@ -42,24 +44,20 @@ int main()
         myLoader.AddItems();
 
         myConveyor.Report();
-        myProcessor.RemovalItemReport();
+        myProcessor.ProccessItemsTimed();
+        //myProcessor.RemovalItemReport();
         myProcessor.ProcessItems();
         myConveyor.Report();
+
 
         i++;
     }
 
-}
+    
+    std::cout << "***************************************************" << std::endl;
+    std::cout << "                  Final Report                     " << std::endl;
+    myProcessor.AvgArmUtil();
+    std::cout << "***************************************************" << std::endl;
 
 
-/*
-//------------------------------------------------------------------------------
-void Conveyor::print_container(const std::vector<Object*>& insertVector )
-{
-    for (auto &i : insertVector )
-    {
-        std::cout << i << " ";
-    }
-    std::cout << '\n';
 }
-*/

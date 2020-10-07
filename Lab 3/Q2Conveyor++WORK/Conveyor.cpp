@@ -21,7 +21,7 @@ void Conveyor::Init()
 }
 
 
-//---------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Adds items to the conveyor and also doubles as a getter function
 // to return the number of items that were just added to the conveyor
 int Conveyor::AddItems( int n )
@@ -52,7 +52,7 @@ int Conveyor::AddItems( int n )
 
 
 
-//---------------------------------------------------------------
+//------------------------------------------------------------------------------
 void Conveyor::RemoveItems( int n )
 {
     // Note that we cannot have a negative number of items on belt
@@ -75,16 +75,57 @@ void Conveyor::RemoveItems( int n )
 
 }
 
-//---------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
 void Conveyor::Report()
 {
     std::cout << "[Conv]: Items on conveyor: " << _NumItemsOnConveyor << std::endl;
 
 }
 
-//---------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
 // Getter function which returns the number of items on conveyor
 int Conveyor::GetNumItemsOnConveyor()
 {
     return _NumItemsOnConveyor;
+}
+
+
+
+//------------------------------------------------------------------------------
+// The purpose of this function is to take an integer input at which the user
+// desires to obtain data from the vector that contains the items. I.e. input
+// the index in which you wish to obtain the processing time variable for.
+float Conveyor::GetItemProcTime( int _ItemIndex )
+{
+    // If the input index is less than the current highest index for the vector
+    // then there exists a valid item. If the desired index is greater than the
+    // current index then there is no item and we must return a value that the
+    // processing robot can check against to make sure it is a valid proc time
+    if( _ItemIndex < _i )
+    {
+      // Right hand side is going to return a pointer to an Item
+      // we need to dereference this item and access the proc time variable
+        Item* pItem = MyListOfItems.at( _ItemIndex );
+        _ProcTimeReturning = pItem->ProcTimeGetter();
+
+    }
+    else
+    {
+        _ProcTimeReturning = 999;
+    }
+
+    return _ProcTimeReturning;
+
+}
+
+
+//------------------------------------------------------------------------------
+// The purpose of this getter is to return the cycle count
+int Conveyor::CycleCountGetter()
+{
+    return _CycleCount;
 }
