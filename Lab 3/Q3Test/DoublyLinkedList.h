@@ -18,6 +18,7 @@ class DoublyLinkedList
         void pop_front( );
         //void printList(Item* item);
         void printList( );
+        int Size();
 
     private:
         int   _ItemID;

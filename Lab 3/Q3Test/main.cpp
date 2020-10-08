@@ -21,7 +21,7 @@ int main()
 
     DoublyLinkedList myList;
 
-    //int _UniqueID = 2;
+    int sizeUp = 0;
 
     //Item* pItems = new Item( _UniqueID );
     //myList.push_back( pItems, _UniqueID);
@@ -29,16 +29,27 @@ int main()
     myList.push_back( 2 );
     myList.push_back( 3 );
     myList.printList( );
+    sizeUp = myList.Size();
+    std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
+
     myList.pop_front( );
     myList.pop_front( );
     myList.pop_front( );
     myList.printList( );
+    sizeUp = myList.Size();
+    std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
+
     myList.push_back( 4 );
     myList.push_back( 5 );
     myList.printList( );
+    sizeUp = myList.Size();
+    std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
+
     myList.pop_front( );
     myList.pop_front( );
     myList.printList( );
+    sizeUp = myList.Size();
+    std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
 
     std::cout << "[Main]: I am done here." << std::endl;
 

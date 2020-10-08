@@ -78,8 +78,6 @@ void DoublyLinkedList::printList()
     }
     */
 
-    std::cout << "[Disp]: There are " << _CountOfItems << " items in your list" << std::endl;
-
 }
 
 
@@ -136,4 +134,9 @@ void DoublyLinkedList::pop_front( )
     _CountOfItems--;
 
     return;
+}
+
+int DoublyLinkedList::Size()
+{
+    return _CountOfItems;
 }
