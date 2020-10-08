@@ -29,6 +29,16 @@ int main()
     myList.push_back( 2 );
     myList.push_back( 3 );
     myList.printList( );
+    myList.pop_front( );
+    myList.pop_front( );
+    myList.pop_front( );
+    myList.printList( );
+    myList.push_back( 4 );
+    myList.push_back( 5 );
+    myList.printList( );
+    myList.pop_front( );
+    myList.pop_front( );
+    myList.printList( );
 
     std::cout << "[Main]: I am done here." << std::endl;
 

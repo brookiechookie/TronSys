@@ -13,9 +13,9 @@
 class DoublyLinkedList
 {
     public:
-        DoublyLinkedList();
+        DoublyLinkedList( );
         void push_back(int _TheItemID);
-        void pop_front(Item** head_ref );
+        void pop_front( );
         //void printList(Item* item);
         void printList( );
 

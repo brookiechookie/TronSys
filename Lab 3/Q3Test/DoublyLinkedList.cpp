@@ -79,42 +79,41 @@ void DoublyLinkedList::printList()
     */
 
     std::cout << "[Disp]: There are " << _CountOfItems << " items in your list" << std::endl;
- 
+
 }
 
 
-/*
+
 //------------------------------------------------------------------------------
-// This function pops the front item of the list. There are several conditions
-// in which we must consider
-void DoublyLinkedList::pop_front( Item** head_ref )
+// This function pops the front item of the list. In order to pop the front of
+// the stack, we must first make sure that there is items in the list. Then we
+// must find the head of the list and pop the first item.
+void DoublyLinkedList::pop_front( )
 {
     std::cout << "[Pop ]: Popping Front Item"  << std::endl;
-    Item* _FirstItem = *head_ref;
-
+    Item* _FirstItem = _HeadRef;
 
     if( _FirstItem->prev == NULL && _FirstItem->next == NULL)
     {
-        std::cout << "[Pop ]: Either array empty or only one item left" << std::endl;
-        std::cout << "[Pop ]: The current item value is = " << _FirstItem->_ItemID << std::endl;
+        _ItemID = _FirstItem->IDGetter();
+        std::cout << "[Pop ]: There is only one item left" << std::endl;
+        std::cout << "[Pop ]: The current item value is = " << _ItemID << std::endl;
 
-        /*
-        if( _FirstItem->data != NULL )
-        {
-            delete( _FirstItem );
-        }
-        */
-        //Item* _TempItem = _FirstItem->prev;
-        //std::cout << "[Pop ]: The value at the prev item is = " << _FirstItem->prev->data << std::endl;
-        //head_ref = NULL;
-        //free( _FirstItem );
-/*
+        // IF we are popping the last item in the list, then we must reset the
+        // head reference point back to the base head.
+        _HeadRef = _HeadRefBase;
+
+        delete( _FirstItem );
+        _CountOfItems--;
+
         return;
     }
 
     while( _FirstItem->prev != NULL )  // Find the front of the list
     {
-        std::cout << "[Pop ]: Currently at Item with val " << _FirstItem->_ItemID << std::endl;
+        _ItemID = _FirstItem->IDGetter();
+        std::cout << "[Pop ]: Currently at Item with val " << _ItemID << std::endl;
+
         _FirstItem = _FirstItem->prev;
 
         std::cout << "[Pop ]: First Item not given, Finding First Item" << std::endl;
@@ -127,13 +126,14 @@ void DoublyLinkedList::pop_front( Item** head_ref )
         _FirstItem->next->prev = NULL;
 
         // We need to reassign the head item to the next item in the list
-        *head_ref = _FirstItem->next;
+        _HeadRef = _FirstItem->next;
     }
 
-    std::cout << "[Pop ]: Item with value " << _FirstItem->_ItemID << " being deleted"<< std::endl;
+    _ItemID = _FirstItem->IDGetter();
+    std::cout << "[Pop ]: Item with value " << _ItemID << " being deleted"<< std::endl;
 
     delete _FirstItem;
+    _CountOfItems--;
 
     return;
 }
-*/
