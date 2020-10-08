@@ -1,0 +1,3 @@
+/home/brookie/github/TronSys/Lab 3/Q3Test/CMakeFiles/rebuild_cache.dir
+/home/brookie/github/TronSys/Lab 3/Q3Test/CMakeFiles/BigF.dir
+/home/brookie/github/TronSys/Lab 3/Q3Test/CMakeFiles/edit_cache.dir

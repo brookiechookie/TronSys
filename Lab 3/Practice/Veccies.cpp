@@ -1,5 +1,24 @@
 // Practicing with vectors
 
+
+#include <iostream>
+#include <list>
+int main()
+{
+  std::list<int> l = { 7, 5, 16, 8 }; // Create a list containing integers
+  l.push_front( 25 ); // add to front
+  l.push_front( 2 ); // add to front
+  l.push_back( 13 ); // add to back
+  std::cout << l.front() << std::endl;
+  std::cout << l.back() << std::endl;
+  // Iterate and print values of the list using range-based for loop
+  std::cout << "Separate" << std::endl;
+  for( int n : l )
+  std::cout << n << std::endl;
+  //std::cout << l[0] << std::endl; // error! lists don’t have random access
+}
+
+/*
 #include <iostream>
 #include <vector>
 
@@ -27,6 +46,7 @@ int main()
 }
 */
 
+/*
 int main()
 {
   std::vector<double> v;
@@ -50,4 +70,4 @@ int main()
   std::cout << n << std::endl;
   */
 
-}
+//}
