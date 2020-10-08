@@ -79,7 +79,7 @@ void DoublyLinkedList::printList()
     */
 
     std::cout << "[Disp]: There are " << _CountOfItems << " items in your list" << std::endl;
-
+ 
 }
 
 
