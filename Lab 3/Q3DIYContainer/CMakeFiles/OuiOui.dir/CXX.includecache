@@ -1,0 +1,104 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Conveyor.cpp
+iostream
+-
+algorithm
+-
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Conveyor.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
+
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Conveyor.h
+vector
+-
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
+
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/DoublyLinkedList.cpp
+DoublyLinkedList.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/DoublyLinkedList.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
+
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/DoublyLinkedList.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
+
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.cpp
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
+
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
+iostream
+-
+cstdlib
+-
+random
+-
+
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/LoadingRobot.cpp
+cstdlib
+-
+iostream
+-
+string
+-
+LoadingRobot.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/LoadingRobot.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Conveyor.h
+
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/LoadingRobot.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Conveyor.h
+
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/ProcessingRobot.cpp
+iostream
+-
+cstdlib
+-
+algorithm
+-
+vector
+-
+ProcessingRobot.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/ProcessingRobot.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Conveyor.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
+
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/ProcessingRobot.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Conveyor.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
+
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/main.cpp
+iostream
+-
+cstdlib
+-
+algorithm
+-
+stdlib.h
+-
+vector
+-
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Conveyor.h
+LoadingRobot.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/LoadingRobot.h
+ProcessingRobot.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/ProcessingRobot.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
+

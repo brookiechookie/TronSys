@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall   CMakeFiles/HelpMe.dir/main.cpp.o CMakeFiles/HelpMe.dir/Conveyor.cpp.o CMakeFiles/HelpMe.dir/LoadingRobot.cpp.o CMakeFiles/HelpMe.dir/ProcessingRobot.cpp.o CMakeFiles/HelpMe.dir/Item.cpp.o CMakeFiles/HelpMe.dir/DoublyLinkedList.cpp.o  -o HelpMe 

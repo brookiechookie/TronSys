@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall   CMakeFiles/OuiOui.dir/main.cpp.o CMakeFiles/OuiOui.dir/Conveyor.cpp.o CMakeFiles/OuiOui.dir/LoadingRobot.cpp.o CMakeFiles/OuiOui.dir/ProcessingRobot.cpp.o CMakeFiles/OuiOui.dir/Item.cpp.o CMakeFiles/OuiOui.dir/DoublyLinkedList.cpp.o  -o OuiOui 

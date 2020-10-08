@@ -1,8 +1,8 @@
 // main.cpp
 //
-// Main file for simulated conveyor belt
-// Initial revision: Donald G Dansereau, 2019
-// Completed by:
+// Creator:   Brookie
+// Date:      9.10.20
+// Purpose:   Main file for the simulated conveyor robot
 
 #include <iostream>
 #include <cstdlib>      // rand
@@ -14,6 +14,7 @@
 #include "LoadingRobot.h"
 #include "ProcessingRobot.h"
 #include "Item.h"
+
 
 
 int main()
