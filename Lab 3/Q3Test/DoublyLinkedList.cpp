@@ -59,14 +59,12 @@ void DoublyLinkedList::push_back( int _TheItemID )
 //void DoublyLinkedList::printList(Item* item)
 void DoublyLinkedList::printList()
 {
-  	//Item* last;
     Item* item = _HeadRef;
   	std::cout <<"[Disp]: Traversal in forward direction" << std::endl;
   	while (item != NULL)
   	{
         _ItemID = item->IDGetter();
-    		//std::cout << "[List]: "<< item->_ItemID << std::endl;
-        std::cout << "[List]: "<< _ItemID << std::endl;
+        std::cout << "[List]: Item with ID "<< _ItemID << std::endl;
     		item = item->next;
         _CountOfItems++;
   	}
@@ -95,7 +93,7 @@ void DoublyLinkedList::pop_front( )
     {
         _ItemID = _FirstItem->IDGetter();
         std::cout << "[Pop ]: There is only one item left" << std::endl;
-        std::cout << "[Pop ]: The current item value is = " << _ItemID << std::endl;
+        //std::cout << "[Pop ]: The current item value is = " << _ItemID << std::endl;
 
         // IF we are popping the last item in the list, then we must reset the
         // head reference point back to the base head.
@@ -127,8 +125,8 @@ void DoublyLinkedList::pop_front( )
         _HeadRef = _FirstItem->next;
     }
 
-    _ItemID = _FirstItem->IDGetter();
-    std::cout << "[Pop ]: Item with value " << _ItemID << " being deleted"<< std::endl;
+    //_ItemID = _FirstItem->IDGetter();
+    //std::cout << "[Pop ]: Item with value " << _ItemID << " being deleted"<< std::endl;
 
     delete _FirstItem;
     _CountOfItems--;
@@ -136,6 +134,10 @@ void DoublyLinkedList::pop_front( )
     return;
 }
 
+
+//------------------------------------------------------------------------------
+// This function simply returns the size of the list i.e. the number of Item
+// objects in the list
 int DoublyLinkedList::Size()
 {
     return _CountOfItems;

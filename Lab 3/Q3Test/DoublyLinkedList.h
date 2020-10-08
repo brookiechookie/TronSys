@@ -16,14 +16,12 @@ class DoublyLinkedList
         DoublyLinkedList( );
         void push_back(int _TheItemID);
         void pop_front( );
-        //void printList(Item* item);
         void printList( );
         int Size();
 
     private:
         int   _ItemID;
         Item* _HeadRefBase = NULL;
-        //Item* _HeadRefWItems;
         Item* _HeadRef;
         int   _CountOfItems;
 

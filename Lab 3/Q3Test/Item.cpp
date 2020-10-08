@@ -26,7 +26,7 @@ Item::Item( int SpecialID )
     std::uniform_real_distribution<float> distr(range_from, range_to);
     _ProcTime = distr(generator);
 
-    std::cout << "[Item]: Item ID = " << _ItemID << ", Proc time = "<< _ProcTime
+    std::cout << "[CTor]: Item ID = " << _ItemID << ", Proc time = "<< _ProcTime
     << " sec added" << std::endl;
 
 }
@@ -39,6 +39,8 @@ Item::~Item()
     << std::endl;
 }
 
+//------------------------------------------------------------------------------
+// Getter function returning the item ID's of each Item object 
 int Item::IDGetter()
 {
     return _ItemID;

@@ -18,20 +18,14 @@ class Item
 {
     public:
         Item( int SpecialID );
-        //Item();
         ~Item();
-        //int   data;
         Item* next;
         Item* prev;
         int IDGetter();
 
-
-
     private:
         int   _ItemID;
         float _ProcTime;
-
-
 
 };
 

@@ -15,16 +15,10 @@ int main()
     // then create the actual list and point it to the reference head
     // We had a vector of item objects in Q2, now we are going to have a list
     // of item objects
-
-    //Item* HeadRef = NULL;
-    //DoublyLinkedList* myList;
-
     DoublyLinkedList myList;
 
     int sizeUp = 0;
 
-    //Item* pItems = new Item( _UniqueID );
-    //myList.push_back( pItems, _UniqueID);
     myList.push_back( 1 );
     myList.push_back( 2 );
     myList.push_back( 3 );
@@ -52,45 +46,5 @@ int main()
     std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
 
     std::cout << "[Main]: I am done here." << std::endl;
-
-
-
-    /*
-    Item* head = NULL;
-
-    printList(head);
-
-  	// Insert 6. So linked list becomes 6->NULL
-  	push_back(&head, 6);
-
-  	// Insert 7 at the beginning. So
-  	// linked list becomes 7->6->NULL
-  	push_back(&head, 7);
-
-  	// Insert 1 at the beginning. So
-  	// linked list becomes 1->7->6->NULL
-  	push_back(&head, 1);
-
-  	// Insert 4 at the end. So linked
-  	// list becomes 1->7->6->4->NULL
-  	push_back(&head, 4);
-
-
-  	std::cout << "[Main]: Created DLL is: " << std::endl;
-  	printList(head);
-    pop_front(&head);
-    printList(head);
-    pop_front(&head);
-    printList(head);
-    pop_front(&head);
-    printList(head);
-
-    pop_front(&head);
-    printList(head);
-    pop_front(&head);
-    printList(head);
-    push_back(&head, 10);
-    printList(head);
-    */
 
 }
