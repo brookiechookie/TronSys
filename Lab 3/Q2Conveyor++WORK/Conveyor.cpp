@@ -22,6 +22,8 @@ Conveyor::Conveyor( float MaxProcessingTime, int ErrorValue )
     _UniqueID             = 0;
     _MaxProcessingTime    = MaxProcessingTime;
     _ErrorValue           = ErrorValue;
+    _Overflow             = 0;
+    _TotalNumItemsAdded   = 0;
 }
 
 
@@ -33,6 +35,12 @@ void Conveyor::AddItems( int n )
 {
     _NumItemsOnConveyor += n;
     _CycleCount++;
+    _TotalNumItemsAdded = _TotalNumItemsAdded + n;
+
+    if( _NumItemsOnConveyor > 50)
+    {
+        _Overflow++;
+    }
 
     std::cout << "[Conv]: " <<  n << " items added to the conveyor" << std::endl;
 
@@ -41,14 +49,14 @@ void Conveyor::AddItems( int n )
         // 1. Create a new object Item with an ID
         // 2. Add this object to the vector
 
-        std::cout << "[Conv]: At Index " << _i << std::endl;
+        //std::cout << "[Conv]: At Index " << _i << std::endl;
 
         pItems = new Item( _UniqueID );     // Creating new item object
         MyListOfItems.push_back( pItems );  // Put a pointer to this object in the vector
         _TimeONCalculated = _CycleCount * _MaxProcessingTime; // Record the time that the
         pItems->TimeONSetter( _TimeONCalculated );            // item was loaded onto conveyor
 
-        std::cout << "[Conv]: Time ON = " << _TimeONCalculated << std::endl;
+        //std::cout << "[Conv]: Time ON = " << _TimeONCalculated << std::endl;
         _UniqueID++;
 
     }
@@ -69,9 +77,6 @@ void Conveyor::RemoveItems( int n )
     _NumItemsOnConveyor = std::max(0, _NumItemsOnConveyor-n);
 
     std::cout << "[Conv]: " << n << " items being removed" << std::endl;
-
-    // Delete the item
-    // Delete the element where the item was
 
     _TotalItemsInPointer = _TotalItemsInPointer - n;
 
@@ -113,8 +118,8 @@ float Conveyor::GetItemProcTime( int _ItemIndex )
     // processing robot can check against to make sure it is a valid proc time
     if( _ItemIndex < _i )
     {
-      // Right hand side is going to return a pointer to an Item
-      // we need to dereference this item and access the proc time variable
+        // Right hand side is going to return a pointer to an Item
+        // we need to dereference this item and access the proc time variable
         Item* pItem = MyListOfItems.at( _ItemIndex );
         _ProcTimeReturning = pItem->ProcTimeGetter();
 
@@ -151,10 +156,29 @@ void Conveyor::SettingItemTimeOFF( int currentIndex, float TimeOFFcalculated )
 //------------------------------------------------------------------------------
 // This function is essentially a double getter function as it is first getting
 // the timeon variable from item and then the function itself is a getter which
-// returns the timeOn value 
+// returns the timeOn value
 float Conveyor::TimeONGetGet( int currentIndex )
 {
     Item* pAnothItem = MyListOfItems.at( currentIndex );
     _ItemTimeON = pAnothItem->TimeONgetter();
     return _ItemTimeON;
+}
+
+
+//------------------------------------------------------------------------------
+// This function reports the number of overflows that occur
+void Conveyor::ReportOverflows()
+{
+    std::cout << "Counted number of overflows = " << _Overflow << std::endl;
+}
+
+
+//------------------------------------------------------------------------------
+// This function calculates the average number of items added in a cycle
+void Conveyor::AvgNumbAddedItems()
+{
+    _AvgNumbItems = float(_TotalNumItemsAdded) / float(_CycleCount);
+
+    std::cout << "Average Number of Items Added in a Cycle = " << _AvgNumbItems <<
+    std::endl;
 }

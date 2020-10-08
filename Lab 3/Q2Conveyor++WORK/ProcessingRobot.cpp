@@ -25,6 +25,8 @@ ProcessingRobot::ProcessingRobot( Conveyor* WhichConveyor, float MaxProcessingTi
     _TotNumProcItem     = 0;
     _TotalWaitTime      = 0;
     _ErrorValue         = ErrorVal;
+    _TotalItemProcTime  = 0;
+    _AvgItemProcTime    = 0;
 
 }
 
@@ -99,29 +101,32 @@ void ProcessingRobot::ProccessItemsTimed()
             {
                 _TotalTime = _TotalTime + _CurrentItemTime;
 
-                std::cout << "[Proc]: Safe to add next time, new tot time = " << _TotalTime << std::endl;
+                //std::cout << "[Proc]: Safe to add next time, new tot time = " << _TotalTime << std::endl;
 
                 _TimeOFFCalculated = ( _CycleCount * _MaxTotalProcTime ) + _TotalTime;
                 _Conveyor->SettingItemTimeOFF( _CurrentIndex, _TimeOFFCalculated );
-                std::cout << "[Proc]: Item Time OFF = " << _TimeOFFCalculated << std::endl;
+                //std::cout << "[Proc]: Item Time OFF = " << _TimeOFFCalculated << std::endl;
 
                 // Before we get rid of the item we quickly want to store the
                 // amount of time that this item waited before being processed.
                 CalcWaitTime( _CurrentIndex );
+
+                // We also wish to keep a count of the processing time for all the items
+                _TotalItemProcTime = _TotalItemProcTime + _CurrentItemTime;
 
                 _CurrentIndex++;
             }
             else
             {
                 _UnderTimeLimit = 0;
-                std::cout << "[Proc]: Not safe to process next item" << std::endl;
+                //std::cout << "[Proc]: Not safe to process next item" << std::endl;
             }
         }
 
     }
 
     _RobotArmUsageTime = _RobotArmUsageTime + _TotalTime;
-    std::cout << "[Proc]: Current Index = "<< _CurrentIndex << std::endl;
+    //std::cout << "[Proc]: Current Index = "<< _CurrentIndex << std::endl;
 
 }
 
@@ -165,4 +170,17 @@ void ProcessingRobot::AvgItemWaitTime()
     _AVGWaitTime = _TotalWaitTime/float(_TotNumProcItem);
     std::cout << "Average Item Wait Time = "<< _AVGWaitTime << " sec"<< std::endl;
 
+}
+
+//------------------------------------------------------------------------------
+// To calculate the average processing time of an item, we must know two things.
+// 1. We must know the processing time of all the items.
+// 2. We must know the total number of items that have been added.
+// To calculate the avg proc time per item, we divide the total processing time
+// of all the items by the number of items that have been added.
+void ProcessingRobot::FindAvgItemProcTime()
+{
+    _AvgItemProcTime = _TotalItemProcTime/float( _TotNumProcItem );
+    std::cout << "Average Processing Time per Item = " << _AvgItemProcTime <<
+    " sec" << std::endl;
 }

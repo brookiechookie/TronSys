@@ -26,6 +26,9 @@ class Conveyor
         int CycleCountGetter();
         void SettingItemTimeOFF( int currentIndex, float TimeOFFcalculated );
         float TimeONGetGet( int currentIndex );
+        void ReportOverflows();
+        void AvgNumbAddedItems();
+
 
 
     private:
@@ -41,6 +44,9 @@ class Conveyor
         float _TimeONCalculated;
         float _ItemTimeON;
         int   _ErrorValue;
+        int   _Overflow;
+        int   _TotalNumItemsAdded;
+        float _AvgNumbItems;
 
 };
 

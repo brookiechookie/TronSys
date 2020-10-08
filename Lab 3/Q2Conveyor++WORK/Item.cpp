@@ -26,7 +26,8 @@ Item::Item( int SpecialID )
     _ProcTime = distr(generator);
 
     std::cout << "[Item]: Item with ID " << _ItemID << " and proc time "<< _ProcTime
-    << " added" << std::endl;
+    << " sec added" << std::endl; 
+
 }
 
 //------------------------------------------------------------------------------
@@ -63,7 +64,7 @@ float Item::TimeOFFSetter( float TimeOFF )
 
 //------------------------------------------------------------------------------
 // This is a simple getter function returning the time the item was put onto the
-// conveyor 
+// conveyor
 float Item::TimeONgetter()
 {
     return _TimeON;

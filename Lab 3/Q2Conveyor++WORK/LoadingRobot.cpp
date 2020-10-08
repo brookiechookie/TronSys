@@ -23,7 +23,7 @@ LoadingRobot::LoadingRobot( Conveyor* WhichConveyor )
 
 //------------------------------------------------------------------------------
 // This function is responsible for loading a "random" number of items onto the
-// conveyor 
+// conveyor
 int LoadingRobot::AddItems()
 {
     _ItemsToAdd = rand() % 10;

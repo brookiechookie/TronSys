@@ -24,6 +24,7 @@ class ProcessingRobot
         void AvgArmUtil();
         void CalcWaitTime( int currentIndex );
         void AvgItemWaitTime();
+        void FindAvgItemProcTime();
 
 
     private:
@@ -49,6 +50,8 @@ class ProcessingRobot
         float     _TotalWaitTime;
         float     _AVGWaitTime;
         int       _ErrorValue;
+        float     _AvgItemProcTime;
+        float     _TotalItemProcTime;
 
 };
 

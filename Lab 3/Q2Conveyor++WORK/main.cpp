@@ -49,11 +49,14 @@ int main()
         i++;
     }
 
-    // Provide the final report 
+    // Provide the final report
     std::cout << "***************************************************" << std::endl;
     std::cout << "                  Final Report                     " << std::endl;
     myProcessor.AvgArmUtil();
     myProcessor.AvgItemWaitTime();
+    myConveyor.ReportOverflows();
+    myConveyor.AvgNumbAddedItems();
+    myProcessor.FindAvgItemProcTime();
     std::cout << "***************************************************" << std::endl;
 
 
