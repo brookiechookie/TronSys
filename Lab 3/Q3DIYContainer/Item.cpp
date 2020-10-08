@@ -9,10 +9,11 @@
 
 //------------------------------------------------------------------------------
 // Class Item Constructor
-Item::Item( int SpecialID )
+Item::Item( int SpecialID, float TimeON )
 {
     _ItemID = SpecialID;
-
+    _TimeON = TimeON;
+    
     // The following lines of code assign a processing time to each item in a
     // uniformly distributed manner of type float.
     // The following code was sourced online from cppreference. I used this

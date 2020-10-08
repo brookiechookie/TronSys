@@ -4,6 +4,7 @@
 CMakeFiles/OuiOui.dir/Conveyor.cpp.o
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Conveyor.cpp
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Conveyor.h
+ /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/DoublyLinkedList.h
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
 CMakeFiles/OuiOui.dir/DoublyLinkedList.cpp.o
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/DoublyLinkedList.cpp
@@ -14,16 +15,19 @@ CMakeFiles/OuiOui.dir/Item.cpp.o
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
 CMakeFiles/OuiOui.dir/LoadingRobot.cpp.o
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Conveyor.h
+ /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/DoublyLinkedList.h
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/LoadingRobot.cpp
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/LoadingRobot.h
 CMakeFiles/OuiOui.dir/ProcessingRobot.cpp.o
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Conveyor.h
+ /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/DoublyLinkedList.h
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/ProcessingRobot.cpp
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/ProcessingRobot.h
 CMakeFiles/OuiOui.dir/main.cpp.o
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Conveyor.h
+ /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/DoublyLinkedList.h
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/LoadingRobot.h
  /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/ProcessingRobot.h

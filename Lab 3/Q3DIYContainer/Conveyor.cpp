@@ -51,15 +51,28 @@ void Conveyor::AddItems( int n )
 
         //std::cout << "[Conv]: At Index " << _i << std::endl;
 
-        pItems = new Item( _UniqueID );     // Creating new item object
-        MyListOfItems.push_back( pItems );  // Put a pointer to this object in the vector
-        _TimeONCalculated = _CycleCount * _MaxProcessingTime; // Record the time that the
-        pItems->TimeONSetter( _TimeONCalculated );            // item was loaded onto conveyor
+        //pItems = new Item( _UniqueID );     // Creating new item object
+        //MyListOfItems.push_back( pItems );  // Put a pointer to this object in the vector
+
+        // This records the time the item was loaded onto the conveyor, then
+        // adds this item to the back of the doublylinkedlist (DLL)
+        _TimeONCalculated = _CycleCount * _MaxProcessingTime;
+        myList.push_back( _UniqueID, _TimeONCalculated );
+
+
+        //_TimeONCalculated = _CycleCount * _MaxProcessingTime; // Record the time that the
+        //pItems->TimeONSetter( _TimeONCalculated );            // item was loaded onto conveyor
 
         //std::cout << "[Conv]: Time ON = " << _TimeONCalculated << std::endl;
         _UniqueID++;
 
     }
+    std::cout << "[Conv]: Finished Loading List with items" << std::endl;
+    myList.printList( );
+    int sizeUp = myList.Size();
+    std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
+
+
 
     _TotalItemsInPointer = _TotalItemsInPointer + n;
 
@@ -67,7 +80,7 @@ void Conveyor::AddItems( int n )
 }
 
 
-
+/*
 //------------------------------------------------------------------------------
 // This function removes items from the conveyor belt, and at the same time also
 // deletes the object item and removes it from the vector storing all the items
@@ -182,3 +195,5 @@ void Conveyor::AvgNumbAddedItems()
     std::cout << "Average Number of Items Added in a Cycle = " << _AvgNumbItems <<
     std::endl;
 }
+
+*/

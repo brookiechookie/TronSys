@@ -17,12 +17,13 @@ DoublyLinkedList::DoublyLinkedList()
 // Given a reference (pointer to pointer) to the head of a DLL and an int,
 // push_backs a new Item at the end
 //void DoublyLinkedList::push_back(Item** head_ref, int _TheItemID )
-void DoublyLinkedList::push_back( int _TheItemID )
+void DoublyLinkedList::push_back( int _TheItemID, float TimeOn )
 {
     std::cout << "[Back]: Push back"  << std::endl;
 
-    Item* new_Item = new Item( _TheItemID );
+    Item* new_Item = new Item( _TheItemID, TimeOn );
     Item* last = _HeadRef;
+    _CountOfItems++;
 
     // Since this is the last element, no elements exist after this one, thus
     // assign the next of this item object to null
@@ -66,7 +67,6 @@ void DoublyLinkedList::printList()
         _ItemID = item->IDGetter();
         std::cout << "[List]: Item with ID "<< _ItemID << std::endl;
     		item = item->next;
-        _CountOfItems++;
   	}
 
     /*

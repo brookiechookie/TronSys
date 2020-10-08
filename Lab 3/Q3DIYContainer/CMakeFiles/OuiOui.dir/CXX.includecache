@@ -21,6 +21,8 @@ vector
 -
 Item.h
 /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/Item.h
+DoublyLinkedList.h
+/home/brookie/github/TronSys/Lab 3/Q3DIYContainer/DoublyLinkedList.h
 
 /home/brookie/github/TronSys/Lab 3/Q3DIYContainer/DoublyLinkedList.cpp
 DoublyLinkedList.h

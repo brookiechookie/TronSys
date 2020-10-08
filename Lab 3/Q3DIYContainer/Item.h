@@ -17,7 +17,7 @@
 class Item
 {
     public:
-        Item( int SpecialID );
+        Item( int SpecialID, float TimeOn );
         ~Item();
         float ProcTimeGetter();
         void TimeONSetter( float TimeON );

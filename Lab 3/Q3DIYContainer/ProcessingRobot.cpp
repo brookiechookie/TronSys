@@ -30,6 +30,7 @@ ProcessingRobot::ProcessingRobot( Conveyor* WhichConveyor, float MaxProcessingTi
 
 }
 
+/*
 
 //------------------------------------------------------------------------------
 // This function removes items from the conveyor and also counts the number
@@ -56,14 +57,14 @@ int ProcessingRobot::GetProcessedItems()
 // processing time frame.
 void ProcessingRobot::ProccessItemsTimed()
 {
-    /* Steps:
-          1.  I need to get the Processing time private variable of the first
-              item in the vector
-          2.  Add this items processing time to a variable storing the count
-          3.  Once the count passes a certain value, we have maxed out on time
-              so feed into the ProcessItems function how many items have managed
-              to be processed.
-    */
+    // Steps:
+    //      1.  I need to get the Processing time private variable of the first
+    //          item in the vector
+    //      2.  Add this items processing time to a variable storing the count
+    //      3.  Once the count passes a certain value, we have maxed out on time
+    //          so feed into the ProcessItems function how many items have managed
+    //          to be processed.
+    //
 
     // Reset all the relevant variables to their base value every time this
     // function is called
@@ -184,3 +185,5 @@ void ProcessingRobot::FindAvgItemProcTime()
     std::cout << "Average Processing Time per Item = " << _AvgItemProcTime <<
     " sec" << std::endl;
 }
+
+*/

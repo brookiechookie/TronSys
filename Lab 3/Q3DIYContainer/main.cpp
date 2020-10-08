@@ -34,21 +34,22 @@ int main()
     ProcessingRobot myProcessor( &myConveyor, MaxProcessingTime, ErrorVal );
 
     int i = 0;
-    int _DesiredCycles = 1000;
+    int _DesiredCycles = 5;
 
     while( i < _DesiredCycles )
     {
         std::cout << "__________________________________________________ " << std::endl;
 
         myLoader.AddItems();
-        myConveyor.Report();
-        myProcessor.ProccessItemsTimed();
-        myProcessor.ProcessItems();
-        myConveyor.Report();
+        //myConveyor.Report();
+        //myProcessor.ProccessItemsTimed();
+        //myProcessor.ProcessItems();
+        //myConveyor.Report();
 
         i++;
     }
 
+/*
     // Provide the final report
     std::cout << "***************************************************" << std::endl;
     std::cout << "                  Final Report                     " << std::endl;
@@ -58,6 +59,6 @@ int main()
     myConveyor.AvgNumbAddedItems();
     myProcessor.FindAvgItemProcTime();
     std::cout << "***************************************************" << std::endl;
-
+*/
 
 }

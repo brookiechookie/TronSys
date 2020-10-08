@@ -14,7 +14,7 @@ class DoublyLinkedList
 {
     public:
         DoublyLinkedList( );
-        void push_back(int _TheItemID);
+        void push_back( int _TheItemID, float TimeON );
         void pop_front( );
         void printList( );
         int Size();

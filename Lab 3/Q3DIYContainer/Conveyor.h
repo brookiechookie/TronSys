@@ -9,6 +9,7 @@
 
 #include <vector>     // Vector STL
 #include "Item.h"
+#include "DoublyLinkedList.h"
 
 //---------------------------------------------------------------
 // Simulate a conveyor belt. This version just counts how many
@@ -47,6 +48,8 @@ class Conveyor
         int   _Overflow;
         int   _TotalNumItemsAdded;
         float _AvgNumbItems;
+
+        DoublyLinkedList myList;
 
 };
 
