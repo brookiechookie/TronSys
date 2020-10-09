@@ -118,7 +118,7 @@ float Conveyor::GetShortestItemProcTime()
     _ShortestItemProcTime   = 100;  // Set an arbitrarily high value that we know
                                     // the first item proc time will be less than
 
-    std::cout << "[Conv]: We have enterred Get Shortest Time" << std::endl;
+    //std::cout << "[Conv]: We have enterred Get Shortest Time" << std::endl;
 
     int _IsListEmpty = myList.CheckIfListEmpty();
     if( _IsListEmpty ==  _ErrorValue )
@@ -168,7 +168,7 @@ float Conveyor::GetLongestItemProcTime()
     _LongesttItemProcTime   = 0;  // Set a low value that we know the next item
                                   // will have a longer proc time
 
-    std::cout << "[Conv]: We have enterred Get Longest Time" << std::endl;
+    //std::cout << "[Conv]: We have enterred Get Longest Time" << std::endl;
 
     int _IsListEmpty = myList.CheckIfListEmpty();
     if( _IsListEmpty ==  _ErrorValue )
@@ -241,6 +241,17 @@ float Conveyor::GetFirstItemTimeON( )
     Item* pAnothItem = myList.ReturnFirstItem();
     _ItemTimeON = pAnothItem->TimeONgetter();
     return _ItemTimeON;
+}
+
+
+//------------------------------------------------------------------------------
+// This function needs to find a given items time on value. In order to find
+// value, the index of the item in the list is given.
+float Conveyor::GetItemTimeOn( int ItemIndex )
+{
+    Item* pDesiredItem = myList.at( ItemIndex );
+    int ItemTimeOn = pDesiredItem->TimeONgetter();
+    return ItemTimeOn;
 }
 
 

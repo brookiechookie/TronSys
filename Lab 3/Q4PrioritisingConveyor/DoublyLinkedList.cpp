@@ -78,7 +78,6 @@ void DoublyLinkedList::printList()
 }
 
 
-
 //------------------------------------------------------------------------------
 // This function pops the front item of the list. In order to pop the front of
 // the stack, we must first make sure that there is items in the list. Then we
@@ -161,7 +160,7 @@ int DoublyLinkedList::CheckIfListEmpty()
 }
 
 //------------------------------------------------------------------------------
-// This function returns a pointer to the first element in the list 
+// This function returns a pointer to the first element in the list
 Item* DoublyLinkedList::ReturnFirstItem()
 {
     Item* _FirstItemInList = _HeadRef;
@@ -169,11 +168,25 @@ Item* DoublyLinkedList::ReturnFirstItem()
 }
 
 //------------------------------------------------------------------------------
+// This function returns a pointer to the first element in the list
+Item* DoublyLinkedList::at( int n )
+{
+    Item* _DesiredItem = _HeadRef;
+
+    for( int i = 0; i < n && _DesiredItem != NULL; i++ )
+    {
+        _DesiredItem = _DesiredItem->next;
+    }
+
+    return _DesiredItem;
+}
+
+//------------------------------------------------------------------------------
 // This function deletes an element in the DLL at the nth item. The list starts
 // at zero, i.e. the first index is zero and the second index is one.
 void DoublyLinkedList::DeleteElement( int n )
 {
-    std::cout << "[DLLI]: Deleting Item at index " << n << std::endl;
+    //std::cout << "[DLLI]: Deleting Item at index " << n << std::endl;
 
     Item* _ItemToDelete = _HeadRef;
 

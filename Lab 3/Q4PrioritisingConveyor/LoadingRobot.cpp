@@ -26,7 +26,7 @@ LoadingRobot::LoadingRobot( Conveyor* WhichConveyor )
 // conveyor
 int LoadingRobot::AddItems()
 {
-    _ItemsToAdd = rand() % 5;
+    _ItemsToAdd = rand() % 10;
     _Conveyor->AddItems( _ItemsToAdd );
     return _ItemsToAdd;
 }

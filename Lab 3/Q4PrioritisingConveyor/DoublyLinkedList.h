@@ -26,6 +26,7 @@ class DoublyLinkedList
         Item* ReturnFirstItem();
         int CheckIfListEmpty();
         void DeleteElement( int n );
+        Item* at( int n );
 
     private:
         int   _ItemID;

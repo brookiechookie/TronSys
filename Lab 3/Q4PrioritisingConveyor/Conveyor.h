@@ -31,9 +31,11 @@ class Conveyor
 
         float GetShortestItemProcTime();
         int   GetShortestItemIndex();
-
         float GetLongestItemProcTime();
         int   GetLongestItemIndex();
+
+        float GetItemTimeOn( int ItemIndex );
+
 
 
 

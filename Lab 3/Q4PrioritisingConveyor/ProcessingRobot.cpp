@@ -16,7 +16,7 @@
 
 //------------------------------------------------------------------------------
 // Constructor for Processing Robot
-ProcessingRobot::ProcessingRobot( Conveyor* WhichConveyor, float MaxProcessingTime, int ErrorVal )
+ProcessingRobot::ProcessingRobot( Conveyor* WhichConveyor, float MaxProcessingTime, int ErrorVal, int ShortOrLongProcessing )
 {
     _Conveyor           = WhichConveyor;
     _MaxTotalProcTime   = MaxProcessingTime;
@@ -27,85 +27,13 @@ ProcessingRobot::ProcessingRobot( Conveyor* WhichConveyor, float MaxProcessingTi
     _ErrorValue         = ErrorVal;
     _TotalItemProcTime  = 0;
     _AvgItemProcTime    = 0;
+    _ShortOrLong        = ShortOrLongProcessing;
 
 }
 
-/*
 //------------------------------------------------------------------------------
 // The purpose of this function is to process a number of items within a fixed
-// processing time frame.
-// Steps:
-//      1.  Get the Processing time private variable of the first
-//          item in the vector
-//      2.  Add this items processing time to a variable storing the count
-//      3.  Once the count passes a certain value, we have maxed out on time
-//          so feed into the ProcessItems function how many items have managed
-//          to be processed.
-//
-void ProcessingRobot::ProccessItemsTimed()
-{
-
-    // Reset all the relevant variables to their base value every time this
-    // function is called
-    _TotalTime          = 0;
-    _UnderTimeLimit     = 1;
-    _FirstItemTime      = 0;
-
-    _CycleCount = _Conveyor->CycleCountGetter();
-
-    std::cout << "[Proc]: Removing Items " << std::endl;
-    while( _UnderTimeLimit )
-    {
-        _FirstItemTime = _Conveyor->GetFirstItemProcTime();
-
-        if( _FirstItemTime == float(_ErrorValue) )
-        {
-            // If this input is received from the function, this means that we
-            // have exceeded the number of items that are in the array. So just
-            // return from the while loop with the current calculated total time
-            _UnderTimeLimit = 0;
-            std::cout << "[Proc]: No more items left to process! " << std::endl;
-        }
-        else if( _TotalTime < _MaxTotalProcTime )
-        {
-
-            if( (_TotalTime + _FirstItemTime) <= _MaxTotalProcTime )
-            {
-                _TotalTime = _TotalTime + _FirstItemTime;
-
-                //std::cout << "[Proc]: Safe to add next time, new tot time = " << _TotalTime << std::endl;
-
-                _TimeOFFCalculated = ( _CycleCount * _MaxTotalProcTime ) + _TotalTime;
-                _Conveyor->SettingItemTimeOFF( _TimeOFFCalculated );
-
-                //std::cout << "[Proc]: Item Time OFF = " << _TimeOFFCalculated << std::endl;
-
-                // Before we get rid of the item we quickly want to store the
-                // amount of time that this item waited before being processed.
-                CalcWaitTime( );
-
-                // We also wish to keep a count of the processing time for all the items
-                _TotalItemProcTime = _TotalItemProcTime + _FirstItemTime;
-                ProcessItem( );
-
-            }
-            else
-            {
-                _UnderTimeLimit = 0;
-                std::cout << "[Proc]: Time Frame Reached " << std::endl;
-            }
-        }
-
-    }
-
-    _RobotArmUsageTime = _RobotArmUsageTime + _TotalTime;
-    //std::cout << "[Proc]: Current Index = "<< _CurrentIndex << std::endl;
-
-}
-*/
-
-//------------------------------------------------------------------------------
-//
+// processing time frame, in either shorter or longer tasks prioritised
 void ProcessingRobot::ProccessItemsTimed()
 {
 
@@ -128,51 +56,55 @@ void ProcessingRobot::ProccessItemsTimed()
         // 6. Then for process item, we're going to need to know what the index
         //    is for the item that needs to be deleted
 
-        int ShortOrLong = 1;
-
-        if( ShortOrLong == 0 )
+        // The variable ShortOrLong corresponds to the system prioritising
+        // shorter or longer tasked activities.
+        // 0 = Shorter tasks prioritised
+        // 1 = Longer tasks prioritised
+        if( _ShortOrLong == 0 )
         {
-            _ItemTime   = _Conveyor->GetShortestItemProcTime();
-            _ItemIndex  = _Conveyor->GetShortestItemIndex();
+            _ItemProcTime   = _Conveyor->GetShortestItemProcTime();
+            _ItemIndex      = _Conveyor->GetShortestItemIndex();
         }
-        else if( ShortOrLong == 1 )
+        else if( _ShortOrLong == 1 )
         {
-            _ItemTime   = _Conveyor->GetLongestItemProcTime();
-            _ItemIndex  = _Conveyor->GetLongestItemIndex();
+            _ItemProcTime   = _Conveyor->GetLongestItemProcTime();
+            _ItemIndex      = _Conveyor->GetLongestItemIndex();
         }
 
 
-        if( _ItemTime == float(_ErrorValue) ) 
+
+        if( _ItemProcTime == float(_ErrorValue) )
         {
             // If this input is received from the function, this means that we
             // have exceeded the number of items that are in the array. So just
             // return from the while loop with the current calculated total time
             _UnderTimeLimit = 0;
-            std::cout << "[Proc]: No more items left to process! " << std::endl;
+            std::cout << "[Proc]: No more items in list left to process!" << std::endl;
         }
         else if( _TotalTime < _MaxTotalProcTime )
         {
 
-            if( (_TotalTime + _ItemTime ) <= _MaxTotalProcTime )
+            if( (_TotalTime + _ItemProcTime ) <= _MaxTotalProcTime )
             {
 
-                _TotalTime = _TotalTime + _ItemTime;
+                _TotalTime = _TotalTime + _ItemProcTime;
 
                 //std::cout << "[Proc]: Safe to add next time, new tot time = " << _TotalTime << std::endl;
 
-                _TimeOFFCalculated = ( _CycleCount * _MaxTotalProcTime ) + _TotalTime;
+                _TimeOFFCalculated = ( _CycleCount * _MaxTotalProcTime ) + _TotalTime - _ItemProcTime;
                 _Conveyor->SettingItemTimeOFF( _TimeOFFCalculated );
 
                 //std::cout << "[Proc]: Item Time OFF = " << _TimeOFFCalculated << std::endl;
 
                 // Before we get rid of the item we quickly want to store the
                 // amount of time that this item waited before being processed.
-                CalcWaitTime( );
+                CalcWaitTime( _ItemIndex );
 
                 // We also wish to keep a count of the processing time for all the items
-                _TotalItemProcTime = _TotalItemProcTime + _ItemTime;
+                _TotalItemProcTime = _TotalItemProcTime + _ItemProcTime;
+                //std::cout << "[Proc]: Adding item proc time = " << _ItemProcTime << " sec" << std::endl;
+                //std::cout << "[Proc]: Total Proc time =  " << _TotalItemProcTime << " sec" << std::endl;
                 ProcessItem( _ItemIndex );
-
 
             }
             else
@@ -194,11 +126,16 @@ void ProcessingRobot::ProccessItemsTimed()
 // This function is called every time an item is being processed. Before it
 // gets removed we want to store the amount of time it was waiting on the
 // conveyor line in order to calculate average wait time
-void ProcessingRobot::CalcWaitTime( )
+void ProcessingRobot::CalcWaitTime( int ItemIndex )
 {
-    _ItemTimeON     = _Conveyor->GetFirstItemTimeON( );
+    //_ItemTimeON     = _Conveyor->GetFirstItemTimeON( );
+
+    _ItemTimeON     = _Conveyor->GetItemTimeOn( ItemIndex );
     _ItemWaitTime   = _TimeOFFCalculated - _ItemTimeON;
     _TotalWaitTime  = _TotalWaitTime + _ItemWaitTime;
+
+    std::cout << "[Proc]: Calc Item Wait Time = " << _ItemWaitTime << " sec" << std::endl;
+    std::cout << "[Proc]: Total Wait Time = " << _TotalWaitTime << " sec" << std::endl;
 }
 
 
@@ -209,6 +146,8 @@ void ProcessingRobot::ProcessItem( int ItemIndex )
 {
     _Conveyor->RemoveItem( _ItemIndex );
     _TotNumProcItem = _TotNumProcItem + 1;
+    std::cout << "[Proc]: Total # Proc Items = " << _TotNumProcItem << std::endl;
+
 }
 
 
@@ -247,7 +186,24 @@ void ProcessingRobot::AvgItemWaitTime()
 // of all the items by the number of items that have been added.
 void ProcessingRobot::FindAvgItemProcTime()
 {
-    _AvgItemProcTime = _TotalItemProcTime/float( _TotNumProcItem );
+    _AvgItemProcTime = float(_TotalItemProcTime)/float( _TotNumProcItem );
     std::cout << "Average Processing Time per Item = " << _AvgItemProcTime <<
     " sec" << std::endl;
+}
+
+
+//------------------------------------------------------------------------------
+// This function reports to the screen whether shorter or longer tasks were
+// prioritised
+void ProcessingRobot::ReportPriorityType()
+{
+    if( _ShortOrLong == 0 )
+    {
+        std::cout << "Shorter Tasks Prioritised" << std::endl;
+    }
+    else if( _ShortOrLong == 1 )
+    {
+        std::cout << "Longer Tasks Prioritised" << std::endl;
+    }
+
 }

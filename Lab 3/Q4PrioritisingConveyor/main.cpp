@@ -29,12 +29,42 @@ int main()
     // then the processing robot knows that there is no items to process right now.
     int   ErrorVal = 999;
 
+    // This variable controls whether the program priorities either shorter or
+    // longer tasks.
+    // 0 = Shorter tasks prioritised
+    // 1 = Longer tasks prioritised
+    int   ShortOrLongProcessing;
+    int   InputError = 1;
+
+    std::cout << "Hi User. Please advise whether you desire shorter or longer"<<
+    " tasks to be prioritised. \n 0 = Shorter Tasks Prioritised \n 1 = Longer"<<
+    " Tasks Prioritised" << std::endl;
+
+
+    while( InputError )
+    {
+        std::cin >> ShortOrLongProcessing; // Take in User Input
+
+        // If the user input is not 1 or 0, then tell them invalid input, and
+        // allow them to try again
+        if( ShortOrLongProcessing == 1 || ShortOrLongProcessing == 0 )
+        {
+            InputError = 0;
+        }
+        else
+        {
+            std::cout << "Invalid Input! Please try again." << std::endl;
+        }
+    }
+
+
+
     Conveyor myConveyor( MaxProcessingTime, ErrorVal );
     LoadingRobot myLoader( &myConveyor );
-    ProcessingRobot myProcessor( &myConveyor, MaxProcessingTime, ErrorVal );
+    ProcessingRobot myProcessor( &myConveyor, MaxProcessingTime, ErrorVal, ShortOrLongProcessing );
 
     int i = 0;
-    int _DesiredCycles = 10;
+    int _DesiredCycles = 1000;
 
     while( i < _DesiredCycles )
     {
@@ -50,8 +80,11 @@ int main()
 
 
     // Provide the final report
+    std::cout << "__________________________________________________ " << std::endl;
     std::cout << "***************************************************" << std::endl;
-    std::cout << "                  Final Report                     " << std::endl;
+    std::cout << "*                  Final Report                   *" << std::endl;
+    std::cout << "***************************************************" << std::endl;
+    myProcessor.ReportPriorityType();
     myProcessor.AvgArmUtil();
     myProcessor.AvgItemWaitTime();
     myConveyor.ReportOverflows();
