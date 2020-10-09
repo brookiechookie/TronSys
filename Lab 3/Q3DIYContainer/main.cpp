@@ -59,5 +59,4 @@ int main()
     myProcessor.FindAvgItemProcTime();
     std::cout << "***************************************************" << std::endl;
 
-
 }

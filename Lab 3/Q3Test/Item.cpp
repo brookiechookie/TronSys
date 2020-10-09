@@ -7,7 +7,6 @@
 
 #include "Item.h"
 
-
 //------------------------------------------------------------------------------
 // Class Item Constructor
 Item::Item( int SpecialID )
@@ -40,7 +39,7 @@ Item::~Item()
 }
 
 //------------------------------------------------------------------------------
-// Getter function returning the item ID's of each Item object 
+// Getter function returning the item ID's of each Item object
 int Item::IDGetter()
 {
     return _ItemID;

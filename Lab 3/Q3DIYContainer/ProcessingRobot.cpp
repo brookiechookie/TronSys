@@ -53,6 +53,7 @@ void ProcessingRobot::ProccessItemsTimed()
 
     _CycleCount = _Conveyor->CycleCountGetter();
 
+    std::cout << "[Proc]: Removing Items " << std::endl;
     while( _UnderTimeLimit )
     {
         _FirstItemTime = _Conveyor->GetFirstItemProcTime();
@@ -67,20 +68,17 @@ void ProcessingRobot::ProccessItemsTimed()
         }
         else if( _TotalTime < _MaxTotalProcTime )
         {
-            //std::cout << "[Proc]: Total time is currently less than max time " << std::endl;
-            //std::cout << "[Proc]: Max Time = "<< _MaxTotalProcTime << std::endl;
-            //std::cout << "[Proc]: Total Time = "<< _TotalTime << std::endl;
 
             if( (_TotalTime + _FirstItemTime) <= _MaxTotalProcTime )
             {
                 _TotalTime = _TotalTime + _FirstItemTime;
 
-                std::cout << "[Proc]: Safe to add next time, new tot time = " << _TotalTime << std::endl;
+                //std::cout << "[Proc]: Safe to add next time, new tot time = " << _TotalTime << std::endl;
 
                 _TimeOFFCalculated = ( _CycleCount * _MaxTotalProcTime ) + _TotalTime;
                 _Conveyor->SettingItemTimeOFF( _TimeOFFCalculated );
 
-                std::cout << "[Proc]: Item Time OFF = " << _TimeOFFCalculated << std::endl;
+                //std::cout << "[Proc]: Item Time OFF = " << _TimeOFFCalculated << std::endl;
 
                 // Before we get rid of the item we quickly want to store the
                 // amount of time that this item waited before being processed.
@@ -94,7 +92,7 @@ void ProcessingRobot::ProccessItemsTimed()
             else
             {
                 _UnderTimeLimit = 0;
-                //std::cout << "[Proc]: Not safe to process next item" << std::endl;
+                std::cout << "[Proc]: Time Frame Reached " << std::endl;
             }
         }
 

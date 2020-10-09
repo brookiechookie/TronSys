@@ -20,12 +20,12 @@ class Item
         Item( int SpecialID, float TimeOn );
         ~Item();
         float ProcTimeGetter();
-        void TimeONSetter( float TimeON );
-        void TimeOFFSetter( float TimeOFF );
+        void  TimeONSetter( float TimeON );
+        void  TimeOFFSetter( float TimeOFF );
         float TimeONgetter();
         Item* next;
         Item* prev;
-        int IDGetter();
+        int   IDGetter();
 
     private:
         int   _ItemID;
