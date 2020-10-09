@@ -18,12 +18,20 @@ class DoublyLinkedList
         void pop_front( );
         void printList( );
         int Size();
+        //float GetProcTime();
+        //void FirstItemSetTimeOff( float TimeOff );
+        //float GetItemTimeOn();
+
+        Item* ReturnFirstItem();
+        int CheckIfListEmpty();
 
     private:
         int   _ItemID;
         Item* _HeadRefBase = NULL;
         Item* _HeadRef;
         int   _CountOfItems;
+        int   _ErrorValue;
+        int   _NoError;
 
 };
 

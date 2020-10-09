@@ -18,13 +18,13 @@ class ProcessingRobot
 {
     public:
         ProcessingRobot( Conveyor* WhichConveyor, float MaxProcessingTime, int ErrorVal );
-        void ProcessItems();
-        int GetProcessedItems();
-        void ProccessItemsTimed();
-        void AvgArmUtil();
-        void CalcWaitTime( int currentIndex );
-        void AvgItemWaitTime();
-        void FindAvgItemProcTime();
+        void      ProcessItem( );
+        int       GetProcessedItems();
+        void      ProccessItemsTimed();
+        void      AvgArmUtil();
+        void      CalcWaitTime( );
+        void      AvgItemWaitTime();
+        void      FindAvgItemProcTime();
 
 
     private:
@@ -36,8 +36,7 @@ class ProcessingRobot
         float     _IndividualItemProcTime;
         float     _TotalTime;
         int       _UnderTimeLimit;
-        int       _CurrentIndex;
-        float     _CurrentItemTime;
+        float     _FirstItemTime;
         float     _MaxTotalProcTime;
         int       _CycleCount;
         float     _RobotArmUsageTime;

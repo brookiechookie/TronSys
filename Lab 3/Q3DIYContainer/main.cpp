@@ -41,10 +41,9 @@ int main()
         std::cout << "__________________________________________________ " << std::endl;
 
         myLoader.AddItems();
-        //myConveyor.Report();
-        //myProcessor.ProccessItemsTimed();
-        //myProcessor.ProcessItems();
-        //myConveyor.Report();
+        myConveyor.Report();
+        myProcessor.ProccessItemsTimed();
+        myConveyor.Report();
 
         i++;
     }

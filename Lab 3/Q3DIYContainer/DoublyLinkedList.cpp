@@ -7,11 +7,13 @@
 #include "DoublyLinkedList.h"
 #include "Item.h"
 
-DoublyLinkedList::DoublyLinkedList()
+DoublyLinkedList::DoublyLinkedList( )
 {
     _HeadRef        = _HeadRefBase;
     _ItemID         = 0;
     _CountOfItems   = 0;
+    _ErrorValue     = 999;
+    _NoError        = 1;
 }
 //------------------------------------------------------------------------------
 // Given a reference (pointer to pointer) to the head of a DLL and an int,
@@ -142,3 +144,81 @@ int DoublyLinkedList::Size()
 {
     return _CountOfItems;
 }
+
+//------------------------------------------------------------------------------
+// This function checks whether or not the list is empty
+int DoublyLinkedList::CheckIfListEmpty()
+{
+    int _ReturningVal;
+    
+    // We must perform a little bit of error checking here. If the list is empty
+    // we will return the symbolic value to communciate this.
+    if(_HeadRef == _HeadRefBase)
+    {
+        _ReturningVal = _ErrorValue;
+    }
+    else
+    {
+        _ReturningVal = _NoError;
+    }
+
+    return _ReturningVal;
+}
+
+//------------------------------------------------------------------------------
+// This function returns the first element in the array
+Item* DoublyLinkedList::ReturnFirstItem()
+{
+    Item* _FirstItemInList = _HeadRef;
+    return _FirstItemInList;
+}
+
+/*
+//------------------------------------------------------------------------------
+// This function returns the processing time of the first item in the list
+float DoublyLinkedList::GetProcTime()
+{
+    std::cout << "[DLL ]: Getting Proc Time"  << std::endl;
+    Item* _FirstItemInList = _HeadRef;
+
+    // If the list is empty, then we must return something symbolic to
+    // communicate that there is nothing left in the list and therefore a
+    // processing time cannot be obtained
+    if( _HeadRef == _HeadRefBase )
+    {
+        std::cout << "[DLL ]: No items in list " << std::endl;
+        return NULL;
+    }
+    // If there is items in the list then return the item proc time
+    else
+    {
+        std::cout << "[DLL ]: Getting Item Proc Time " << std::endl;
+        float ItemProcTime = _FirstItemInList->ProcTimeGetterFromItem();
+        return ItemProcTime;
+    }
+
+}
+
+
+//------------------------------------------------------------------------------
+// The purpose of this function is to set the off time for the first item
+void DoublyLinkedList::FirstItemSetTimeOff( float TimeOff )
+{
+    std::cout << "[DLL ]: Setting Item Time Off"  << std::endl;
+    Item* _FirstItemInList = _HeadRef;
+
+    _FirstItemInList->TimeOFFSetter( TimeOff );
+
+}
+
+//------------------------------------------------------------------------------
+//
+float DoublyLinkedList::GetItemTimeOn()
+{
+    std::cout << "[DLL ]: Getting First Item Time On"  << std::endl;
+    Item* _FirstItemInList = _HeadRef;
+    float TimeOnGet = _FirstItemInList->TimeONgetter();
+    return TimeOnGet;
+}
+
+*/

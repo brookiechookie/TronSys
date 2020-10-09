@@ -30,67 +30,40 @@ ProcessingRobot::ProcessingRobot( Conveyor* WhichConveyor, float MaxProcessingTi
 
 }
 
-/*
-
-//------------------------------------------------------------------------------
-// This function removes items from the conveyor and also counts the number
-// of items that have been processed in total
-void ProcessingRobot::ProcessItems()
-{
-    _Conveyor->RemoveItems( _CurrentIndex );
-
-    _TotNumProcItem = _TotNumProcItem + _CurrentIndex;
-    //std::cout << "[Proc]: Total number of proc items = " << _TotNumProcItem << std::endl;
-}
-
-
-//------------------------------------------------------------------------------
-// This is a getter function returning the number of items that have been removed
-int ProcessingRobot::GetProcessedItems()
-{
-    return _CurrentIndex;
-}
-
 
 //------------------------------------------------------------------------------
 // The purpose of this function is to process a number of items within a fixed
 // processing time frame.
+// Steps:
+//      1.  Get the Processing time private variable of the first
+//          item in the vector
+//      2.  Add this items processing time to a variable storing the count
+//      3.  Once the count passes a certain value, we have maxed out on time
+//          so feed into the ProcessItems function how many items have managed
+//          to be processed.
+//
 void ProcessingRobot::ProccessItemsTimed()
 {
-    // Steps:
-    //      1.  I need to get the Processing time private variable of the first
-    //          item in the vector
-    //      2.  Add this items processing time to a variable storing the count
-    //      3.  Once the count passes a certain value, we have maxed out on time
-    //          so feed into the ProcessItems function how many items have managed
-    //          to be processed.
-    //
 
     // Reset all the relevant variables to their base value every time this
     // function is called
-    _TotalTime        = 0;
-    _UnderTimeLimit   = 1;
-    _CurrentIndex     = 0;
-    _CurrentItemTime  = 0;
+    _TotalTime          = 0;
+    _UnderTimeLimit     = 1;
+    _FirstItemTime      = 0;
 
     _CycleCount = _Conveyor->CycleCountGetter();
-    //std::cout << "[Proc]: New Func Enterred " << std::endl;
-
 
     while( _UnderTimeLimit )
     {
-        _CurrentItemTime = _Conveyor->GetItemProcTime( _CurrentIndex );
+        _FirstItemTime = _Conveyor->GetFirstItemProcTime();
 
-        //std::cout << "[Proc]: Current Index = " << _CurrentIndex << std::endl;
-        //std::cout << "[Proc]: Current Item Time = " << _CurrentItemTime << std::endl;
-
-        if( _CurrentItemTime == _ErrorValue )
+        if( _FirstItemTime == float(_ErrorValue) )
         {
             // If this input is received from the function, this means that we
             // have exceeded the number of items that are in the array. So just
             // return from the while loop with the current calculated total time
             _UnderTimeLimit = 0;
-            //std::cout << "[Proc]: Exceeded number of items in array " << std::endl;
+            std::cout << "[Proc]: No more items left to process! " << std::endl;
         }
         else if( _TotalTime < _MaxTotalProcTime )
         {
@@ -98,24 +71,25 @@ void ProcessingRobot::ProccessItemsTimed()
             //std::cout << "[Proc]: Max Time = "<< _MaxTotalProcTime << std::endl;
             //std::cout << "[Proc]: Total Time = "<< _TotalTime << std::endl;
 
-            if( (_TotalTime + _CurrentItemTime) <= _MaxTotalProcTime )
+            if( (_TotalTime + _FirstItemTime) <= _MaxTotalProcTime )
             {
-                _TotalTime = _TotalTime + _CurrentItemTime;
+                _TotalTime = _TotalTime + _FirstItemTime;
 
-                //std::cout << "[Proc]: Safe to add next time, new tot time = " << _TotalTime << std::endl;
+                std::cout << "[Proc]: Safe to add next time, new tot time = " << _TotalTime << std::endl;
 
                 _TimeOFFCalculated = ( _CycleCount * _MaxTotalProcTime ) + _TotalTime;
-                _Conveyor->SettingItemTimeOFF( _CurrentIndex, _TimeOFFCalculated );
-                //std::cout << "[Proc]: Item Time OFF = " << _TimeOFFCalculated << std::endl;
+                _Conveyor->SettingItemTimeOFF( _TimeOFFCalculated );
+
+                std::cout << "[Proc]: Item Time OFF = " << _TimeOFFCalculated << std::endl;
 
                 // Before we get rid of the item we quickly want to store the
                 // amount of time that this item waited before being processed.
-                CalcWaitTime( _CurrentIndex );
+                CalcWaitTime( );
 
                 // We also wish to keep a count of the processing time for all the items
-                _TotalItemProcTime = _TotalItemProcTime + _CurrentItemTime;
+                _TotalItemProcTime = _TotalItemProcTime + _FirstItemTime;
+                ProcessItem( );
 
-                _CurrentIndex++;
             }
             else
             {
@@ -129,6 +103,41 @@ void ProcessingRobot::ProccessItemsTimed()
     _RobotArmUsageTime = _RobotArmUsageTime + _TotalTime;
     //std::cout << "[Proc]: Current Index = "<< _CurrentIndex << std::endl;
 
+}
+
+
+//------------------------------------------------------------------------------
+// This function is called every time an item is being processed. Before it
+// gets removed we want to store the amount of time it was waiting on the
+// conveyor line in order to calculate average wait time
+void ProcessingRobot::CalcWaitTime( )
+{
+    _ItemTimeON = _Conveyor->GetFirstItemTimeON( );
+    _ItemWaitTime = _TimeOFFCalculated - _ItemTimeON;
+
+    _TotalWaitTime = _TotalWaitTime + _ItemWaitTime;
+}
+
+
+//------------------------------------------------------------------------------
+// This function removes items from the conveyor and also counts the number
+// of items that have been processed in total
+void ProcessingRobot::ProcessItem( )
+{
+    _Conveyor->RemoveItem( );
+
+    _TotNumProcItem = _TotNumProcItem + 1;
+    //std::cout << "[Proc]: Total number of proc items = " << _TotNumProcItem << std::endl;
+}
+
+
+/*
+
+//------------------------------------------------------------------------------
+// This is a getter function returning the number of items that have been removed
+int ProcessingRobot::GetProcessedItems()
+{
+    return _CurrentIndex;
 }
 
 
@@ -147,19 +156,6 @@ void ProcessingRobot::AvgArmUtil()
     // std::cout << "Robot arm usage time = " << _RobotArmUsageTime << std::endl;
 
     std::cout << "Average Arm Utilisation Time = "<< _AvgArmUtilTime << "%" << std::endl;
-}
-
-
-//------------------------------------------------------------------------------
-// This function is called every time an item is being processed. Before it
-// gets removed we want to store the amount of time it was waiting on the
-// conveyor line in order to calculate average wait time
-void ProcessingRobot::CalcWaitTime( int currentIndex )
-{
-    _ItemTimeON = _Conveyor->TimeONGetGet( currentIndex );
-    _ItemWaitTime = _TimeOFFCalculated - _ItemTimeON;
-
-    _TotalWaitTime = _TotalWaitTime + _ItemWaitTime;
 }
 
 

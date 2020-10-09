@@ -33,7 +33,7 @@ Conveyor::Conveyor( float MaxProcessingTime, int ErrorValue )
 // a vector of class item
 void Conveyor::AddItems( int n )
 {
-    _NumItemsOnConveyor += n;
+    //_NumItemsOnConveyor += n;
     _CycleCount++;
     _TotalNumItemsAdded = _TotalNumItemsAdded + n;
 
@@ -69,37 +69,15 @@ void Conveyor::AddItems( int n )
     }
     std::cout << "[Conv]: Finished Loading List with items" << std::endl;
     myList.printList( );
-    int sizeUp = myList.Size();
-    std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
+    //int sizeUp = myList.Size();
+    _NumItemsOnConveyor = myList.Size();
+    std::cout << "[Conv]: Size of List is " << _NumItemsOnConveyor << std::endl;
 
 
 
     _TotalItemsInPointer = _TotalItemsInPointer + n;
 
     std::cout << "[Conv]: Current Cycle: " << _CycleCount << std::endl;
-}
-
-
-/*
-//------------------------------------------------------------------------------
-// This function removes items from the conveyor belt, and at the same time also
-// deletes the object item and removes it from the vector storing all the items
-void Conveyor::RemoveItems( int n )
-{
-    // Note that we cannot have a negative number of items on belt
-    _NumItemsOnConveyor = std::max(0, _NumItemsOnConveyor-n);
-
-    std::cout << "[Conv]: " << n << " items being removed" << std::endl;
-
-    _TotalItemsInPointer = _TotalItemsInPointer - n;
-
-    for( std::vector<Item*>::iterator pObj = MyListOfItems.begin(); pObj < ( MyListOfItems.begin() + n ) ; ++pObj  )
-    {
-        delete *pObj; // Deletes the item object
-    }
-
-    // Deletes the element in the vector
-    MyListOfItems.erase( MyListOfItems.begin(), MyListOfItems.begin() + n );
 }
 
 
@@ -112,42 +90,6 @@ void Conveyor::Report()
 
 
 //------------------------------------------------------------------------------
-// Getter function which returns the number of items on conveyor
-int Conveyor::GetNumItemsOnConveyor()
-{
-    return _NumItemsOnConveyor;
-}
-
-
-//------------------------------------------------------------------------------
-// The purpose of this function is to take an integer input at which the user
-// desires to obtain data from the vector that contains the items. I.e. input
-// the index in which you wish to obtain the processing time variable for.
-float Conveyor::GetItemProcTime( int _ItemIndex )
-{
-    // If the input index is less than the current highest index for the vector
-    // then there exists a valid item. If the desired index is greater than the
-    // current index then there is no item and we must return a value that the
-    // processing robot can check against to make sure it is a valid proc time
-    if( _ItemIndex < _i )
-    {
-        // Right hand side is going to return a pointer to an Item
-        // we need to dereference this item and access the proc time variable
-        Item* pItem = MyListOfItems.at( _ItemIndex );
-        _ProcTimeReturning = pItem->ProcTimeGetter();
-
-    }
-    else
-    {
-        _ProcTimeReturning = _ErrorValue;
-    }
-
-    return _ProcTimeReturning;
-
-}
-
-
-//------------------------------------------------------------------------------
 // The purpose of this getter is to return the cycle count
 int Conveyor::CycleCountGetter()
 {
@@ -156,13 +98,38 @@ int Conveyor::CycleCountGetter()
 
 
 //------------------------------------------------------------------------------
+// The purpose of this function is to feedback to the user, the processing
+// time for the first item in the list
+float Conveyor::GetFirstItemProcTime( )
+{
+    float _ValToReturn;
+
+    int _IsListEmpty = myList.CheckIfListEmpty();
+    if( _IsListEmpty == _ErrorValue )
+    {
+         _ValToReturn = float(_ErrorValue);
+         std::cout << "[Conv]: List is EMPTY!" << std::endl;
+    }
+    else
+    {
+        Item* _FirstItem = myList.ReturnFirstItem();
+        float _ItemProcTime = _FirstItem->ProcTimeGetter();
+        std::cout << "[Conv]: The first item proc time is " << _ItemProcTime << " sec" << std::endl;
+        _ValToReturn = _ItemProcTime;
+    }
+
+    return _ValToReturn;
+}
+
+//------------------------------------------------------------------------------
 // This function sets the off time for an item. In order to do this, we must
 // know the index of the item in the vector, and also the time that the item
 // was taken off the conveyor
-void Conveyor::SettingItemTimeOFF( int currentIndex, float TimeOFFcalculated )
+void Conveyor::SettingItemTimeOFF( float TimeOFFcalculated )
 {
-    Item* pLilItem = MyListOfItems.at( currentIndex );
+    Item* pLilItem = myList.ReturnFirstItem();
     pLilItem->TimeOFFSetter( TimeOFFcalculated );
+
 }
 
 
@@ -170,11 +137,74 @@ void Conveyor::SettingItemTimeOFF( int currentIndex, float TimeOFFcalculated )
 // This function is essentially a double getter function as it is first getting
 // the timeon variable from item and then the function itself is a getter which
 // returns the timeOn value
-float Conveyor::TimeONGetGet( int currentIndex )
+float Conveyor::GetFirstItemTimeON( )
 {
-    Item* pAnothItem = MyListOfItems.at( currentIndex );
+    Item* pAnothItem = myList.ReturnFirstItem();
     _ItemTimeON = pAnothItem->TimeONgetter();
     return _ItemTimeON;
+}
+
+
+//------------------------------------------------------------------------------
+// This function removes items from the conveyor belt, and at the same time also
+// deletes the object item and removes it from the vector storing all the items
+void Conveyor::RemoveItem( )
+{
+    // Note that we cannot have a negative number of items on belt
+    //_NumItemsOnConveyor = std::max(0, _NumItemsOnConveyor-n);
+
+    std::cout << "[Conv]: First Item being removed" << std::endl;
+
+    _TotalItemsInPointer = _TotalItemsInPointer - 1;
+
+    myList.pop_front();
+    _NumItemsOnConveyor = myList.Size();
+
+    //for( std::vector<Item*>::iterator pObj = MyListOfItems.begin(); pObj < ( MyListOfItems.begin() + n ) ; ++pObj  )
+    //{
+    //    delete *pObj; // Deletes the item object
+    //}
+
+    // Deletes the element in the vector
+    //MyListOfItems.erase( MyListOfItems.begin(), MyListOfItems.begin() + n );
+}
+
+
+
+/*
+//------------------------------------------------------------------------------
+// The purpose of this function is to feedback to the user, the processing
+// time for the first item in the list
+float Conveyor::GetFirstItemProcTime( )
+{
+    float ItemProcTimeFromList = myList.GetProcTime();
+    return ItemProcTimeFromList;
+}
+
+
+
+
+//------------------------------------------------------------------------------
+// This function is essentially a double getter function as it is first getting
+// the timeon variable from item and then the function itself is a getter which
+// returns the timeOn value
+float Conveyor::GetFirstItemTimeON( )
+{
+    // Pointer to the desired element
+    Item* pAnothItem = MyListOfItems.at( currentIndex );
+    _ItemTimeON = pAnothItem->TimeONgetter();
+
+
+    _ItemTimeON = myList.GetItemTimeOn()
+    return _ItemTimeON;
+}
+
+
+//------------------------------------------------------------------------------
+// Getter function which returns the number of items on conveyor
+int Conveyor::GetNumItemsOnConveyor()
+{
+    return _NumItemsOnConveyor;
 }
 
 

@@ -19,16 +19,16 @@ class Conveyor
 {
     public:
         Conveyor( float MaxProcessingTime, int ErrorValue );
-        void AddItems( int n );
-        void RemoveItems( int n );
-        void Report();
-        int GetNumItemsOnConveyor();
-        float GetItemProcTime( int _ItemIndex );
-        int CycleCountGetter();
-        void SettingItemTimeOFF( int currentIndex, float TimeOFFcalculated );
-        float TimeONGetGet( int currentIndex );
-        void ReportOverflows();
-        void AvgNumbAddedItems();
+        void  AddItems( int n );
+        void  RemoveItem( );
+        void  Report();
+        int   GetNumItemsOnConveyor();
+        float GetFirstItemProcTime();
+        int   CycleCountGetter();
+        void  SettingItemTimeOFF( float TimeOFFcalculated );
+        float GetFirstItemTimeON( );
+        void  ReportOverflows();
+        void  AvgNumbAddedItems();
 
 
 
