@@ -1,0 +1,106 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Conveyor.cpp
+iostream
+-
+algorithm
+-
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Conveyor.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Item.h
+
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Conveyor.h
+vector
+-
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Item.h
+DoublyLinkedList.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/DoublyLinkedList.h
+
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/DoublyLinkedList.cpp
+DoublyLinkedList.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/DoublyLinkedList.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Item.h
+
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/DoublyLinkedList.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Item.h
+
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Item.cpp
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Item.h
+
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Item.h
+iostream
+-
+cstdlib
+-
+random
+-
+
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/LoadingRobot.cpp
+cstdlib
+-
+iostream
+-
+string
+-
+LoadingRobot.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/LoadingRobot.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Conveyor.h
+
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/LoadingRobot.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Conveyor.h
+
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/ProcessingRobot.cpp
+iostream
+-
+cstdlib
+-
+algorithm
+-
+vector
+-
+ProcessingRobot.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/ProcessingRobot.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Conveyor.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Item.h
+
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/ProcessingRobot.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Conveyor.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Item.h
+
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/main.cpp
+iostream
+-
+cstdlib
+-
+algorithm
+-
+stdlib.h
+-
+vector
+-
+Conveyor.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Conveyor.h
+LoadingRobot.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/LoadingRobot.h
+ProcessingRobot.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/ProcessingRobot.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/Item.h
+

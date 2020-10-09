@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall   CMakeFiles/Reddy.dir/main.cpp.o CMakeFiles/Reddy.dir/Conveyor.cpp.o CMakeFiles/Reddy.dir/LoadingRobot.cpp.o CMakeFiles/Reddy.dir/ProcessingRobot.cpp.o CMakeFiles/Reddy.dir/Item.cpp.o CMakeFiles/Reddy.dir/DoublyLinkedList.cpp.o  -o Reddy 

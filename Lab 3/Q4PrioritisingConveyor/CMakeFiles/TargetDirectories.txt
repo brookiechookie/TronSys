@@ -1,0 +1,3 @@
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/CMakeFiles/rebuild_cache.dir
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/CMakeFiles/Reddy.dir
+/home/brookie/github/TronSys/Lab 3/Q4PrioritisingConveyor/CMakeFiles/edit_cache.dir
