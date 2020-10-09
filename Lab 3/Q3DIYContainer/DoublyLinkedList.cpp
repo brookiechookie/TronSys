@@ -7,6 +7,8 @@
 #include "DoublyLinkedList.h"
 #include "Item.h"
 
+//------------------------------------------------------------------------------
+// Constructor for DoublyLinkedList
 DoublyLinkedList::DoublyLinkedList( )
 {
     _HeadRef        = _HeadRefBase;
@@ -15,10 +17,12 @@ DoublyLinkedList::DoublyLinkedList( )
     _ErrorValue     = 999;
     _NoError        = 1;
 }
+
+
 //------------------------------------------------------------------------------
-// Given a reference (pointer to pointer) to the head of a DLL and an int,
-// push_backs a new Item at the end
-//void DoublyLinkedList::push_back(Item** head_ref, int _TheItemID )
+// This function acts to push back a node to the end of a doubly linked list.
+// The two vital pieces of information that are required is the Item ID and the
+// time in which the node was added to the system
 void DoublyLinkedList::push_back( int _TheItemID, float TimeOn )
 {
     //std::cout << "[Back]: Push back"  << std::endl;
@@ -58,8 +62,8 @@ void DoublyLinkedList::push_back( int _TheItemID, float TimeOn )
 
 
 //------------------------------------------------------------------------------
-// This function prints contents of linked list starting from the given Item
-//void DoublyLinkedList::printList(Item* item)
+// This function prints contents of the doubly linked list starting from the
+// head reference point of the list
 void DoublyLinkedList::printList()
 {
     Item* item = _HeadRef;

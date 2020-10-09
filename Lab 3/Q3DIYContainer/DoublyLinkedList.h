@@ -10,6 +10,11 @@
 
 #include "Item.h"
 
+//------------------------------------------------------------------------------
+// This class provides a functioning doubly linked list, with standard functions
+// such as push back, pop front and size, as well as some unqiue functions such
+// return first item and checking if the list is empty. The way in which each
+// function works is detailed in the corresponding cpp file 
 class DoublyLinkedList
 {
     public:
