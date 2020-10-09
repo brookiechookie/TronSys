@@ -131,7 +131,7 @@ float Conveyor::GetFirstItemTimeON( )
 //------------------------------------------------------------------------------
 // This function removes items from the conveyor belt, and at the same time also
 // deletes the object item and removes it from the vector storing all the items
-void Conveyor::RemoveItem( int n )
+void Conveyor::RemoveItem( int n ) 
 {
     // Note that we cannot have a negative number of items on belt
     //_NumItemsOnConveyor = std::max(0, _NumItemsOnConveyor-n);
