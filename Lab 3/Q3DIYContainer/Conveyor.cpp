@@ -37,11 +37,6 @@ void Conveyor::AddItems( int n )
     _CycleCount++;
     _TotalNumItemsAdded = _TotalNumItemsAdded + n;
 
-    if( _NumItemsOnConveyor > 50)
-    {
-        _Overflow++;
-    }
-
     std::cout << "[Conv]: " <<  n << " items added to the conveyor" << std::endl;
 
     for( _i = _TotalItemsInPointer ; _i < (n + _TotalItemsInPointer) ; _i++ )
@@ -73,7 +68,10 @@ void Conveyor::AddItems( int n )
     _NumItemsOnConveyor = myList.Size();
     std::cout << "[Conv]: Size of List is " << _NumItemsOnConveyor << std::endl;
 
-
+    if( _NumItemsOnConveyor > 50)
+    {
+        _Overflow++;
+    }
 
     _TotalItemsInPointer = _TotalItemsInPointer + n;
 
@@ -160,59 +158,6 @@ void Conveyor::RemoveItem( )
     myList.pop_front();
     _NumItemsOnConveyor = myList.Size();
 
-    //for( std::vector<Item*>::iterator pObj = MyListOfItems.begin(); pObj < ( MyListOfItems.begin() + n ) ; ++pObj  )
-    //{
-    //    delete *pObj; // Deletes the item object
-    //}
-
-    // Deletes the element in the vector
-    //MyListOfItems.erase( MyListOfItems.begin(), MyListOfItems.begin() + n );
-}
-
-
-
-/*
-//------------------------------------------------------------------------------
-// The purpose of this function is to feedback to the user, the processing
-// time for the first item in the list
-float Conveyor::GetFirstItemProcTime( )
-{
-    float ItemProcTimeFromList = myList.GetProcTime();
-    return ItemProcTimeFromList;
-}
-
-
-
-
-//------------------------------------------------------------------------------
-// This function is essentially a double getter function as it is first getting
-// the timeon variable from item and then the function itself is a getter which
-// returns the timeOn value
-float Conveyor::GetFirstItemTimeON( )
-{
-    // Pointer to the desired element
-    Item* pAnothItem = MyListOfItems.at( currentIndex );
-    _ItemTimeON = pAnothItem->TimeONgetter();
-
-
-    _ItemTimeON = myList.GetItemTimeOn()
-    return _ItemTimeON;
-}
-
-
-//------------------------------------------------------------------------------
-// Getter function which returns the number of items on conveyor
-int Conveyor::GetNumItemsOnConveyor()
-{
-    return _NumItemsOnConveyor;
-}
-
-
-//------------------------------------------------------------------------------
-// This function reports the number of overflows that occur
-void Conveyor::ReportOverflows()
-{
-    std::cout << "Counted number of overflows = " << _Overflow << std::endl;
 }
 
 
@@ -223,7 +168,12 @@ void Conveyor::AvgNumbAddedItems()
     _AvgNumbItems = float(_TotalNumItemsAdded) / float(_CycleCount);
 
     std::cout << "Average Number of Items Added in a Cycle = " << _AvgNumbItems <<
-    std::endl;
+    " sec" << std::endl;
 }
 
-*/
+//------------------------------------------------------------------------------
+// This function reports the number of overflows that occur
+void Conveyor::ReportOverflows()
+{
+    std::cout << "Counted number of overflows = " << _Overflow << std::endl;
+}

@@ -23,7 +23,6 @@ class Item
         void TimeONSetter( float TimeON );
         void TimeOFFSetter( float TimeOFF );
         float TimeONgetter();
-
         Item* next;
         Item* prev;
         int IDGetter();

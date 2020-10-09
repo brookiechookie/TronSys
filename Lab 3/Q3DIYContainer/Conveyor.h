@@ -22,7 +22,6 @@ class Conveyor
         void  AddItems( int n );
         void  RemoveItem( );
         void  Report();
-        int   GetNumItemsOnConveyor();
         float GetFirstItemProcTime();
         int   CycleCountGetter();
         void  SettingItemTimeOFF( float TimeOFFcalculated );

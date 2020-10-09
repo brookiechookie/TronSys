@@ -19,7 +19,6 @@ class ProcessingRobot
     public:
         ProcessingRobot( Conveyor* WhichConveyor, float MaxProcessingTime, int ErrorVal );
         void      ProcessItem( );
-        int       GetProcessedItems();
         void      ProccessItemsTimed();
         void      AvgArmUtil();
         void      CalcWaitTime( );

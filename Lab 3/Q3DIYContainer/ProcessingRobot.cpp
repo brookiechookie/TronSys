@@ -125,19 +125,7 @@ void ProcessingRobot::CalcWaitTime( )
 void ProcessingRobot::ProcessItem( )
 {
     _Conveyor->RemoveItem( );
-
     _TotNumProcItem = _TotNumProcItem + 1;
-    //std::cout << "[Proc]: Total number of proc items = " << _TotNumProcItem << std::endl;
-}
-
-
-/*
-
-//------------------------------------------------------------------------------
-// This is a getter function returning the number of items that have been removed
-int ProcessingRobot::GetProcessedItems()
-{
-    return _CurrentIndex;
 }
 
 
@@ -153,8 +141,7 @@ void ProcessingRobot::AvgArmUtil()
     _AvgArmUtilTime = ( _RobotArmUsageTime/_TotalRunTime ) * 100;
     std::cout << "Cycle Count = " << _CycleCount << std::endl;
     std::cout << "Total Run Time = " << _TotalRunTime << " sec"<< std::endl;
-    // std::cout << "Robot arm usage time = " << _RobotArmUsageTime << std::endl;
-
+    //std::cout << "Robot arm usage time = " << _RobotArmUsageTime << std::endl;
     std::cout << "Average Arm Utilisation Time = "<< _AvgArmUtilTime << "%" << std::endl;
 }
 
@@ -181,5 +168,3 @@ void ProcessingRobot::FindAvgItemProcTime()
     std::cout << "Average Processing Time per Item = " << _AvgItemProcTime <<
     " sec" << std::endl;
 }
-
-*/

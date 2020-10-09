@@ -18,10 +18,6 @@ class DoublyLinkedList
         void pop_front( );
         void printList( );
         int Size();
-        //float GetProcTime();
-        //void FirstItemSetTimeOff( float TimeOff );
-        //float GetItemTimeOn();
-
         Item* ReturnFirstItem();
         int CheckIfListEmpty();
 
