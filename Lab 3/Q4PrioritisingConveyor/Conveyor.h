@@ -29,6 +29,12 @@ class Conveyor
         void  ReportOverflows();
         void  AvgNumbAddedItems();
 
+        float GetShortestItemProcTime();
+        int   GetShortestItemIndex();
+
+        float GetLongestItemProcTime();
+        int   GetLongestItemIndex();
+
 
 
     private:
@@ -49,6 +55,13 @@ class Conveyor
         float _AvgNumbItems;
 
         DoublyLinkedList myList;
+
+        float _ShortestItemProcTime;
+        int   _ShortestItemIndex;
+
+        float _LongesttItemProcTime;
+        int   _LongestItemIndex;
+
 
 };
 

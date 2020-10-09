@@ -161,7 +161,7 @@ int DoublyLinkedList::CheckIfListEmpty()
 }
 
 //------------------------------------------------------------------------------
-// This function returns the first element in the array
+// This function returns a pointer to the first element in the list 
 Item* DoublyLinkedList::ReturnFirstItem()
 {
     Item* _FirstItemInList = _HeadRef;
@@ -262,8 +262,6 @@ void DoublyLinkedList::DeleteElement( int n )
         return;
 
     }
-
-
 
 
     // Case 4: If the item to delete is in the middle of the list

@@ -127,9 +127,22 @@ void ProcessingRobot::ProccessItemsTimed()
         // 5. Perform the required calculations lines of code
         // 6. Then for process item, we're going to need to know what the index
         //    is for the item that needs to be deleted
-        _FirstItemTime = _Conveyor->GetFirstItemProcTime();
 
-        if( _FirstItemTime == float(_ErrorValue) )
+        int ShortOrLong = 1;
+
+        if( ShortOrLong == 0 )
+        {
+            _ItemTime   = _Conveyor->GetShortestItemProcTime();
+            _ItemIndex  = _Conveyor->GetShortestItemIndex();
+        }
+        else if( ShortOrLong == 1 )
+        {
+            _ItemTime   = _Conveyor->GetLongestItemProcTime();
+            _ItemIndex  = _Conveyor->GetLongestItemIndex();
+        }
+
+
+        if( _ItemTime == float(_ErrorValue) ) 
         {
             // If this input is received from the function, this means that we
             // have exceeded the number of items that are in the array. So just
@@ -140,9 +153,10 @@ void ProcessingRobot::ProccessItemsTimed()
         else if( _TotalTime < _MaxTotalProcTime )
         {
 
-            if( (_TotalTime + _FirstItemTime) <= _MaxTotalProcTime )
+            if( (_TotalTime + _ItemTime ) <= _MaxTotalProcTime )
             {
-                _TotalTime = _TotalTime + _FirstItemTime;
+
+                _TotalTime = _TotalTime + _ItemTime;
 
                 //std::cout << "[Proc]: Safe to add next time, new tot time = " << _TotalTime << std::endl;
 
@@ -156,8 +170,8 @@ void ProcessingRobot::ProccessItemsTimed()
                 CalcWaitTime( );
 
                 // We also wish to keep a count of the processing time for all the items
-                _TotalItemProcTime = _TotalItemProcTime + _FirstItemTime;
-                ProcessItem( );
+                _TotalItemProcTime = _TotalItemProcTime + _ItemTime;
+                ProcessItem( _ItemIndex );
 
 
             }
@@ -182,19 +196,18 @@ void ProcessingRobot::ProccessItemsTimed()
 // conveyor line in order to calculate average wait time
 void ProcessingRobot::CalcWaitTime( )
 {
-    _ItemTimeON = _Conveyor->GetFirstItemTimeON( );
-    _ItemWaitTime = _TimeOFFCalculated - _ItemTimeON;
-
-    _TotalWaitTime = _TotalWaitTime + _ItemWaitTime;
+    _ItemTimeON     = _Conveyor->GetFirstItemTimeON( );
+    _ItemWaitTime   = _TimeOFFCalculated - _ItemTimeON;
+    _TotalWaitTime  = _TotalWaitTime + _ItemWaitTime;
 }
 
 
 //------------------------------------------------------------------------------
 // This function removes items from the conveyor and also counts the number
 // of items that have been processed in total
-void ProcessingRobot::ProcessItem( )
+void ProcessingRobot::ProcessItem( int ItemIndex )
 {
-    _Conveyor->RemoveItem( 0 );
+    _Conveyor->RemoveItem( _ItemIndex );
     _TotNumProcItem = _TotNumProcItem + 1;
 }
 

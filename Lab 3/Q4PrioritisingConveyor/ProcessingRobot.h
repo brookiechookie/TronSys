@@ -18,7 +18,7 @@ class ProcessingRobot
 {
     public:
         ProcessingRobot( Conveyor* WhichConveyor, float MaxProcessingTime, int ErrorVal );
-        void      ProcessItem( );
+        void      ProcessItem( int ItemIndex );
         void      ProccessItemsTimed();
         void      AvgArmUtil();
         void      CalcWaitTime( );
@@ -50,6 +50,11 @@ class ProcessingRobot
         int       _ErrorValue;
         float     _AvgItemProcTime;
         float     _TotalItemProcTime;
+        float     _ShortestItemTime;
+        int       _ShortestTimeItemIndex;
+
+        int       _ItemTime;
+        int       _ItemIndex;
 
 };
 

@@ -104,6 +104,122 @@ float Conveyor::GetFirstItemProcTime( )
     return _ValToReturn;
 }
 
+
+//------------------------------------------------------------------------------
+// This function finds the item in the list with the SHORTEST processing time.
+// It returns the processing time and also records the index at which this item
+// exists which can be accessed through a getter function.
+float Conveyor::GetShortestItemProcTime()
+{
+    float _ValToReturn;
+    float _CurrentItemProcTime;
+    int   _CurrentCycle     = 0;
+    _ShortestItemIndex      = 0;
+    _ShortestItemProcTime   = 100;  // Set an arbitrarily high value that we know
+                                    // the first item proc time will be less than
+
+    std::cout << "[Conv]: We have enterred Get Shortest Time" << std::endl;
+
+    int _IsListEmpty = myList.CheckIfListEmpty();
+    if( _IsListEmpty ==  _ErrorValue )
+    {
+        _ValToReturn = float(_ErrorValue);
+    }
+    else
+    {
+        // Assign a pointer to the start of the list
+        Item* pItem = myList.ReturnFirstItem();
+
+        // Run the loop until we reach the end of the array
+        while( pItem != NULL )
+        {
+            _CurrentItemProcTime = pItem->ProcTimeGetter();
+
+            if( _CurrentItemProcTime < _ShortestItemProcTime )
+            {
+                _ShortestItemProcTime = _CurrentItemProcTime;
+                _ShortestItemIndex    = _CurrentCycle;
+            }
+
+            _CurrentCycle++;
+            pItem = pItem->next;
+        }
+
+        // Return the shortest item proc time
+        _ValToReturn = _ShortestItemProcTime;
+
+    }
+
+    return _ValToReturn;
+
+}
+
+
+//------------------------------------------------------------------------------
+// This function finds the item in the list with the LONGEST processing time.
+// It returns the processing time and also records the index at which this item
+// exists which can be accessed through a getter function.
+float Conveyor::GetLongestItemProcTime()
+{
+    float _ValToReturn;
+    float _CurrentItemProcTime;
+    int   _CurrentCycle     = 0;
+    _LongestItemIndex       = 0;
+    _LongesttItemProcTime   = 0;  // Set a low value that we know the next item
+                                  // will have a longer proc time
+
+    std::cout << "[Conv]: We have enterred Get Longest Time" << std::endl;
+
+    int _IsListEmpty = myList.CheckIfListEmpty();
+    if( _IsListEmpty ==  _ErrorValue )
+    {
+        _ValToReturn = float(_ErrorValue);
+    }
+    else
+    {
+        // Assign a pointer to the start of the list
+        Item* pItem = myList.ReturnFirstItem();
+
+        // Run the loop until we reach the end of the array
+        while( pItem != NULL )
+        {
+            _CurrentItemProcTime = pItem->ProcTimeGetter();
+
+            if( _CurrentItemProcTime > _LongesttItemProcTime )
+            {
+                _LongesttItemProcTime = _CurrentItemProcTime;
+                _LongestItemIndex     = _CurrentCycle;
+            }
+
+            _CurrentCycle++;
+            pItem = pItem->next;
+        }
+
+        // Return the shortest item proc time
+        _ValToReturn = _LongesttItemProcTime;
+
+    }
+
+    return _ValToReturn;
+
+}
+
+//------------------------------------------------------------------------------
+// This getter function returns the index of the shortest proc item in the list
+int Conveyor::GetShortestItemIndex()
+{
+    return _ShortestItemIndex;
+}
+
+
+//------------------------------------------------------------------------------
+// This getter function returns the index of the longest proc item in the list
+int Conveyor::GetLongestItemIndex()
+{
+    return _LongestItemIndex;
+}
+
+
 //------------------------------------------------------------------------------
 // This function sets the off time for an item. In order to do this, we must
 // know the index of the item in the vector, and also the time that the item
@@ -131,7 +247,7 @@ float Conveyor::GetFirstItemTimeON( )
 //------------------------------------------------------------------------------
 // This function removes items from the conveyor belt, and at the same time also
 // deletes the object item and removes it from the vector storing all the items
-void Conveyor::RemoveItem( int n ) 
+void Conveyor::RemoveItem( int n )
 {
     // Note that we cannot have a negative number of items on belt
     //_NumItemsOnConveyor = std::max(0, _NumItemsOnConveyor-n);
