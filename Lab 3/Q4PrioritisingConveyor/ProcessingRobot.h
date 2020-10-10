@@ -53,7 +53,6 @@ class ProcessingRobot
         float     _TotalItemProcTime;
         float     _ShortestItemTime;
         int       _ShortestTimeItemIndex;
-
         float     _ItemProcTime;
         int       _ItemIndex;
         int       _ShortOrLong;

@@ -28,6 +28,7 @@ class Conveyor
         float TimeONGetGet( int currentIndex );
         void ReportOverflows();
         void AvgNumbAddedItems();
+        float GetFirstItemTimeON( int currentIndex );
 
 
 

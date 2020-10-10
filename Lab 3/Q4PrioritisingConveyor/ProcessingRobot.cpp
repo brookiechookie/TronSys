@@ -48,14 +48,6 @@ void ProcessingRobot::ProccessItemsTimed()
     std::cout << "[Proc]: Removing Items " << std::endl;
     while( _UnderTimeLimit )
     {
-        // 1. Get either the shortest or longest processed item
-        // 2. _ItemShort = _Conveyor->GetShortestProcTimeItem()
-        // 3. Check for the error value
-        // 4. If clear, then make sure we're still within the processing time frame
-        // 5. Perform the required calculations lines of code
-        // 6. Then for process item, we're going to need to know what the index
-        //    is for the item that needs to be deleted
-
         // The variable ShortOrLong corresponds to the system prioritising
         // shorter or longer tasked activities.
         // 0 = Shorter tasks prioritised
@@ -72,12 +64,11 @@ void ProcessingRobot::ProccessItemsTimed()
         }
 
 
-
+        // If this input is received from the function, this means that we
+        // have exceeded the number of items that are in the array. So just
+        // return from the while loop with the current calculated total time
         if( _ItemProcTime == float(_ErrorValue) )
         {
-            // If this input is received from the function, this means that we
-            // have exceeded the number of items that are in the array. So just
-            // return from the while loop with the current calculated total time
             _UnderTimeLimit = 0;
             std::cout << "[Proc]: No more items in list left to process!" << std::endl;
         }
@@ -89,12 +80,8 @@ void ProcessingRobot::ProccessItemsTimed()
 
                 _TotalTime = _TotalTime + _ItemProcTime;
 
-                //std::cout << "[Proc]: Safe to add next time, new tot time = " << _TotalTime << std::endl;
-
                 _TimeOFFCalculated = ( _CycleCount * _MaxTotalProcTime ) + _TotalTime - _ItemProcTime;
                 _Conveyor->SettingItemTimeOFF( _TimeOFFCalculated );
-
-                //std::cout << "[Proc]: Item Time OFF = " << _TimeOFFCalculated << std::endl;
 
                 // Before we get rid of the item we quickly want to store the
                 // amount of time that this item waited before being processed.
@@ -102,8 +89,8 @@ void ProcessingRobot::ProccessItemsTimed()
 
                 // We also wish to keep a count of the processing time for all the items
                 _TotalItemProcTime = _TotalItemProcTime + _ItemProcTime;
-                //std::cout << "[Proc]: Adding item proc time = " << _ItemProcTime << " sec" << std::endl;
-                //std::cout << "[Proc]: Total Proc time =  " << _TotalItemProcTime << " sec" << std::endl;
+
+                // Delete the element
                 ProcessItem( _ItemIndex );
 
             }
@@ -117,8 +104,6 @@ void ProcessingRobot::ProccessItemsTimed()
     }
 
     _RobotArmUsageTime = _RobotArmUsageTime + _TotalTime;
-    //std::cout << "[Proc]: Current Index = "<< _CurrentIndex << std::endl;
-
 }
 
 
@@ -128,14 +113,9 @@ void ProcessingRobot::ProccessItemsTimed()
 // conveyor line in order to calculate average wait time
 void ProcessingRobot::CalcWaitTime( int ItemIndex )
 {
-    //_ItemTimeON     = _Conveyor->GetFirstItemTimeON( );
-
     _ItemTimeON     = _Conveyor->GetItemTimeOn( ItemIndex );
     _ItemWaitTime   = _TimeOFFCalculated - _ItemTimeON;
     _TotalWaitTime  = _TotalWaitTime + _ItemWaitTime;
-
-    std::cout << "[Proc]: Calc Item Wait Time = " << _ItemWaitTime << " sec" << std::endl;
-    std::cout << "[Proc]: Total Wait Time = " << _TotalWaitTime << " sec" << std::endl;
 }
 
 
@@ -146,8 +126,6 @@ void ProcessingRobot::ProcessItem( int ItemIndex )
 {
     _Conveyor->RemoveItem( _ItemIndex );
     _TotNumProcItem = _TotNumProcItem + 1;
-    std::cout << "[Proc]: Total # Proc Items = " << _TotNumProcItem << std::endl;
-
 }
 
 
@@ -163,7 +141,6 @@ void ProcessingRobot::AvgArmUtil()
     _AvgArmUtilTime = ( _RobotArmUsageTime/_TotalRunTime ) * 100;
     std::cout << "Cycle Count = " << _CycleCount << std::endl;
     std::cout << "Total Run Time = " << _TotalRunTime << " sec"<< std::endl;
-    //std::cout << "Robot arm usage time = " << _RobotArmUsageTime << std::endl;
     std::cout << "Average Arm Utilisation Time = "<< _AvgArmUtilTime << "%" << std::endl;
 }
 

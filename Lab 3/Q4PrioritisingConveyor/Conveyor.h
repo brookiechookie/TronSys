@@ -28,19 +28,14 @@ class Conveyor
         float GetFirstItemTimeON( );
         void  ReportOverflows();
         void  AvgNumbAddedItems();
-
         float GetShortestItemProcTime();
         int   GetShortestItemIndex();
         float GetLongestItemProcTime();
         int   GetLongestItemIndex();
-
         float GetItemTimeOn( int ItemIndex );
 
-
-
-
     private:
-        std::vector<Item*> MyListOfItems;
+        DoublyLinkedList myList;
         int   _NumItemsOnConveyor;
         int   _CycleCount;
         Item* pItems;
@@ -55,12 +50,8 @@ class Conveyor
         int   _Overflow;
         int   _TotalNumItemsAdded;
         float _AvgNumbItems;
-
-        DoublyLinkedList myList;
-
         float _ShortestItemProcTime;
         int   _ShortestItemIndex;
-
         float _LongesttItemProcTime;
         int   _LongestItemIndex;
 

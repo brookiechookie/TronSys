@@ -25,8 +25,6 @@ DoublyLinkedList::DoublyLinkedList( )
 // time in which the node was added to the system
 void DoublyLinkedList::push_back( int _TheItemID, float TimeOn )
 {
-    //std::cout << "[Back]: Push back"  << std::endl;
-
     Item* new_Item = new Item( _TheItemID, TimeOn );
     Item* last = _HeadRef;
     _CountOfItems++;
@@ -236,10 +234,6 @@ void DoublyLinkedList::DeleteElement( int n )
         // head reference point back to the base head.
         _HeadRef = _HeadRefBase;
 
-        //std::cout << "[DLLI]: Case 1 reached" << std::endl;
-        //std::cout << "[DLLI]: Deleting Last item in list with ID = " << _ItemID <<
-        //" and Proc Time " << _ItemProcTime << std::endl;
-
         _CountOfItems--;
         delete _ItemToDelete ;
         return;
@@ -250,11 +244,6 @@ void DoublyLinkedList::DeleteElement( int n )
     {
         _HeadRef = _ItemToDelete->next;
         _ItemToDelete->next->prev = NULL;
-
-        //std::cout << "[DLLI]: Case 2 reached" << std::endl;
-
-        //std::cout << "[DLLI]: Deleting First item in list with ID = " << _ItemID <<
-        //" and Proc Time " << _ItemProcTime << std::endl;
 
         _CountOfItems--;
         delete _ItemToDelete ;
@@ -267,9 +256,6 @@ void DoublyLinkedList::DeleteElement( int n )
     {
         _ItemToDelete->prev->next = NULL;
 
-        //std::cout << "[DLLI]: Deleting End item in list with ID = " << _ItemID <<
-        //" and Proc Time " << _ItemProcTime << std::endl;
-        //std::cout << "[DLLI]: Case 3 reached" << std::endl;
         _CountOfItems--;
         delete _ItemToDelete ;
         return;
@@ -288,10 +274,7 @@ void DoublyLinkedList::DeleteElement( int n )
     {
         _ItemToDelete->prev->next = _ItemToDelete->next;
     }
-    //std::cout << "[DLLI]: Deleting a middle item in list with ID = " << _ItemID <<
-    //" and Proc Time " << _ItemProcTime << std::endl;
 
-    //std::cout << "[DLLI]: Case 4 reached" << std::endl;
     delete _ItemToDelete;
     _CountOfItems--;
     return;

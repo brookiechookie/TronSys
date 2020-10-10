@@ -22,10 +22,6 @@ vector
 Item.h
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
 
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/IndiItem.h
-ItemParent.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.h
-
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.cpp
 Item.h
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
@@ -36,18 +32,6 @@ iostream
 cstdlib
 -
 random
--
-
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.h
-Conveyor.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Conveyor.h
-ProcessingRobot.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ProcessingRobot.h
-vector
--
-iostream
--
-cstdlib
 -
 
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/LoadingRobot.cpp
@@ -105,8 +89,6 @@ LoadingRobot.h
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/LoadingRobot.h
 ProcessingRobot.h
 /home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ProcessingRobot.h
-ItemParent.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/ItemParent.h
-IndiItem.h
-/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/IndiItem.h
+Item.h
+/home/brookie/github/TronSys/Lab 3/Q2Conveyor++WORK/Item.h
 

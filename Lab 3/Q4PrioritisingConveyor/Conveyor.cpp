@@ -33,7 +33,6 @@ Conveyor::Conveyor( float MaxProcessingTime, int ErrorValue )
 // a vector of class item
 void Conveyor::AddItems( int n )
 {
-    //_NumItemsOnConveyor += n;
     _CycleCount++;
     _TotalNumItemsAdded = _TotalNumItemsAdded + n;
 
@@ -48,10 +47,9 @@ void Conveyor::AddItems( int n )
 
         _UniqueID++;
     }
-    //std::cout << "[Conv]: Finished Loading List with items" << std::endl;
-    //myList.printList( );
+
+    // Update the number of items on the conveyor
     _NumItemsOnConveyor = myList.Size();
-    //std::cout << "[Conv]: Size of List is " << _NumItemsOnConveyor << std::endl;
 
     if( _NumItemsOnConveyor > 50)
     {
@@ -260,16 +258,15 @@ float Conveyor::GetItemTimeOn( int ItemIndex )
 // deletes the object item and removes it from the vector storing all the items
 void Conveyor::RemoveItem( int n )
 {
-    // Note that we cannot have a negative number of items on belt
-    //_NumItemsOnConveyor = std::max(0, _NumItemsOnConveyor-n);
-
     //std::cout << "[Conv]: First Item being removed" << std::endl;
 
+    // One item gets removed each item, so decrement the total items
     _TotalItemsInPointer = _TotalItemsInPointer - 1;
 
-    //myList.pop_front();
+    // Delete the item
     myList.DeleteElement( n );
 
+    // Update the value of how many items are on the conveyor 
     _NumItemsOnConveyor = myList.Size();
 
 }

@@ -26,6 +26,7 @@ LoadingRobot::LoadingRobot( Conveyor* WhichConveyor )
 // conveyor
 int LoadingRobot::AddItems()
 {
+    // Add a random number of items in the range between 0-10 on the conveyor 
     _ItemsToAdd = rand() % 10;
     _Conveyor->AddItems( _ItemsToAdd );
     return _ItemsToAdd;

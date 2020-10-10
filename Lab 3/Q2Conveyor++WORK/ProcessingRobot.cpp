@@ -155,7 +155,7 @@ void ProcessingRobot::AvgArmUtil()
 // conveyor line in order to calculate average wait time
 void ProcessingRobot::CalcWaitTime( int currentIndex )
 {
-    _ItemTimeON = _Conveyor->TimeONGetGet( currentIndex );
+    _ItemTimeON = _Conveyor->GetFirstItemTimeON( currentIndex );
     _ItemWaitTime = _TimeOFFCalculated - _ItemTimeON;
 
     _TotalWaitTime = _TotalWaitTime + _ItemWaitTime;

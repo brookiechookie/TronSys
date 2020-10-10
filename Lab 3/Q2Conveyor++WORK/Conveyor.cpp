@@ -157,7 +157,7 @@ void Conveyor::SettingItemTimeOFF( int currentIndex, float TimeOFFcalculated )
 // This function is essentially a double getter function as it is first getting
 // the timeon variable from item and then the function itself is a getter which
 // returns the timeOn value
-float Conveyor::GetFirstItemTimeON( )
+float Conveyor::GetFirstItemTimeON( int currentIndex )
 {
     Item* pAnothItem = MyListOfItems.at( currentIndex );
     _ItemTimeON = pAnothItem->TimeONgetter();
