@@ -23,6 +23,9 @@ DoublyLinkedList::DoublyLinkedList( )
 // This function acts to push back a node to the end of a doubly linked list.
 // The two vital pieces of information that are required is the Item ID and the
 // time in which the node was added to the system
+// The following code was inspired by a piece of code found online. I used this
+// resource on the 8/10/20, and it can be found at
+// https://www.geeksforgeeks.org/doubly-linked-list/
 void DoublyLinkedList::push_back( int _TheItemID, float TimeOn )
 {
     //std::cout << "[Back]: Push back"  << std::endl;
@@ -43,7 +46,6 @@ void DoublyLinkedList::push_back( int _TheItemID, float TimeOn )
   	{
     		new_Item->prev = NULL;
     		_HeadRef = new_Item;   // Point the head to the first item
-        //std::cout << "[Back]: This is the first item in the list" << std::endl;
     		return;
   	}
 
@@ -64,6 +66,9 @@ void DoublyLinkedList::push_back( int _TheItemID, float TimeOn )
 //------------------------------------------------------------------------------
 // This function prints contents of the doubly linked list starting from the
 // head reference point of the list
+// The following code was sourced online. I used this
+// resource on the 8/10/20, and it can be found at
+// https://www.geeksforgeeks.org/doubly-linked-list/
 void DoublyLinkedList::printList()
 {
     Item* item = _HeadRef;
@@ -83,6 +88,9 @@ void DoublyLinkedList::printList()
 // This function pops the front item of the list. In order to pop the front of
 // the stack, we must first make sure that there is items in the list. Then we
 // must find the head of the list and pop the first item.
+// The following code was inspired by a piece of code found online. I used this
+// resource on the 8/10/20, and it can be found at
+// https://www.geeksforgeeks.org/doubly-linked-list/
 void DoublyLinkedList::pop_front( )
 {
     //std::cout << "[Pop ]: Popping Front Item"  << std::endl;
@@ -142,6 +150,9 @@ int DoublyLinkedList::Size()
 
 //------------------------------------------------------------------------------
 // This function checks whether or not the list is empty
+// The following code was inspired by a piece of code found online. I used this
+// resource on the 8/10/20, and it can be found at
+// https://www.geeksforgeeks.org/doubly-linked-list/
 int DoublyLinkedList::CheckIfListEmpty()
 {
     int _ReturningVal;

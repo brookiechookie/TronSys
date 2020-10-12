@@ -7,16 +7,22 @@
 #include "DoublyLinkedList.h"
 #include "Item.h"
 
+//------------------------------------------------------------------------------
+// Constructor for DLL
 DoublyLinkedList::DoublyLinkedList()
 {
     _HeadRef        = _HeadRefBase;
     _ItemID         = 0;
     _CountOfItems   = 0;
 }
+
+
 //------------------------------------------------------------------------------
 // Given a reference (pointer to pointer) to the head of a DLL and an int,
 // push_backs a new Item at the end
-//void DoublyLinkedList::push_back(Item** head_ref, int _TheItemID )
+// The following code was inspired by a piece of code found online. I used this
+// resource on the 8/10/20, and it can be found at
+// https://www.geeksforgeeks.org/doubly-linked-list/
 void DoublyLinkedList::push_back( int _TheItemID )
 {
     std::cout << "[Back]: Push back"  << std::endl;
@@ -56,7 +62,9 @@ void DoublyLinkedList::push_back( int _TheItemID )
 
 //------------------------------------------------------------------------------
 // This function prints contents of linked list starting from the given Item
-//void DoublyLinkedList::printList(Item* item)
+// The following code was sourced online. I used this
+// resource on the 8/10/20, and it can be found at
+// https://www.geeksforgeeks.org/doubly-linked-list/
 void DoublyLinkedList::printList()
 {
     Item* item = _HeadRef;
@@ -69,13 +77,6 @@ void DoublyLinkedList::printList()
         _CountOfItems++;
   	}
 
-    /*
-    if(item == NULL)
-    {
-        std::cout << "[List]: "<< "NULL - Last Item in the list" << std::endl;
-    }
-    */
-
 }
 
 
@@ -84,6 +85,9 @@ void DoublyLinkedList::printList()
 // This function pops the front item of the list. In order to pop the front of
 // the stack, we must first make sure that there is items in the list. Then we
 // must find the head of the list and pop the first item.
+// The following code was inspired by a piece of code found online. I used this
+// resource on the 8/10/20, and it can be found at
+// https://www.geeksforgeeks.org/doubly-linked-list/
 void DoublyLinkedList::pop_front( )
 {
     std::cout << "[Pop ]: Popping Front Item"  << std::endl;
@@ -124,9 +128,6 @@ void DoublyLinkedList::pop_front( )
         // We need to reassign the head item to the next item in the list
         _HeadRef = _FirstItem->next;
     }
-
-    //_ItemID = _FirstItem->IDGetter();
-    //std::cout << "[Pop ]: Item with value " << _ItemID << " being deleted"<< std::endl;
 
     delete _FirstItem;
     _CountOfItems--;
