@@ -26,12 +26,14 @@ int main()
     sizeUp = myList.Size();
     std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
 
+
     myList.pop_front( );
     myList.pop_front( );
     myList.pop_front( );
     myList.printList( );
     sizeUp = myList.Size();
     std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
+
 
     myList.push_back( 4 );
     myList.push_back( 5 );

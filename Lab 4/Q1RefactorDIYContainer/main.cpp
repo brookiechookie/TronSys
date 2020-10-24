@@ -15,17 +15,19 @@ int main()
     // then create the actual list and point it to the reference head
     // We had a vector of item objects in Q2, now we are going to have a list
     // of item objects
-    DoublyLinkedList myList;
+    DoublyLinkedList<int> myList;
 
     int sizeUp = 0;
 
+    //int a = 1;
     myList.push_back( 1 );
     myList.push_back( 2 );
     myList.push_back( 3 );
-    myList.printList( );
-    sizeUp = myList.Size();
-    std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
+//    myList.printList( );
+//    sizeUp = myList.Size();
+//    std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
 
+/*
     myList.pop_front( );
     myList.pop_front( );
     myList.pop_front( );
@@ -44,7 +46,7 @@ int main()
     myList.printList( );
     sizeUp = myList.Size();
     std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
-
+*/
     std::cout << "[Main]: I am done here." << std::endl;
 
 }

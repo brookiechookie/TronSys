@@ -7,13 +7,16 @@
 #include "DoublyLinkedList.h"
 #include "Item.h"
 
+/*
 //------------------------------------------------------------------------------
 // Constructor for DLL
+//template <class T>
 DoublyLinkedList::DoublyLinkedList()
 {
     _HeadRef        = _HeadRefBase;
     _ItemID         = 0;
     _CountOfItems   = 0;
+
 }
 
 
@@ -23,6 +26,7 @@ DoublyLinkedList::DoublyLinkedList()
 // The following code was inspired by a piece of code found online. I used this
 // resource on the 8/10/20, and it can be found at
 // https://www.geeksforgeeks.org/doubly-linked-list/
+//template <class T>
 void DoublyLinkedList::push_back( int _TheItemID )
 {
     std::cout << "[Back]: Push back"  << std::endl;
@@ -60,6 +64,7 @@ void DoublyLinkedList::push_back( int _TheItemID )
 
 
 
+
 //------------------------------------------------------------------------------
 // This function prints contents of linked list starting from the given Item
 // The following code was sourced online. I used this
@@ -78,6 +83,7 @@ void DoublyLinkedList::printList()
   	}
 
 }
+
 
 
 
@@ -143,3 +149,5 @@ int DoublyLinkedList::Size()
 {
     return _CountOfItems;
 }
+
+*/
