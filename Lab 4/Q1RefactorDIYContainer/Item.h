@@ -17,7 +17,7 @@
 class Item
 {
     public:
-        Item( int SpecialID );
+        Item( int SpecialID, float ProcTime );
         ~Item();
         Item* next;
         Item* prev;

@@ -9,21 +9,10 @@
 
 //------------------------------------------------------------------------------
 // Class Item Constructor
-Item::Item( int SpecialID )
+Item::Item( int SpecialID, float ProcTime )
 {
-    _ItemID = SpecialID;
-
-    // The following lines of code assign a processing time to each item in a
-    // uniformly distributed manner of type float.
-    // The following code was sourced online from cppreference. I used this
-    // resource on the 7/10/20, and it can be found at
-    // https://en.cppreference.com/w/cpp/numeric/random/uniform_real_distribution
-    const float range_from  = 1;
-    const float range_to    = 5.1;
-    std::random_device rand_dev;
-    std::mt19937 generator(rand_dev());
-    std::uniform_real_distribution<float> distr(range_from, range_to);
-    _ProcTime = distr(generator);
+    _ItemID   = SpecialID;
+    _ProcTime = ProcTime;
 
     std::cout << "[CTor]: Item ID = " << _ItemID << ", Proc time = "<< _ProcTime
     << " sec added" << std::endl;

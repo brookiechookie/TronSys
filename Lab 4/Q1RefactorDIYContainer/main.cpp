@@ -11,42 +11,73 @@
 int main()
 {
 
-    // First create the head of the list which we will always have access to
-    // then create the actual list and point it to the reference head
-    // We had a vector of item objects in Q2, now we are going to have a list
-    // of item objects
-    DoublyLinkedList<int> myList;
+/*
+    // Create the new item object
+    Item myItem1( 1, 4.32 );
 
-    int sizeUp = 0;
+    // Create the list of Item references
+    DoublyLinkedList<Item> ItemList;
 
-    //int a = 1;
-    myList.push_back( 1 );
-    myList.push_back( 2 );
-    myList.push_back( 3 );
-//    myList.printList( );
-//    sizeUp = myList.Size();
-//    std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
+    // Feed in the new Item object made
+    ItemList.push_back( myItem1 );
+
+*/
+/*
+    DoublyLinkedList<int> intList;
+    int a = 1;
+    intList.push_back( a );
+*/
 
 /*
-    myList.pop_front( );
-    myList.pop_front( );
-    myList.pop_front( );
-    myList.printList( );
-    sizeUp = myList.Size();
-    std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
+    Item myItem1( 22, 4.2343 );
 
-    myList.push_back( 4 );
-    myList.push_back( 5 );
-    myList.printList( );
-    sizeUp = myList.Size();
-    std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
-
-    myList.pop_front( );
-    myList.pop_front( );
-    myList.printList( );
-    sizeUp = myList.Size();
-    std::cout << "[Main]: Size of List is " << sizeUp << std::endl;
+    DoublyLinkedList<Item&> ItemList;
+    ItemList.push_back( myItem1 );
 */
+
+
+
+    // Variable to store the number of objects that are in the list
+    int NumberOfItems = 0;
+    // Create a new list which contains references to the items
+    DoublyLinkedList<int> intList;
+    int a = 1;
+    intList.push_back( a );
+    NumberOfItems = intList.Size();
+    std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
+    std::endl;
+    intList.printList();
+
+    a++;
+    intList.push_back( a );
+    NumberOfItems = intList.Size();
+    std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
+    std::endl;
+    intList.printList();
+
+    a++;
+    intList.push_back( a );
+    NumberOfItems = intList.Size();
+    std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
+    std::endl;
+    intList.printList();
+
+    a++;
+    intList.push_back( a );
+    NumberOfItems = intList.Size();
+    std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
+    std::endl;
+    intList.printList();
+
+    intList.pop_front( );
+    intList.pop_front( );
+    intList.pop_front( );
+    intList.pop_front( );
+    intList.pop_front( );
+
+
+
+
     std::cout << "[Main]: I am done here." << std::endl;
 
 }

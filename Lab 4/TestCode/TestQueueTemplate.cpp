@@ -1,86 +1,21 @@
+
+
 #include <iostream>
-#include <vector>
 
-using namespace std;
-//------------------------------------------------------------------------------
-template <typename T>
-class MyQueue
-{
-    protected:
-        vector<T> data;
-    public:
-        void Add(T const &input);
-        void Remove();
-        void PrintString();
-        void PrintInt();
-        bool IsEmpty();
-};
+int i = 37;
+int j = 43;
 
-//------------------------------------------------------------------------------
-template <typename T>
-void MyQueue<T>::Add(T const &input)
-{
-    data.push_back(input);
-}
+int& r = i;   // initialising the reference
+int* p = &i;  // initialising the pointer
+std::cout << i << ", " << j << std::endl;
+std::cout << r << ", " << *p << std::endl;
+p = &j;  // reassigning the pointer
+*p = 3;  // modifying what's pointed to by p
+std::cout << i << ", " << j << std::endl;std::cout << r << ", " << *p << std::endl;
+r = j;   // modifying what's referenced by r// NOT reassigning r
+std::cout << i << ", " << j << std::endl;
+std::cout << r << ", " << *p << std::endl;
 
-//------------------------------------------------------------------------------
-template <typename T>
-void MyQueue<T>::Remove()
-{
-    data.erase(data.begin());
-}
 
-//------------------------------------------------------------------------------
-template <typename T>
-void MyQueue<T>::PrintString()
-{
-    vector<string>::iterator PrintIt = data.begin();
-    while (PrintIt != data.end())
-    {
-        cout << *PrintIt << endl;
-        PrintIt++;
-    }
-}
-
-//------------------------------------------------------------------------------
-template <typename T>
-void MyQueue<T>::PrintInt()
-{
-    vector<int>::iterator PrintIt = data.begin();
-    while (PrintIt != data.end())
-    {
-        cout << *PrintIt << endl;
-        PrintIt++;
-    }
-}
-
-//------------------------------------------------------------------------------
-template <typename T>
-bool MyQueue<T>::IsEmpty()
-{
-    return data.begin() == data.end();
-}
-
-//------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
-int main()
-{
-    MyQueue<string> StringQueue;
-    cout << StringQueue.IsEmpty() << endl;
-    StringQueue.Add("Hello");
-    StringQueue.Add("Goodbye");
-    cout << "Printing strings: " << endl;
-    StringQueue.PrintString();
-    cout << StringQueue.IsEmpty() << endl;
-    StringQueue.Remove();
-    cout << "Printing strings: " << endl;
-    StringQueue.PrintString();
-    StringQueue.Remove();
-    cout << StringQueue.IsEmpty() << endl;
-    MyQueue<int> IntQueue;
-    IntQueue.Add(1);
-    IntQueue.Add(2);
-    cout << "Printing ints: " << endl;
-    IntQueue.PrintInt();
-    return 0;
-}
+int k = r;
+std::cout << r << ", " << k << std::endl;

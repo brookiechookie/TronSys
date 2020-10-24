@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/OOP.dir/main.cpp.o"
   "CMakeFiles/OOP.dir/DoublyLinkedList.cpp.o"
   "CMakeFiles/OOP.dir/Item.cpp.o"
+  "CMakeFiles/OOP.dir/Node.cpp.o"
   "OOP.pdb"
   "OOP"
 )
