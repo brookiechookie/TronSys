@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/BigF.dir/main.cpp.o CMakeFiles/BigF.dir/DoublyLinkedList.cpp.o CMakeFiles/BigF.dir/Item.cpp.o  -o BigF 
