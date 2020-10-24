@@ -54,45 +54,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/brookie/github/TronSys/Lab 3/Q3Test"
+CMAKE_SOURCE_DIR = "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/brookie/github/TronSys/Lab 3/Q3Test"
+CMAKE_BINARY_DIR = "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer"
 
 #=============================================================================
-# Target rules for target CMakeFiles/BigF.dir
+# Target rules for target CMakeFiles/OOP.dir
 
 # All Build rule for target.
-CMakeFiles/BigF.dir/all:
-	$(MAKE) -f CMakeFiles/BigF.dir/build.make CMakeFiles/BigF.dir/depend
-	$(MAKE) -f CMakeFiles/BigF.dir/build.make CMakeFiles/BigF.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brookie/github/TronSys/Lab 3/Q3Test/CMakeFiles" --progress-num=1,2,3,4 "Built target BigF"
-.PHONY : CMakeFiles/BigF.dir/all
+CMakeFiles/OOP.dir/all:
+	$(MAKE) -f CMakeFiles/OOP.dir/build.make CMakeFiles/OOP.dir/depend
+	$(MAKE) -f CMakeFiles/OOP.dir/build.make CMakeFiles/OOP.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/CMakeFiles" --progress-num=1,2,3,4 "Built target OOP"
+.PHONY : CMakeFiles/OOP.dir/all
 
 # Include target in all.
-all: CMakeFiles/BigF.dir/all
+all: CMakeFiles/OOP.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/BigF.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brookie/github/TronSys/Lab 3/Q3Test/CMakeFiles" 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/BigF.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brookie/github/TronSys/Lab 3/Q3Test/CMakeFiles" 0
-.PHONY : CMakeFiles/BigF.dir/rule
+CMakeFiles/OOP.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/CMakeFiles" 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/OOP.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/CMakeFiles" 0
+.PHONY : CMakeFiles/OOP.dir/rule
 
 # Convenience name for target.
-BigF: CMakeFiles/BigF.dir/rule
+OOP: CMakeFiles/OOP.dir/rule
 
-.PHONY : BigF
-
-# clean rule for target.
-CMakeFiles/BigF.dir/clean:
-	$(MAKE) -f CMakeFiles/BigF.dir/build.make CMakeFiles/BigF.dir/clean
-.PHONY : CMakeFiles/BigF.dir/clean
+.PHONY : OOP
 
 # clean rule for target.
-clean: CMakeFiles/BigF.dir/clean
+CMakeFiles/OOP.dir/clean:
+	$(MAKE) -f CMakeFiles/OOP.dir/build.make CMakeFiles/OOP.dir/clean
+.PHONY : CMakeFiles/OOP.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/OOP.dir/clean
 
 .PHONY : clean
 

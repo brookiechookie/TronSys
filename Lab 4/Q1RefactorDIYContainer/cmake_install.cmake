@@ -1,4 +1,4 @@
-# Install script for directory: /home/brookie/github/TronSys/Lab 3/Q3Test
+# Install script for directory: /home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/brookie/github/TronSys/Lab 3/Q3Test/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

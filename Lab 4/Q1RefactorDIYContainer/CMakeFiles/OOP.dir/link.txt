@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/OOP.dir/main.cpp.o CMakeFiles/OOP.dir/DoublyLinkedList.cpp.o CMakeFiles/OOP.dir/Item.cpp.o  -o OOP 
