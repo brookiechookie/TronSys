@@ -7,15 +7,20 @@
 
 #include "Item.h"
 
+
+Item::Item()
+{
+    std::cout<< "[CTor]: Item with no values constructed" << std::endl;
+}
+
+
 //------------------------------------------------------------------------------
 // Class Item Constructor
-Item::Item( int SpecialID, float ProcTime )
+Item::Item( int SpecialID )
 {
     _ItemID   = SpecialID;
-    _ProcTime = ProcTime;
 
-    std::cout << "[CTor]: Item ID = " << _ItemID << ", Proc time = "<< _ProcTime
-    << " sec added" << std::endl;
+    std::cout << "[CTor]: Item ID = " << _ItemID << " added" << std::endl;
 
 }
 
@@ -23,8 +28,9 @@ Item::Item( int SpecialID, float ProcTime )
 // Class Item Destructor
 Item::~Item()
 {
-    std::cout << "[DTor]: Item with ID " << _ItemID << " is signing off."
-    << std::endl;
+    //std::cout << "[DTor]: Item with ID " << _ItemID << " is signing off."
+    //<< std::endl;
+
 }
 
 //------------------------------------------------------------------------------

@@ -17,16 +17,14 @@ template <class T>
 class Node
 {
     public:
-//        Node( Node& object );
-        Node( T& object );
+        Node( const T& object );
         ~Node();
         Node<T>* next;
         Node<T>* prev;
         T ObjectStoredGetter();
 
     private:
-        T _ObjectStored;
-
+        T m_ObjectStored;
 
 };
 
@@ -34,12 +32,14 @@ class Node
 // Node Object Consructor
 
 template <class T>
-Node<T>::Node( T& object )
+Node<T>::Node( const T& object ) : m_ObjectStored( object )
 {
-    std::cout << "[DLL ]: Reached here" << std::endl;
+
+    //std::cout << "[DLL ]: Reached here" << std::endl;
+
 
     // Object to be stored
-    _ObjectStored = object;
+    // _ObjectStored = object;
 
     // The node function must be able to store the value that gets passed in.
     std::cout<< "[Ctor]: New node added to list" << std::endl;
@@ -62,7 +62,7 @@ Node<T>::~Node()
 template <class T>
 T Node<T>::ObjectStoredGetter()
 {
-    return _ObjectStored;
+    return m_ObjectStored;
 }
 
 

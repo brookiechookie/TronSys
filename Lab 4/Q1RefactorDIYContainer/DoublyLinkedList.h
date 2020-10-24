@@ -55,8 +55,6 @@ void DoublyLinkedList<T>::push_back( T& object )
     //std::cout << "[Back]: The item object " << object << " has been received" <<
     //std::endl;
 
-
-
 //    Node* new_Node = new Node( object );
     Node<T>* new_Node = new Node<T>( object );
     //std::cout << "[DLL ]: Reached here" << std::endl;
@@ -125,9 +123,8 @@ void DoublyLinkedList<T>::printList()
 template <class T>
 void DoublyLinkedList<T>::pop_front( )
 {
-//    std::cout << "[Pop ]: Popping Front Item"  << std::endl;
+
     Node<T>* _FirstItem = _HeadRef;
-    T _StoredNodeValue;
 
     // If there is nothing currently being stored in the list then we cannot
     // delete anything
@@ -144,10 +141,10 @@ void DoublyLinkedList<T>::pop_front( )
     if( _FirstItem->prev == NULL && _FirstItem->next == NULL)
     {
 
-        _StoredNodeValue = _FirstItem->ObjectStoredGetter();
+      //  _StoredNodeValue = _FirstItem->ObjectStoredGetter();
         std::cout << "[Pop ]: There is only one item left" << std::endl;
-        std::cout << "[Pop ]: The current object value is = " <<
-        _StoredNodeValue << std::endl;
+      //  std::cout << "[Pop ]: The current object value is = " <<
+      //  _StoredNodeValue << std::endl;
 
         // IF we are popping the last item in the list, then we must reset the
         // head reference point back to the base head.
@@ -163,7 +160,7 @@ void DoublyLinkedList<T>::pop_front( )
     while( _FirstItem->prev != NULL )
     {
         std::cout << "[Pop ]: First Node not given, Finding First Node" << std::endl;
-        _StoredNodeValue = _FirstItem->ObjectStoredGetter();
+      //  _StoredNodeValue = _FirstItem->ObjectStoredGetter();
         _FirstItem = _FirstItem->prev;
 
     }
@@ -178,9 +175,11 @@ void DoublyLinkedList<T>::pop_front( )
         _HeadRef = _FirstItem->next;
     }
 
-    _StoredNodeValue = _FirstItem->ObjectStoredGetter();
-    std::cout << "[Pop ]: First Node being deleted. Object Value = " <<
-    _StoredNodeValue << std::endl;
+    // _StoredNodeValue = _FirstItem->ObjectStoredGetter();
+    //std::cout << "[Pop ]: First Node being deleted. Object Value = " <<
+    //_StoredNodeValue << std::endl;
+
+    std::cout << "[Pop ]: First Node being deleted." << std::endl;
 
     delete _FirstItem;
     m_CountOfItems--;

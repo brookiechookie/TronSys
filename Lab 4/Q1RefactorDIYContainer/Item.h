@@ -17,7 +17,8 @@
 class Item
 {
     public:
-        Item( int SpecialID, float ProcTime );
+        Item();
+        Item( int SpecialID );
         ~Item();
         Item* next;
         Item* prev;
@@ -25,7 +26,6 @@ class Item
 
     private:
         int   _ItemID;
-        float _ProcTime;
 
 };
 
