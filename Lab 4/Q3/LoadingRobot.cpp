@@ -9,16 +9,23 @@
 //
 
 #include <cstdlib>      // rand
+#include <iostream>     // std::cout
 
 #include "LoadingRobot.h"
-#include "Conveyor.h"
+//#include "Conveyor.h"
 
 
 //---------------------------------------------------------------
 // Initialise the pointer conveyor to point to the right conveyor
-void LoadingRobot::Init( Conveyor* WhichConveyor )
+LoadingRobot::LoadingRobot( Conveyor& WhichConveyor ) : _Conveyor( WhichConveyor )
 {
-    _Conveyor = WhichConveyor;
+}
+
+//------------------------------------------------------------------------------
+// Destructor
+LoadingRobot::~LoadingRobot()
+{
+    std::cout << "[DTor]: LoadingRobot signing off" << std::endl;
 }
 
 //---------------------------------------------------------------
@@ -26,6 +33,13 @@ void LoadingRobot::Init( Conveyor* WhichConveyor )
 // number of items is being added each cycle
 void LoadingRobot::AddItems()
 {
-    _Conveyor->AddItems( rand() % 10 );
+    _Conveyor.AddItems( rand() % 10 );
 
+}
+
+//------------------------------------------------------------------------------
+// Copy Constructor for LoadingRobot
+LoadingRobot::LoadingRobot( const LoadingRobot& other ) : _Conveyor( other._Conveyor )
+{
+    std::cout << "[STUFFEDUP ]: Copy Created of LoadingRobot Object :(" << std::endl;
 }

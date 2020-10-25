@@ -18,11 +18,13 @@
 class Conveyor
 {
     public:
-        void Init();
+        Conveyor();
+        ~Conveyor();
         void AddItems( int n );
         void RemoveItems( int n );
         void Report();
         int getConvItemNum();
+        Conveyor( const Conveyor& other );
 
     private:
         int _NumItemsOnConveyor;

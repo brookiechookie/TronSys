@@ -21,10 +21,13 @@
 class LoadingRobot
 {
     public:
-        void Init( Conveyor* WhichConveyor );
+        LoadingRobot( Conveyor& WhichConveyor );
+        ~LoadingRobot();
         void AddItems();
+        LoadingRobot( const LoadingRobot& other );
+
     private:
-        Conveyor* _Conveyor;
+        Conveyor& _Conveyor;
 };
 
 
