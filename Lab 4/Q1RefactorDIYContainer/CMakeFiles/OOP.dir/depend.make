@@ -9,10 +9,6 @@ CMakeFiles/OOP.dir/DoublyLinkedList.cpp.o: Node.h
 CMakeFiles/OOP.dir/Item.cpp.o: Item.cpp
 CMakeFiles/OOP.dir/Item.cpp.o: Item.h
 
-CMakeFiles/OOP.dir/Node.cpp.o: Item.h
-CMakeFiles/OOP.dir/Node.cpp.o: Node.cpp
-CMakeFiles/OOP.dir/Node.cpp.o: Node.h
-
 CMakeFiles/OOP.dir/main.cpp.o: DoublyLinkedList.h
 CMakeFiles/OOP.dir/main.cpp.o: Item.h
 CMakeFiles/OOP.dir/main.cpp.o: Node.h

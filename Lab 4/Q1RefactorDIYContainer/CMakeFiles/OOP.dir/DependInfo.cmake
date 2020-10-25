@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/DoublyLinkedList.cpp" "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/CMakeFiles/OOP.dir/DoublyLinkedList.cpp.o"
   "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/Item.cpp" "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/CMakeFiles/OOP.dir/Item.cpp.o"
-  "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/Node.cpp" "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/CMakeFiles/OOP.dir/Node.cpp.o"
   "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/main.cpp" "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/CMakeFiles/OOP.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

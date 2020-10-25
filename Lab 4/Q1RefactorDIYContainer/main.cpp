@@ -75,6 +75,7 @@ int main()
 
     // Pop the items from the list. Intentionally delete more items than there
     // is in the list to check DLL is robust
+
     ItemList.pop_front( );
     ItemList.pop_front( );
     ItemList.pop_front( );
@@ -89,7 +90,7 @@ int main()
 
     //--------------------------------------------------------------------------
     // The below code test the operation of the list with strings
-
+    /*
     // Create the string list
     DoublyLinkedList<std::string> StringList;
 
@@ -125,6 +126,7 @@ int main()
     StringList.pop_front( );
     StringList.pop_front( );
 
+    */
     //--------------------------------------------------------------------------
 
     std::cout << "[Main]: I am done here." << std::endl;

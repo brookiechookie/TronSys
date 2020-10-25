@@ -2,19 +2,18 @@
 //
 // Creator:   Brookie
 // Date:      24.10.20
-// Purpose:   Header file for Item class in Test DIY List
+// Purpose:   Header file for Node templated class
 
 
 #ifndef _NODE_H
 #define _NODE_H
 
-
 #include <iostream>     // std::cout
-#include <cstdlib>      // For rand()
-#include <random>       // For uniform number generation
 
 #include "Item.h"
 
+//------------------------------------------------------------------------------
+// Public Interface of templated node class
 template <class T>
 class Node
 {
@@ -33,14 +32,17 @@ class Node
 };
 
 //------------------------------------------------------------------------------
-// Node Object Consructor
+// Node Object Consructor with member initialiser list for the object to be
+// stored. Note that this happens on creation and thus the variable is a const
 template <class T>
 Node<T>::Node( T& object ) : m_ObjectStored( object )
 {
-    //_ItemIDCode = object.IDGetter();
-
+    // Include this line to test class item list
+    /*
+    _ItemIDCode = object.IDGetter();
     std::cout << "[DLL ]: Item with ID = " << _ItemIDCode << " put in list" <<
     std::endl;
+    */
 
     // The node function must be able to store the value that gets passed in.
     std::cout<< "[Ctor]: New node added to list" << std::endl;
@@ -73,7 +75,5 @@ int Node<T>::NodeItemIDGetter()
 {
     return _ItemIDCode;
 }
-
-
 
 #endif

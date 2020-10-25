@@ -24,16 +24,8 @@ Item.h
 iostream
 -
 
-/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/Node.cpp
-Node.h
-/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/Node.h
-
 /home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/Node.h
 iostream
--
-cstdlib
--
-random
 -
 Item.h
 /home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/Item.h
