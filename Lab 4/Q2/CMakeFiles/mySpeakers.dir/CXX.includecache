@@ -54,6 +54,14 @@ Speaker.h
 Speaker.h
 /home/brookie/github/TronSys/Lab 4/Q2/Speaker.h
 
+/home/brookie/github/TronSys/Lab 4/Q2/MyLogger.h
+iostream
+-
+string
+-
+cassert
+-
+
 /home/brookie/github/TronSys/Lab 4/Q2/Speaker.cpp
 iostream
 -
@@ -97,6 +105,10 @@ vector
 -
 memory
 -
+cassert
+-
+MyLogger.h
+/home/brookie/github/TronSys/Lab 4/Q2/MyLogger.h
 Speaker.h
 /home/brookie/github/TronSys/Lab 4/Q2/Speaker.h
 English.h

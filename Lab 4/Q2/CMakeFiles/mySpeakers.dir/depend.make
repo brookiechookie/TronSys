@@ -24,6 +24,7 @@ CMakeFiles/mySpeakers.dir/TalkativeEng.cpp.o: TalkativeEng.h
 CMakeFiles/mySpeakers.dir/main.cpp.o: Dutch.h
 CMakeFiles/mySpeakers.dir/main.cpp.o: English.h
 CMakeFiles/mySpeakers.dir/main.cpp.o: Italian.h
+CMakeFiles/mySpeakers.dir/main.cpp.o: MyLogger.h
 CMakeFiles/mySpeakers.dir/main.cpp.o: Speaker.h
 CMakeFiles/mySpeakers.dir/main.cpp.o: TalkativeEng.h
 CMakeFiles/mySpeakers.dir/main.cpp.o: main.cpp
