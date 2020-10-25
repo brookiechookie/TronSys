@@ -13,11 +13,13 @@
 #include <cstdlib>      // For rand()
 #include <random>       // For uniform number generation
 
+#include "Item.h"
+
 template <class T>
 class Node
 {
     public:
-        Node( const T& object );
+        Node( T& object );
         ~Node();
         Node<T>* next;
         Node<T>* prev;
@@ -25,31 +27,25 @@ class Node
         int NodeItemIDGetter();
 
     private:
-        T m_ObjectStored;
-        //int m_ItemIDCode;
+        const T& m_ObjectStored;
+        int _ItemIDCode;
 
 };
 
 //------------------------------------------------------------------------------
 // Node Object Consructor
-
 template <class T>
-Node<T>::Node( const T& object ) : m_ObjectStored( object )
+Node<T>::Node( T& object ) : m_ObjectStored( object )
 {
+    _ItemIDCode = object.IDGetter();
 
-    //_ItemIDCode = object.IDGetter();
-    //std::cout << "[Node]: I can see Item ID = " << _ItemIDCode << std::endl;
-    //std::cout << "[DLL ]: Reached here" << std::endl;
-
-
-    // Object to be stored
-    // _ObjectStored = object;
+    std::cout << "[DLL ]: Item with ID = " << _ItemIDCode << " put in list" <<
+    std::endl;
 
     // The node function must be able to store the value that gets passed in.
     std::cout<< "[Ctor]: New node added to list" << std::endl;
 
 }
-
 
 //------------------------------------------------------------------------------
 // Node Object Destructor
@@ -69,7 +65,7 @@ T Node<T>::ObjectStoredGetter()
     return m_ObjectStored;
 }
 
-/*
+
 //------------------------------------------------------------------------------
 // Getter function returning the item ID's of each Item object
 template <class T>
@@ -77,7 +73,7 @@ int Node<T>::NodeItemIDGetter()
 {
     return _ItemIDCode;
 }
-*/
+
 
 
 #endif

@@ -20,9 +20,9 @@ class Item
         Item();
         Item( int SpecialID );
         ~Item();
-        Item* next;
-        Item* prev;
         int IDGetter();
+        Item( const Item& other );
+        Item& operator=( const Item& other );
 
     private:
         int   _ItemID;

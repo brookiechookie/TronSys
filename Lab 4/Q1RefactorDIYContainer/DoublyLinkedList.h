@@ -21,9 +21,9 @@ class DoublyLinkedList
         int Size();
         void printItemList();
 
-        DoublyLinkedList( const DoublyLinkedList& other );
-        ~DoublyLinkedList( );
-        DoublyLinkedList& operator=( const DoublyLinkedList& other );
+        //DoublyLinkedList( const DoublyLinkedList& other );
+        //~DoublyLinkedList( );
+        //DoublyLinkedList& operator=( const DoublyLinkedList& other );
 
 
     private:
@@ -46,6 +46,7 @@ DoublyLinkedList<T>::DoublyLinkedList() : m_CountOfItems( 0 )
     std::cout << "[Ctor]: The DLL has been created" << std::endl;
 }
 
+/*
 //------------------------------------------------------------------------------
 // Copy Constructor for DLL
 template <class T>
@@ -72,6 +73,7 @@ DoublyLinkedList<T>& DoublyLinkedList<T>::operator=( const DoublyLinkedList& oth
     Copy( other._HeadRef );
     return *this;
 }
+*/
 
 //------------------------------------------------------------------------------
 // We want to add a new entry to the list. Feed in a reference to the item
@@ -82,18 +84,11 @@ void DoublyLinkedList<T>::push_back( T& object )
 {
     std::cout << "[Back]: Push back"  << std::endl;
 
-    //_ItemIDCode = object.IDGetter();
-  //  std::cout << "[Push]: I can see Item ID = " << _ItemIDCode << std::endl;
-
     // We want to increase the number of objects that are being stored
     m_CountOfItems++;
 
-    //std::cout << "[Back]: The item object " << object << " has been received" <<
-    //std::endl;
-
-//    Node* new_Node = new Node( object );
+    //std::cout << "Breaker 1" << std::endl;
     Node<T>* new_Node = new Node<T>( object );
-    //std::cout << "[DLL ]: Reached here" << std::endl;
 
     Node<T>* last = _HeadRef;
 
@@ -158,7 +153,7 @@ void DoublyLinkedList<T>::printList()
 
 }
 
-/*
+
 //------------------------------------------------------------------------------
 // This print list function should scan through the list start to end and print
 // to the screen all the values that are being stored in the list
@@ -167,17 +162,23 @@ void DoublyLinkedList<T>::printItemList()
 {
     Node<T>* node = _HeadRef;
     int i = 0;
+    if( node == NULL )
+    {
+        std::cout << "[List]: List is empty, nothing to print!!" << std::endl;
+    }
+
   	while (node != NULL)
   	{
-        //int _SpecialItemIDCode = node->NodeItemIDGetter();
-        std::cout << "[List]: Index:" << i << ", Item ID = "<< _SpecialItemIDCode <<
+        int _GotItemID = node->NodeItemIDGetter();
+        //std::cout << "[DLL ]: The Item ID of item just added = " << _GotItemID << std::endl;
+        std::cout << "[List]: Index:" << i << ", Item ID = "<< _GotItemID <<
         " stored" << std::endl;
     		node = node->next;
         i++;
   	}
 
 }
-*/
+
 
 //------------------------------------------------------------------------------
 template <class T>

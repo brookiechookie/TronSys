@@ -21,15 +21,30 @@ Item::Item( int SpecialID )
     _ItemID   = SpecialID;
 
     std::cout << "[CTor]: Item ID = " << _ItemID << " added" << std::endl;
-
 }
+
+//------------------------------------------------------------------------------
+// Copy Constructor for Item
+Item::Item( const Item& other )
+{
+    std::cout << "[FUCKEDUP ]: Copy Created " << std::endl;
+}
+
+//------------------------------------------------------------------------------
+// Assignment Operator
+Item& Item::operator=( const Item& other )
+{
+    std::cout << " Assignment operator called" << std::endl;
+    return *this;
+}
+
 
 //------------------------------------------------------------------------------
 // Class Item Destructor
 Item::~Item()
 {
-    //std::cout << "[DTor]: Item with ID " << _ItemID << " is signing off."
-    //<< std::endl;
+    std::cout << "[DTor]: Item with ID " << _ItemID << " is signing off."
+    << std::endl;
 
 }
 

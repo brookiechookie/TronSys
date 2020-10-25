@@ -10,20 +10,30 @@
 //------------------------------------------------------------------------------
 int main()
 {
-
-
-    // Variable to store the number of objects that are in the list
+    // Variable to store the number of elements that are in the list
     int NumberOfItems = 0;
+
+    //--------------------------------------------------------------------------
 
     // Create a new list of integers
     DoublyLinkedList<int> intList;
 
+    // Create integers and put them into the list
     int a = 1;
+    int b = 2;
+    int c = 3;
+    int d = 4;
     intList.push_back( a );
+    intList.push_back( b );
+    intList.push_back( c );
+    intList.push_back( d );
+
+    // Print the items in the list and the size of the List
+    intList.printList();
     NumberOfItems = intList.Size();
     std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
     std::endl;
-    intList.printList();
+
 
 
 
@@ -54,9 +64,15 @@ int main()
     intList.pop_front( );
     intList.pop_front( );
 
+    //--------------------------------------------------------------------------
 
-/*
-    // Create the new item object
+
+    //--------------------------------------------------------------------------
+    /*
+    // The below code is to test whether class objects can be added to the list
+    // Some unique functions have been created to test its operation
+
+    // Create the new item object, assigning ID's to each Item
     int ID1 = 1;
     int ID2 = 2;
     int ID3 = 3;
@@ -68,11 +84,25 @@ int main()
     DoublyLinkedList<Item> ItemList;
 
     // Feed in the new Item object made
-    ItemList.push_back( ItemLolly );
-    ItemList.push_back( ItemBanana );
-    ItemList.push_back( ItemNut );
+    ItemList.push_back( ItemLolly   );
+    ItemList.push_back( ItemBanana  );
+    ItemList.push_back( ItemNut     );
+
+    // Print List and advice how many items are in the list
     ItemList.printItemList();
-*/
+    NumberOfItems = ItemList.Size();
+    std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
+    std::endl;
+
+    // Pop Item from the List
+    ItemList.pop_front( );
+    ItemList.pop_front( );
+    ItemList.pop_front( );
+    ItemList.pop_front( );
+    ItemList.pop_front( );
+    ItemList.printItemList();
+    */
+    //--------------------------------------------------------------------------
 
 /*
     int NumberOfItems = ItemList.Size();
