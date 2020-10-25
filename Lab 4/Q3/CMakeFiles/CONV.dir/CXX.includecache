@@ -19,10 +19,10 @@ Conveyor.h
 /home/brookie/github/TronSys/Lab 4/Q3/LoadingRobot.cpp
 cstdlib
 -
+iostream
+-
 LoadingRobot.h
 /home/brookie/github/TronSys/Lab 4/Q3/LoadingRobot.h
-Conveyor.h
-/home/brookie/github/TronSys/Lab 4/Q3/Conveyor.h
 
 /home/brookie/github/TronSys/Lab 4/Q3/LoadingRobot.h
 Conveyor.h

@@ -19,8 +19,6 @@ int main()
     // Create the instances of the different classes
     Conveyor        myConveyor;
     LoadingRobot    myLoader          ( myConveyor     );
-
-
     ProcessingRobot myProcessor       ( myConveyor, 5  );
     ProcessingRobot secondRobotArm    ( myConveyor, 1  );
 

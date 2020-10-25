@@ -15,9 +15,24 @@
 
 //---------------------------------------------------------------
 // Initialise method - setting variables to zero
-void Conveyor::Init()
+Conveyor::Conveyor()
 {
     _NumItemsOnConveyor = 0;
+}
+
+
+//------------------------------------------------------------------------------
+// Copy Constructor for Conveyor
+Conveyor::Conveyor( const Conveyor& other )
+{
+    std::cout << "[STUFFEDUP ]: Copy Created of Conveyor Object :(" << std::endl;
+}
+
+//------------------------------------------------------------------------------
+// Destructor
+Conveyor::~Conveyor()
+{
+    std::cout << "[DTor]: Conveyor signing off" << std::endl;
 }
 
 //---------------------------------------------------------------
@@ -40,7 +55,7 @@ void Conveyor::RemoveItems( int n )
 // Method that reports how many items are on the conveyor currently
 void Conveyor::Report()
 {
-    std::cout << "Items on Conveyor: " << _NumItemsOnConveyor << std::endl;
+    std::cout << "[Conv]: Items on Conveyor: " << _NumItemsOnConveyor << std::endl;
 
 }
 
