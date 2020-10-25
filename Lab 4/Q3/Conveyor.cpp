@@ -14,18 +14,10 @@
 #include "Conveyor.h"
 
 //---------------------------------------------------------------
-// Initialise method - setting variables to zero
+// Conveyor Constructor
 Conveyor::Conveyor()
 {
     _NumItemsOnConveyor = 0;
-}
-
-
-//------------------------------------------------------------------------------
-// Copy Constructor for Conveyor
-Conveyor::Conveyor( const Conveyor& other )
-{
-    std::cout << "[STUFFEDUP ]: Copy Created of Conveyor Object :(" << std::endl;
 }
 
 //------------------------------------------------------------------------------
@@ -33,6 +25,13 @@ Conveyor::Conveyor( const Conveyor& other )
 Conveyor::~Conveyor()
 {
     std::cout << "[DTor]: Conveyor signing off" << std::endl;
+}
+
+//------------------------------------------------------------------------------
+// Copy Constructor for Conveyor
+Conveyor::Conveyor( const Conveyor& other )
+{
+    std::cout << "[STUFFEDUP ]: Copy Created of Conveyor Object :(" << std::endl;
 }
 
 //---------------------------------------------------------------
