@@ -1,18 +1,14 @@
 // Item.h
 //
 // Creator:   Brookie
-// Date:      8.10.20
-// Purpose:   Header file for Item class in Test DIY List
+// Date:      23.10.20
+// Purpose:   Header file for Item class 
 
 
 #ifndef _ITEM_H
 #define _ITEM_H
 
-
 #include <iostream>     // std::cout
-#include <cstdlib>      // For rand()
-#include <random>       // For uniform number generation
-
 
 class Item
 {

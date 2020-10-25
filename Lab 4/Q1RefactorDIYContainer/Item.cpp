@@ -1,25 +1,24 @@
 // Item.cpp
 //
 // Creator:   Brookie
-// Date:      8.10.20
+// Date:      23.10.20
 // Purpose:   Implementation file for the Item class
 
 
 #include "Item.h"
 
-
+//------------------------------------------------------------------------------
+// Item constructor
 Item::Item()
 {
     std::cout<< "[CTor]: Item with no values constructed" << std::endl;
 }
-
 
 //------------------------------------------------------------------------------
 // Class Item Constructor
 Item::Item( int SpecialID )
 {
     _ItemID   = SpecialID;
-
     std::cout << "[CTor]: Item ID = " << _ItemID << " added" << std::endl;
 }
 
@@ -27,7 +26,7 @@ Item::Item( int SpecialID )
 // Copy Constructor for Item
 Item::Item( const Item& other )
 {
-    std::cout << "[FUCKEDUP ]: Copy Created " << std::endl;
+    std::cout << "[STUFFEDUP ]: Copy Created of Item Object :(" << std::endl;
 }
 
 //------------------------------------------------------------------------------
@@ -37,7 +36,6 @@ Item& Item::operator=( const Item& other )
     std::cout << " Assignment operator called" << std::endl;
     return *this;
 }
-
 
 //------------------------------------------------------------------------------
 // Class Item Destructor

@@ -21,16 +21,10 @@ class DoublyLinkedList
         int Size();
         void printItemList();
 
-        //DoublyLinkedList( const DoublyLinkedList& other );
-        //~DoublyLinkedList( );
-        //DoublyLinkedList& operator=( const DoublyLinkedList& other );
-
-
     private:
         Node<T>* _HeadRefBase = NULL;
         Node<T>* _HeadRef;
         int m_CountOfItems;
-        //int _ItemIDCode;
 
 };
 
@@ -45,35 +39,6 @@ DoublyLinkedList<T>::DoublyLinkedList() : m_CountOfItems( 0 )
 
     std::cout << "[Ctor]: The DLL has been created" << std::endl;
 }
-
-/*
-//------------------------------------------------------------------------------
-// Copy Constructor for DLL
-template <class T>
-DoublyLinkedList<T>::DoublyLinkedList( const DoublyLinkedList& other ) : _HeadRef(NULL)
-{
-    std::cout << "[FUCKITUP ]: Copy Created " << std::endl;
-    Copy( other._HeadRef );
-}
-
-//------------------------------------------------------------------------------
-// Destructor for DLL
-template <class T>
-DoublyLinkedList<T>::~DoublyLinkedList( )
-{
-    std::cout << "[DTOR]: Destructing List " << std::endl;
-}
-
-//------------------------------------------------------------------------------
-// Assignment Operator
-template <class T>
-DoublyLinkedList<T>& DoublyLinkedList<T>::operator=( const DoublyLinkedList& other )
-{
-    std::cout << "[DTOR]: Assignment " << std::endl;
-    Copy( other._HeadRef );
-    return *this;
-}
-*/
 
 //------------------------------------------------------------------------------
 // We want to add a new entry to the list. Feed in a reference to the item
