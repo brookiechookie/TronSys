@@ -15,7 +15,7 @@
 // Constructor for English derived class
 Dutch::Dutch( )
 {
-    _helloPhrase = "Hallo, Wereld!";
+    //_helloPhrase = "Hallo, Wereld!";
     std::cout << "[CTor1]: The Dutch Person has been initalised "
     << std::endl;
     _GreetingCount = 0;

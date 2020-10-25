@@ -15,7 +15,7 @@
 // Constructor for English derived class
 English::English( )
 {
-    _helloPhrase = "Hello, World!";   // If a person speaks english this is their hello phrase
+    //_helloPhrase = "Hello, World!";   // If a person speaks english this is their hello phrase
     std::cout << "[CTor1]: The English Person has been initalised "
     << std::endl;
     _GreetingCount = 0;

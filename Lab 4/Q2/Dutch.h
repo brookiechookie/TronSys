@@ -14,7 +14,10 @@ class Dutch: public Speaker
         ~Dutch( );
         void GreetUser( );
         void GreetingReport( );
+
+        static const std::string _helloPhrase;
 };
+
 
 
 #endif

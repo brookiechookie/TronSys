@@ -14,7 +14,7 @@ class Speaker
                                     // can be called
 
     protected:                      // Protected classes allowed derived classes to access variables
-        std::string _helloPhrase;   // The hello phrase in that speakers language
+      //  std::string _helloPhrase;   // The hello phrase in that speakers language
         int _GreetingCount;
 };
 

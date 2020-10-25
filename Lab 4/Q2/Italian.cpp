@@ -15,7 +15,7 @@
 // Constructor for English derived class
 Italian::Italian( )
 {
-    _helloPhrase = "Ciao, Mondo!";
+    //_helloPhrase = "Ciao, Mondo!";
     std::cout << "[CTor1]: The Italian Person has been initalised "
     << std::endl;
     _GreetingCount = 0;

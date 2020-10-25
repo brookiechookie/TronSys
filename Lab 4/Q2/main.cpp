@@ -14,12 +14,19 @@ Modifications:
 
 #include <vector>   // vector
 #include <memory>   // shared_ptr
+#include <cassert>  // the built-in assert is ignored if we #define NDEBUG
 
+#include "MyLogger.h"
 #include "Speaker.h"
 #include "English.h"
 #include "Italian.h"
 #include "Dutch.h"
 #include "TalkativeEng.h"
+
+const std::string English::_helloPhrase       = "Hello, World!";
+const std::string Dutch::_helloPhrase         = "Hallo, Wereld!";
+const std::string Italian::_helloPhrase       = "Ciao, Mondo!";
+const std::string TalkativeEng::_helloPhrase  = "Hello, World! I'm a bit of a talkative person. Welcome to my crib!";
 
 int main()
 {
@@ -39,18 +46,31 @@ int main()
     // symbolic value of -1, The loop is exited.
     int UserInput = 1;
     int IntEnterred;
+    int ErrorRecorded = 0;
     while( UserInput )
     {
+        //std::cin >> IntEnterred;
+        //assert( IntEnterred < -1 );
         // Check if the user input is valid, i.e. that it is an int and in the
         // range of -1 to 3
-        while( !( std::cin >> IntEnterred) || (IntEnterred < -2 || IntEnterred > 3) )
+
+        //std::cin >> IntEnterred;
+        //assert( IntEnterred >= -1 );
+        //assert( IntEnterred <= 3  );
+
+        while( !( std::cin >> IntEnterred) || (IntEnterred < -1 ||IntEnterred > 3 ) )
         {
+            ErrorRecorded = 1;
+            //assert( ErrorRecorded == 1 );
             std::cout << "Invalid Input: Numbers entered are out of range!" <<
             std::endl;
 
+            //assert( ErrorRecorded == 1 );
             std::cin.clear();
             std::cin.ignore(132, '\n');
         }
+
+      //  assert( ErrorRecorded == 1 );
 
         // If the user wants to stop input, they should enter the number -1.
         // Otherwise, store their input to the back of the vector

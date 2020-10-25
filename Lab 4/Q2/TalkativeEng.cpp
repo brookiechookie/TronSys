@@ -18,7 +18,7 @@
 TalkativeEng::TalkativeEng( )
 {
 
-    _helloPhrase = "Hello, World! I'm a bit of a talkative person. Welcome to my crib!";
+    //_helloPhrase = "Hello, World! I'm a bit of a talkative person. Welcome to my crib!";
     std::cout << "[CTor2]: The Talkative Person has been initalised "
     << std::endl;
 

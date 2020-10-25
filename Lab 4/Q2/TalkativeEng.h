@@ -16,7 +16,12 @@ class TalkativeEng: public English
         ~TalkativeEng( );
         void GreetUser( );
         void GreetingReport( );
+
+        static const std::string _helloPhrase;
 };
+
+
+
 
 
 #endif

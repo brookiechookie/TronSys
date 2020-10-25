@@ -15,7 +15,9 @@ class Italian: public Speaker
         void GreetUser( );
         void GreetingReport( );
 
+        static const std::string _helloPhrase;
 };
+
 
 
 #endif
