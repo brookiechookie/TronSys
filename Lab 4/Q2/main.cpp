@@ -41,7 +41,8 @@ int main()
     int IntEnterred;
     while( UserInput )
     {
-        // Check if the user input is valid
+        // Check if the user input is valid, i.e. that it is an int and in the
+        // range of -1 to 3
         while( !( std::cin >> IntEnterred) || (IntEnterred < -2 || IntEnterred > 3) )
         {
             std::cout << "Invalid Input: Numbers entered are out of range!" <<
@@ -68,8 +69,6 @@ int main()
 
     }
 
-    std::cout << "Exited While loop" << std::endl;
-
     std::cout << "The size of the vector is: " << pSpeakers.size() <<
     std::endl;
     std::cout << "The numbers enterred by the user were; " << std::endl;
@@ -83,89 +82,70 @@ int main()
 
     int* pInputString = new int[numOfSpeakers];
 
-    /*
-    int* pInputString = new int[numOfSpeakers];
-    std::cin >> pInputString[0] >> pInputString[1] >> pInputString[2] >> pInputString[3] >> pInputString[4] >> pInputString[5];
-    std::cout << "The numbers entered were: " << pInputString[0] << ", " << pInputString[1] <<
-    ", " << pInputString[2] << ", " << pInputString[3] << ", " << pInputString[4] <<
-    " and " << pInputString[5] << std::endl;
-    */
-
     // Create the speakers, put them all in an array
     //Speaker** pPeops;                       // Create a pointer array of people
     //pPeops = new Speaker*[numOfSpeakers];   // pPeops pointer points to the array of speakers now
 
-    std::shared_ptr<Speaker> pPeople(NULL);
+    //std::vector<int> pSpeakers;
+
+    std::vector< std::shared_ptr<Speaker> > pPeople;
+
+    //std::shared_ptr<Speaker> pPeople(NULL);
 
     // Now create a for loop assigning the users input to a person speaking that language
     for( int i = 0; i < numOfSpeakers; i++ )
     {
         if( pSpeakers[i] == 0 )
         {
-            pPeople = std::make_shared<English>();
-            std::cout << "pPeople.use_count(): " << pPeople.use_count() << std::endl;
-            pPeople->GreetUser();
+            pPeople.push_back( std::make_shared<English>() );
+            //std::cout << "pPeople.use_count(): " << pPeople[i].use_count() << std::endl;
+            //pPeople->GreetUser();
             //pPeops[i] = new English( );
         }
         if( pSpeakers[i] == 1 )
         {
-            pPeople = std::make_shared<Italian>();
-            std::cout << "pPeople.use_count(): " << pPeople.use_count() << std::endl;
-            pPeople->GreetUser();
+            pPeople.push_back( std::make_shared<Italian>() );
+            //std::cout << "pPeople.use_count(): " << pPeople[i].use_count() << std::endl;
+            //pPeople->GreetUser();
             //pPeops[i] = new Italian( );
         }
         if( pSpeakers[i] == 2 )
         {
-            pPeople = std::make_shared<Dutch>();
-            std::cout << "pPeople.use_count(): " << pPeople.use_count() << std::endl;
-            pPeople->GreetUser();
+            pPeople.push_back( std::make_shared<Dutch>() );
+            //std::cout << "pPeople.use_count(): " << pPeople[i].use_count() << std::endl;
+            //pPeople->GreetUser();
             //pPeops[i] = new Dutch( );
         }
         if( pSpeakers[i] == 3 )
         {
-            pPeople = std::make_shared<TalkativeEng>();
-            std::cout << "pPeople.use_count(): " << pPeople.use_count() << std::endl;
-            pPeople->GreetUser();
+            pPeople.push_back( std::make_shared<TalkativeEng>() );
+            //std::cout << "pPeople.use_count(): " << pPeople[i].use_count() << std::endl;
+            //pPeople->GreetUser();
             //pPeops[i] = new TalkativeEng( );
         }
-        /*
-        else if( pInputString[i] != 0 && pInputString[i] != 1 && pInputString[i] != 2 &&  pInputString[i] != 3 )
-        {
-            std::cout << "Invalid Input: Numbers entered are out of range!" << std::endl;
-            exit(0);
-        }
-        */
 
     }
 
-/*
     // Run through each speaker and make them say their respective greeting
-    for( int i = 0; i < numOfSpeakers; i++ )
+    for( int i = 0; i < pPeople.size(); i++ )
     {
-        *pPeople->GreetUser();
+        pPeople[i]->GreetUser();
         //pPeops[i]->GreetUser();
     }
-/*
-    // Get some of the speakers to greet a few more times
-    pPeops[1]->GreetUser();
-    pPeops[1]->GreetUser();
-    pPeops[1]->GreetUser();
-    pPeops[0]->GreetUser();
-    pPeops[2]->GreetUser();
-    pPeops[3]->GreetUser();
-    pPeops[0]->GreetUser();
-    pPeops[0]->GreetUser();
-    pPeops[2]->GreetUser();
-*/
 
-/*
+    // Get some of the speakers to greet a few more times
+    std::cout << "Adding more greetings" << std::endl;
+    pPeople[1]->GreetUser();
+    pPeople[0]->GreetUser();
+    pPeople[2]->GreetUser();
+
     // Provide a report of how many times each speaker has greeted the user
-    for( int i = 0; i < numOfSpeakers; i++ )
+    for( int i = 0; i < pPeople.size(); i++ )
     {
-        pPeops[i]->GreetingReport();
+        pPeople[i]->GreetingReport();
     }
 
-
+/*
     // Now go through and delete the speakers to ensure there are no memory leaks
     for( int i = 0; i < numOfSpeakers; i++ )
     {
