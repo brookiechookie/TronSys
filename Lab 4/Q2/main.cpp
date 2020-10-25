@@ -12,7 +12,8 @@ Modifications:
 #include <stdlib.h>
 #include <string>
 
-#include <vector>
+#include <vector>   // vector
+#include <memory>   // shared_ptr
 
 #include "Speaker.h"
 #include "English.h"
@@ -31,12 +32,6 @@ int main()
     " 3: Talkative English Speaker\nIf you are finished enterring your" <<
     " speakers, enter -1. Each input must be followed by pressing the enter" <<
     " key. An example of appropriate input is; 0 2 3 2 1 2 \n" << std::endl;
-
-    //Steps:
-    // 1.  Initialise the number of speakers and create an integer array to store the user input
-    // 2. Take in the user input, storing it in each element of the integer array
-    // 3. Report back to the user what they have entered in
-
 
     std::vector<int> pSpeakers;
 
@@ -84,50 +79,73 @@ int main()
     }
     std::cout << std::endl;
 
-    int numOfSpeakers = 6;
+    int numOfSpeakers = pSpeakers.size();
+
+    int* pInputString = new int[numOfSpeakers];
+
+    /*
     int* pInputString = new int[numOfSpeakers];
     std::cin >> pInputString[0] >> pInputString[1] >> pInputString[2] >> pInputString[3] >> pInputString[4] >> pInputString[5];
     std::cout << "The numbers entered were: " << pInputString[0] << ", " << pInputString[1] <<
     ", " << pInputString[2] << ", " << pInputString[3] << ", " << pInputString[4] <<
     " and " << pInputString[5] << std::endl;
+    */
 
     // Create the speakers, put them all in an array
-    Speaker** pPeops;                       // Create a pointer array of people
-    pPeops = new Speaker*[numOfSpeakers];   // pPeops pointer points to the array of speakers now
+    //Speaker** pPeops;                       // Create a pointer array of people
+    //pPeops = new Speaker*[numOfSpeakers];   // pPeops pointer points to the array of speakers now
+
+    std::shared_ptr<Speaker> pPeople(NULL);
 
     // Now create a for loop assigning the users input to a person speaking that language
-    for( int i = 0; i < 6; i++ )
+    for( int i = 0; i < numOfSpeakers; i++ )
     {
-        if( pInputString[i] == 0 )
+        if( pSpeakers[i] == 0 )
         {
-            pPeops[i] = new English( );
+            pPeople = std::make_shared<English>();
+            std::cout << "pPeople.use_count(): " << pPeople.use_count() << std::endl;
+            pPeople->GreetUser();
+            //pPeops[i] = new English( );
         }
-        if( pInputString[i] == 1 )
+        if( pSpeakers[i] == 1 )
         {
-            pPeops[i] = new Italian( );
+            pPeople = std::make_shared<Italian>();
+            std::cout << "pPeople.use_count(): " << pPeople.use_count() << std::endl;
+            pPeople->GreetUser();
+            //pPeops[i] = new Italian( );
         }
-        if( pInputString[i] == 2 )
+        if( pSpeakers[i] == 2 )
         {
-            pPeops[i] = new Dutch( );
+            pPeople = std::make_shared<Dutch>();
+            std::cout << "pPeople.use_count(): " << pPeople.use_count() << std::endl;
+            pPeople->GreetUser();
+            //pPeops[i] = new Dutch( );
         }
-        if( pInputString[i] == 3 )
+        if( pSpeakers[i] == 3 )
         {
-            pPeops[i] = new TalkativeEng( );
+            pPeople = std::make_shared<TalkativeEng>();
+            std::cout << "pPeople.use_count(): " << pPeople.use_count() << std::endl;
+            pPeople->GreetUser();
+            //pPeops[i] = new TalkativeEng( );
         }
+        /*
         else if( pInputString[i] != 0 && pInputString[i] != 1 && pInputString[i] != 2 &&  pInputString[i] != 3 )
         {
             std::cout << "Invalid Input: Numbers entered are out of range!" << std::endl;
             exit(0);
         }
+        */
 
     }
 
+/*
     // Run through each speaker and make them say their respective greeting
     for( int i = 0; i < numOfSpeakers; i++ )
     {
-        pPeops[i]->GreetUser();
+        *pPeople->GreetUser();
+        //pPeops[i]->GreetUser();
     }
-
+/*
     // Get some of the speakers to greet a few more times
     pPeops[1]->GreetUser();
     pPeops[1]->GreetUser();
@@ -138,8 +156,9 @@ int main()
     pPeops[0]->GreetUser();
     pPeops[0]->GreetUser();
     pPeops[2]->GreetUser();
+*/
 
-
+/*
     // Provide a report of how many times each speaker has greeted the user
     for( int i = 0; i < numOfSpeakers; i++ )
     {
@@ -153,5 +172,6 @@ int main()
         delete pPeops[i];
     }
 
-
+*/
+    std::cout << "Finished in main" << std::endl;
 }
