@@ -142,15 +142,11 @@ void DoublyLinkedList<T>::printList()
   	{
         T _StoredObjectValue;
         _StoredObjectValue = node->ObjectStoredGetter();
-//        std::cout << "[List]: Index:" << i << ", object of value = "<< _StoredObjectValue <<
-//        " stored" << std::endl;
-        std::cout << _StoredObjectValue << ", ";
+        std::cout << "[List]: Index:" << i << ", Element = "<<
+        _StoredObjectValue << std::endl;
     		node = node->next;
         i++;
   	}
-
-    std::cout << std::endl;
-
 }
 
 
@@ -240,7 +236,7 @@ void DoublyLinkedList<T>::pop_front( )
     //std::cout << "[Pop ]: First Node being deleted. Object Value = " <<
     //_StoredNodeValue << std::endl;
 
-    std::cout << "[Pop ]: First Node being deleted." << std::endl;
+    //std::cout << "[Pop ]: First Node being deleted." << std::endl;
 
     delete _FirstItem;
     m_CountOfItems--;

@@ -14,7 +14,8 @@ int main()
     int NumberOfItems = 0;
 
     //--------------------------------------------------------------------------
-
+    // The following section test the list can handle integers
+    /*
     // Create a new list of integers
     DoublyLinkedList<int> intList;
 
@@ -34,36 +35,14 @@ int main()
     std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
     std::endl;
 
-
-
-
-    a++;
-    intList.push_back( a );
-    NumberOfItems = intList.Size();
-    std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
-    std::endl;
-    intList.printList();
-
-    a++;
-    intList.push_back( a );
-    NumberOfItems = intList.Size();
-    std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
-    std::endl;
-    intList.printList();
-
-    a++;
-    intList.push_back( a );
-    NumberOfItems = intList.Size();
-    std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
-    std::endl;
-    intList.printList();
-
+    // Pop the items from the list. Intentionally delete more items than there
+    // is in the list to check DLL is robust
     intList.pop_front( );
     intList.pop_front( );
     intList.pop_front( );
     intList.pop_front( );
     intList.pop_front( );
-
+    */
     //--------------------------------------------------------------------------
 
 
@@ -94,65 +73,59 @@ int main()
     std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
     std::endl;
 
-    // Pop Item from the List
+    // Pop the items from the list. Intentionally delete more items than there
+    // is in the list to check DLL is robust
     ItemList.pop_front( );
     ItemList.pop_front( );
     ItemList.pop_front( );
     ItemList.pop_front( );
     ItemList.pop_front( );
-    ItemList.printItemList();
+    ItemList.printItemList();    // Pop Item from the List
     */
     //--------------------------------------------------------------------------
 
-/*
-    int NumberOfItems = ItemList.Size();
-    std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
-    std::endl;
-    ItemList.printItemList();
-
-    ItemList.pop_front( );
-    ItemList.pop_front( );
-    ItemList.pop_front( );
-    ItemList.pop_front( );
-    ItemList.pop_front( );
-*/
-
-
-/*
-    DoublyLinkedList<int> intList;
-    int a = 1;
-    intList.push_back( a );
-*/
-
-/*
-    Item myItem1( 22, 4.2343 );
-
-    DoublyLinkedList<Item&> ItemList;
-    ItemList.push_back( myItem1 );
-*/
 
 
 
+    //--------------------------------------------------------------------------
+    // The below code test the operation of the list with strings
 
-
-    /*
+    // Create the string list
     DoublyLinkedList<std::string> StringList;
 
-    std::string c("chocolate");
-    std::string d("hot");
-
+    // Create strings and put them into the list
+    std::string a( " hot "      );
+    std::string b( " chocolate ");
+    std::string c( " tastes "   );
+    std::string d( " better "   );
+    std::string e( " at the "   );
+    std::string f( " snow"      );
+    StringList.push_back(a);
+    StringList.push_back(b);
     StringList.push_back(c);
     StringList.push_back(d);
+    StringList.push_back(e);
+    StringList.push_back(f);
 
-    int NumberOfItems = StringList.Size();
+    // Print List and advice how many items are in the list
+    NumberOfItems = StringList.Size();
     std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
     std::endl;
     StringList.printList();
 
+    // Pop the items from the list. Intentionally delete more items than there
+    // is in the list to check DLL is robust
     StringList.pop_front( );
     StringList.pop_front( );
     StringList.pop_front( );
-    */
+    StringList.pop_front( );
+    StringList.pop_front( );
+    StringList.pop_front( );
+    StringList.pop_front( );
+    StringList.pop_front( );
+    StringList.pop_front( );
+
+    //--------------------------------------------------------------------------
 
 
 

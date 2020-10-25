@@ -37,7 +37,7 @@ class Node
 template <class T>
 Node<T>::Node( T& object ) : m_ObjectStored( object )
 {
-    _ItemIDCode = object.IDGetter();
+    //_ItemIDCode = object.IDGetter();
 
     std::cout << "[DLL ]: Item with ID = " << _ItemIDCode << " put in list" <<
     std::endl;
