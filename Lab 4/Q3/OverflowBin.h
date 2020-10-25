@@ -1,4 +1,4 @@
-// LoadingRobot.h
+// OverflowBin.h
 // Date created:  6.9.20
 // Creator:       Donald G Dansereau, 2019. Edits by Brooke Agostino
 // Purpose:       Header file for a robot that can load items onto a
@@ -7,8 +7,8 @@
 // Modifications:
 //
 
-#ifndef _LOADINGROBOT_H
-#define _LOADINGROBOT_H
+#ifndef _OVERFLOWBIN_H
+#define _OVERFLOWBIN_H
 
 #include "Conveyor.h"
 
@@ -18,13 +18,14 @@
 // Note that Init sets a pointer to the conveyor the robot will load.
 // This version simulates an irregular source of parts by adding a
 // random number of parts to the conveyor when AddItems() is called.
-class LoadingRobot
+class OverflowBin
 {
     public:
-        void Init( Conveyor* WhichConveyor );
-        void AddItems();
+        void UseOverflowBin( );
+        void OverflowBinReport( );
     private:
         Conveyor* _Conveyor;
+        int _NumberOfItemOnConv;
 };
 
 

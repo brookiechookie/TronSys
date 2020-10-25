@@ -17,29 +17,35 @@
 //---------------------------------------------------------------
 // This initalise method sets all the variables to point to the correct
 // variable or object, or sets the variable to zero
-void ProcessingRobot::Init( Conveyor* WhichConveyor, int ProcessingNumber )
+ProcessingRobot::ProcessingRobot( Conveyor& WhichConveyor, int ProcessingNumber )
+    : _Conveyor( WhichConveyor ),
+      _MaxProcessingNum( ProcessingNumber )
 {
-    _Conveyor = WhichConveyor;
+    _ProcessedItems       = 0;
+    _CurrentLoad          = 0;
+    _AverageLoad          = 0;
+    _TotalProcessedItems  = 0;
+    _AverageLoadUsage     = 0;
+    _CountCycle           = 0;
+    _NumberOfItemOnConv   = 0;
+    _OverflowBinContents  = 0;
+    _MaxItemsOverflowBin  = 0;
+}
 
-    _MaxProcessingNum = ProcessingNumber;
+//------------------------------------------------------------------------------
+// Copy Constructor for ProcessingRobot
+ProcessingRobot::ProcessingRobot( const ProcessingRobot& other )
+    : _Conveyor( other._Conveyor ),
+      _MaxProcessingNum( other._MaxProcessingNum )
+{
+    std::cout << "[STUFFEDUP ]: Copy Created of ProcessingRobot Object :(" << std::endl;
+}
 
-    _ProcessedItems = 0;
-
-    _CurrentLoad = 0;
-
-    _AverageLoad = 0;
-
-    _TotalProcessedItems = 0;
-
-    _AverageLoadUsage = 0;
-
-    _CountCycle = 0;
-
-    _NumberOfItemOnConv = 0;
-
-    _OverflowBinContents = 0;
-
-    _MaxItemsOverflowBin = 0;
+//------------------------------------------------------------------------------
+// Destructor
+ProcessingRobot::~ProcessingRobot()
+{
+    std::cout << "[DTor]: Processing Robot signing off" << std::endl;
 }
 
 //---------------------------------------------------------------
@@ -52,24 +58,20 @@ void ProcessingRobot::ProcessItems( )
 
     _CountCycle++; // Count each process cycle
 
-    _NumberOfItemOnConv = _Conveyor->getConvItemNum(); // Get the number of items on the conveyor
+    _NumberOfItemOnConv = _Conveyor.getConvItemNum(); // Get the number of items on the conveyor
 
     if ( _NumberOfItemOnConv <= _MaxProcessingNum )
     {
         _ProcessedItems = _NumberOfItemOnConv;
-
         _TotalProcessedItems += _ProcessedItems;
     }
     else if( _NumberOfItemOnConv > _MaxProcessingNum )
     {
         _ProcessedItems = _MaxProcessingNum;
-
         _TotalProcessedItems += _ProcessedItems;
     }
 
-
-    _Conveyor->RemoveItems( _MaxProcessingNum );
-
+    _Conveyor.RemoveItems( _MaxProcessingNum );
     std::cout << "Processed Items: " << _ProcessedItems << std::endl;
 }
 
@@ -77,15 +79,14 @@ void ProcessingRobot::ProcessItems( )
 //
 void ProcessingRobot::ItemReport()
 {
-    std::cout << "- Number of Processed Items: " << _TotalProcessedItems << std::endl;
-
+    std::cout << "  > Number of Processed Items: " << _TotalProcessedItems << std::endl;
 }
 
 //---------------------------------------------------------------
 // This method simply prints the current cycle count
 void ProcessingRobot::CycleReport()
 {
-    std::cout << "The Current Count Cycle is: " << _CountCycle << std::endl;
+    std::cout << "[Proc]: The Current Count Cycle is: " << _CountCycle << std::endl;
 }
 
 //---------------------------------------------------------------
@@ -99,7 +100,7 @@ void ProcessingRobot::CycleReport()
 void ProcessingRobot::Report( )
 {
     _AverageLoadUsage = ( double(_TotalProcessedItems) / ( double(_CountCycle)*double(_MaxProcessingNum) ) )*100;
-    std::cout << "- Average Load Usage: " << _AverageLoadUsage << "%" << std::endl;
+    std::cout << "  > Average Load Usage: " << _AverageLoadUsage << "%" << std::endl;
 }
 
 //---------------------------------------------------------------
@@ -121,7 +122,6 @@ void ProcessingRobot::ConveyorLimit( )
         _ConveyorItemLimit << ". PROGRAM TERMINATED." << std::endl;
 
         exit(0);
-
     }
 }
 
@@ -136,14 +136,14 @@ void ProcessingRobot::OverflowBin( )
 {
     if( _NumberOfItemOnConv > 50 )
     {
-        _Conveyor->RemoveItems( _OverflowRemovalRate );
+        _Conveyor.RemoveItems( _OverflowRemovalRate );
         std::cout << "Overflow Bin: " << _OverflowRemovalRate <<
         " item removed from conveyor" << std::endl;
 
         _OverflowBinContents++; // Put the item removed from the conveyor into
                                 // the overflow bin
 
-        _Conveyor->Report();
+        _Conveyor.Report();
 
 
     }
@@ -157,13 +157,13 @@ void ProcessingRobot::OverflowBin( )
         // and then record this by taking one item out of the overflow bin.
         if( _OverflowBinContents > 0 )
         {
-            _Conveyor->AddItems( _OverflowAddition );
+            _Conveyor.AddItems( _OverflowAddition );
             std::cout << "Overflow Bin: " << _OverflowAddition <<
             " item added to the conveyor" << std::endl;
 
             _OverflowBinContents--;
 
-            _Conveyor->Report();
+            _Conveyor.Report();
         }
 
     }
@@ -177,7 +177,7 @@ void ProcessingRobot::OverflowBin( )
 void ProcessingRobot::OverflowBinReport()
 {
     // Printing the number of elements currently in the overflow bin
-    std::cout << "Number of Items in Overflow Bin: " << _OverflowBinContents
+    std::cout << "[OBin]: Number of Items in Overflow Bin: " << _OverflowBinContents
     << std::endl;
 
     // Calculating the max items that have been in the overflow bin
@@ -186,7 +186,7 @@ void ProcessingRobot::OverflowBinReport()
         _MaxItemsOverflowBin = _OverflowBinContents;
     }
 
-    std::cout << "Max Number of Items stored in Overflow Bin: " << _MaxItemsOverflowBin
+    std::cout << "[OBin]: Max Number of Items stored in Overflow Bin: " << _MaxItemsOverflowBin
     << std::endl;
 
 }

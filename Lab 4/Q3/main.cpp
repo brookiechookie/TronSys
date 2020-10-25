@@ -16,64 +16,48 @@
 
 int main()
 {
-    // Creating the first instance of the different classes
-    Conveyor myConveyor;
-    LoadingRobot myLoader;
-    ProcessingRobot myProcessor;
-
-    // Creating the second instance of Processor which represents the second
-    // robot. Note that a second conveyor and second loader are not required
-    // since this second robot arm is also working on the same conveyor as the
-    // first robot arm
-    ProcessingRobot secondRobotArm;
-
-    // Initialise the first instance of the varying classes
-    myConveyor.Init();
-    myLoader.Init( &myConveyor );
-    myProcessor.Init( &myConveyor, 5 );
-
-    // Initialise the second robot arm with a define processing number
-    secondRobotArm.Init( &myConveyor, 1 );
+    // Create the instances of the different classes
+    Conveyor        myConveyor;
+    LoadingRobot    myLoader          ( myConveyor     );
 
 
-    while( 1 )
+    ProcessingRobot myProcessor       ( myConveyor, 5  );
+    ProcessingRobot secondRobotArm    ( myConveyor, 1  );
+
+    bool run = 1;
+    while( run )
     {
         std::cout << "___________________________________________________"
         << std::endl;
 
+        // Items added to conveyor and reports to the screen
         myLoader.AddItems();
         myConveyor.Report();
 
-        std::cout << "[First Robot Arm] "; // First robot arm processor
+        // Both robot arms process items. Stats and Cycle count displayed
+        std::cout << "[Main]: Arm 1 - ";
         myProcessor.ProcessItems( );
-
-        std::cout << "[Second Robot Arm] "; // Second robot arm processor
+        std::cout << "[Main]: Arm 2 - ";
         secondRobotArm.ProcessItems( );
+        myProcessor.CycleReport();
 
-
-        myProcessor.CycleReport(); // Advises us the number of cycles that the
-                                   // program is currently on
-
-        std::cout << "[First Robot Arm]: " << std::endl; // First robot arm processor
-        myProcessor.ItemReport(); // Reports Total number of processed items by
-                                  // the first robot arm
+        // Stats on each arm displayed
+        std::cout << "[Main]: Arm 1 Stats " << std::endl;
+        myProcessor.ItemReport();
         myProcessor.Report( );
-
-
-        std::cout << "[Second Robot Arm]: " << std::endl; // Second robot arm processor
-        secondRobotArm.ItemReport(); // Reports the total number of processed
-                                      // items by the second robot arm
+        std::cout << "[Main]: Arm 2 Stats " << std::endl;
+        secondRobotArm.ItemReport();
         secondRobotArm.Report();
 
-
+        // Reporting and stats displayed to the screen
         myConveyor.Report( );
-        std::cout << "Total Processed Items: " << myProcessor.TotalItems( ) +
-        secondRobotArm.TotalItems( ) << std::endl;
-
-        // Provides extra reporting and functionality 
+        std::cout << "[Main]: Total Processed Items: " <<
+        myProcessor.TotalItems( ) + secondRobotArm.TotalItems( ) << std::endl;
         myProcessor.ConveyorLimit( );
         myProcessor.OverflowBin( );
         myProcessor.OverflowBinReport( );
 
+        //run = 0;
     }
+
 }

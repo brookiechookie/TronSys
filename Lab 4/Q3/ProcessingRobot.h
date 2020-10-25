@@ -21,7 +21,9 @@
 class ProcessingRobot
 {
     public:
-        void Init( Conveyor* WhichConveyor, int ProcessingNumber );
+        ProcessingRobot( Conveyor& WhichConveyor, int ProcessingNumber );
+        ProcessingRobot( const ProcessingRobot& other );
+        ~ProcessingRobot();
         void ProcessItems( );
         void Report( );
 
@@ -37,7 +39,7 @@ class ProcessingRobot
 
 
     private:
-        Conveyor* _Conveyor;
+        Conveyor& _Conveyor;
         int _MaxProcessingNum;    // Configurable variable that determines processing speed
         int _ProcessedItems;      // Counts the number of processed items per robot
         int _CurrentLoad;         // Count the processing power being utilised
