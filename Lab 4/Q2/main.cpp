@@ -24,13 +24,13 @@ int main()
 {
     // Provide a starting message to the terminal asking the user to input a series
     // of number that will determine what speakers go into the array
-    std::cout << "Hi User, you need to input 6 speakers. You get to choose" <<
-    " the order of the speakers. The number identifiers for the speakers" <<
-    " are; \n 0: English Speaker \n 1: Italian Speaker\n 2: Dutch Speaker\n" <<
-    " 3:Talkative English Speaker\n An example appropriate input is;" <<
-    " 0 2 3 2 1 2 \nNote: Your input must be between the numbers 0-3 and" <<
-    " you must only enter 6 numbers. Please separate your numbers by a" <<
-    " space.\n" << std::endl;
+    std::cout << "Hi User, you need to input some speakers. You get to" <<
+    " choose the language of the speaker and the number of speakers. The" <<
+    " number identifiers for the speakers are as follows;" <<
+    " \n 0: English Speaker \n 1: Italian Speaker\n 2: Dutch Speaker\n" <<
+    " 3: Talkative English Speaker\nIf you are finished enterring your" <<
+    " speakers, enter -1. Each input must be followed by pressing the enter" <<
+    " key. An example of appropriate input is; 0 2 3 2 1 2 \n" << std::endl;
 
     //Steps:
     // 1.  Initialise the number of speakers and create an integer array to store the user input
@@ -43,52 +43,35 @@ int main()
     // The loop runs and takes in all the user input. When the user enters the
     // symbolic value of -1, The loop is exited.
     int UserInput = 1;
-    int n;
-    int InputError = 0;
-    while( !( std::cin >> n) || (n < -2 || n > 3) )
+    int IntEnterred;
+    while( UserInput )
     {
-        std::cout << "Invalid Input: Numbers entered are out of range!" <<
-        std::endl;
+        // Check if the user input is valid
+        while( !( std::cin >> IntEnterred) || (IntEnterred < -2 || IntEnterred > 3) )
+        {
+            std::cout << "Invalid Input: Numbers entered are out of range!" <<
+            std::endl;
 
-        std::cin.clear();
-        std::cin.ignore(132, '\n');
-        //std::cin >> n;
-      //  std::cout << "You have enterred the number " << n << std::endl;
-/*
+            std::cin.clear();
+            std::cin.ignore(132, '\n');
+        }
+
         // If the user wants to stop input, they should enter the number -1.
         // Otherwise, store their input to the back of the vector
-        if( n == -1 )
+        if( IntEnterred == -1 )
         {
-            std::cout << "User has signified end of input. Using " << n <<
+            std::cout << "User has signified end of input. Using " << IntEnterred <<
             std::endl;
             UserInput = 0;
         }
-        else if( n != 0 && n != 1 && n != 2 && n != 3 )
-        {
-            InputError = 1;
-
-        }
-
-
-        if( UserInput != 0 && InputError != 1 )
-        {
-            pSpeakers.push_back(n);
-        }
+        // Store valid input
         else
         {
-            break;
+            std::cout << "Storing int enterred = " << IntEnterred << std::endl;
+            pSpeakers.push_back(IntEnterred);
         }
-*/
-    }
 
-    if( InputError == 1 )
-    {
-        std::cout << "Invalid Input: Numbers entered are out of range!" <<
-        std::endl;
-        exit(0);
     }
-
-    pSpeakers.push_back(n);
 
     std::cout << "Exited While loop" << std::endl;
 
