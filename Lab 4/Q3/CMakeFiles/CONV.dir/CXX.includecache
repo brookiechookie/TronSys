@@ -1,0 +1,62 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/brookie/github/TronSys/Lab 4/Q3/Conveyor.cpp
+iostream
+-
+algorithm
+-
+Conveyor.h
+/home/brookie/github/TronSys/Lab 4/Q3/Conveyor.h
+
+/home/brookie/github/TronSys/Lab 4/Q3/Conveyor.h
+
+/home/brookie/github/TronSys/Lab 4/Q3/LoadingRobot.cpp
+cstdlib
+-
+LoadingRobot.h
+/home/brookie/github/TronSys/Lab 4/Q3/LoadingRobot.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 4/Q3/Conveyor.h
+
+/home/brookie/github/TronSys/Lab 4/Q3/LoadingRobot.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 4/Q3/Conveyor.h
+
+/home/brookie/github/TronSys/Lab 4/Q3/ProcessingRobot.cpp
+iostream
+-
+cstdlib
+-
+algorithm
+-
+stdlib.h
+-
+ProcessingRobot.h
+/home/brookie/github/TronSys/Lab 4/Q3/ProcessingRobot.h
+
+/home/brookie/github/TronSys/Lab 4/Q3/ProcessingRobot.h
+Conveyor.h
+/home/brookie/github/TronSys/Lab 4/Q3/Conveyor.h
+
+/home/brookie/github/TronSys/Lab 4/Q3/main.cpp
+iostream
+-
+cstdlib
+-
+algorithm
+-
+stdlib.h
+-
+Conveyor.h
+/home/brookie/github/TronSys/Lab 4/Q3/Conveyor.h
+LoadingRobot.h
+/home/brookie/github/TronSys/Lab 4/Q3/LoadingRobot.h
+ProcessingRobot.h
+/home/brookie/github/TronSys/Lab 4/Q3/ProcessingRobot.h
+
