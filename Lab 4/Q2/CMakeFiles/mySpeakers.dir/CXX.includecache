@@ -1,0 +1,106 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/brookie/github/TronSys/Lab 4/Q2/Dutch.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+Dutch.h
+/home/brookie/github/TronSys/Lab 4/Q2/Dutch.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 4/Q2/Speaker.h
+
+/home/brookie/github/TronSys/Lab 4/Q2/Dutch.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 4/Q2/Speaker.h
+
+/home/brookie/github/TronSys/Lab 4/Q2/English.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+English.h
+/home/brookie/github/TronSys/Lab 4/Q2/English.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 4/Q2/Speaker.h
+
+/home/brookie/github/TronSys/Lab 4/Q2/English.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 4/Q2/Speaker.h
+
+/home/brookie/github/TronSys/Lab 4/Q2/Italian.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+Italian.h
+/home/brookie/github/TronSys/Lab 4/Q2/Italian.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 4/Q2/Speaker.h
+
+/home/brookie/github/TronSys/Lab 4/Q2/Italian.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 4/Q2/Speaker.h
+
+/home/brookie/github/TronSys/Lab 4/Q2/Speaker.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+Speaker.h
+/home/brookie/github/TronSys/Lab 4/Q2/Speaker.h
+
+/home/brookie/github/TronSys/Lab 4/Q2/Speaker.h
+
+/home/brookie/github/TronSys/Lab 4/Q2/TalkativeEng.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+TalkativeEng.h
+/home/brookie/github/TronSys/Lab 4/Q2/TalkativeEng.h
+English.h
+/home/brookie/github/TronSys/Lab 4/Q2/English.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 4/Q2/Speaker.h
+
+/home/brookie/github/TronSys/Lab 4/Q2/TalkativeEng.h
+English.h
+/home/brookie/github/TronSys/Lab 4/Q2/English.h
+Speaker.h
+/home/brookie/github/TronSys/Lab 4/Q2/Speaker.h
+
+/home/brookie/github/TronSys/Lab 4/Q2/main.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+Speaker.h
+/home/brookie/github/TronSys/Lab 4/Q2/Speaker.h
+English.h
+/home/brookie/github/TronSys/Lab 4/Q2/English.h
+Italian.h
+/home/brookie/github/TronSys/Lab 4/Q2/Italian.h
+Dutch.h
+/home/brookie/github/TronSys/Lab 4/Q2/Dutch.h
+TalkativeEng.h
+/home/brookie/github/TronSys/Lab 4/Q2/TalkativeEng.h
+

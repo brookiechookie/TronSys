@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/mySpeakers.dir/main.cpp.o CMakeFiles/mySpeakers.dir/Speaker.cpp.o CMakeFiles/mySpeakers.dir/English.cpp.o CMakeFiles/mySpeakers.dir/Italian.cpp.o CMakeFiles/mySpeakers.dir/Dutch.cpp.o CMakeFiles/mySpeakers.dir/TalkativeEng.cpp.o  -o mySpeakers 
