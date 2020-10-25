@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/DoublyLinkedList.cpp" "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/CMakeFiles/OOP.dir/DoublyLinkedList.cpp.o"
   "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/Item.cpp" "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/CMakeFiles/OOP.dir/Item.cpp.o"
   "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/main.cpp" "/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/CMakeFiles/OOP.dir/main.cpp.o"
   )

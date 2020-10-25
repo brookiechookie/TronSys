@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/DoublyLinkedList.cpp
-DoublyLinkedList.h
-/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/DoublyLinkedList.h
-Item.h
-/home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/Item.h
-
 /home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/DoublyLinkedList.h
 Node.h
 /home/brookie/github/TronSys/Lab 4/Q1RefactorDIYContainer/Node.h

@@ -123,33 +123,6 @@ OOP/fast:
 	$(MAKE) -f CMakeFiles/OOP.dir/build.make CMakeFiles/OOP.dir/build
 .PHONY : OOP/fast
 
-DoublyLinkedList.o: DoublyLinkedList.cpp.o
-
-.PHONY : DoublyLinkedList.o
-
-# target to build an object file
-DoublyLinkedList.cpp.o:
-	$(MAKE) -f CMakeFiles/OOP.dir/build.make CMakeFiles/OOP.dir/DoublyLinkedList.cpp.o
-.PHONY : DoublyLinkedList.cpp.o
-
-DoublyLinkedList.i: DoublyLinkedList.cpp.i
-
-.PHONY : DoublyLinkedList.i
-
-# target to preprocess a source file
-DoublyLinkedList.cpp.i:
-	$(MAKE) -f CMakeFiles/OOP.dir/build.make CMakeFiles/OOP.dir/DoublyLinkedList.cpp.i
-.PHONY : DoublyLinkedList.cpp.i
-
-DoublyLinkedList.s: DoublyLinkedList.cpp.s
-
-.PHONY : DoublyLinkedList.s
-
-# target to generate assembly for a file
-DoublyLinkedList.cpp.s:
-	$(MAKE) -f CMakeFiles/OOP.dir/build.make CMakeFiles/OOP.dir/DoublyLinkedList.cpp.s
-.PHONY : DoublyLinkedList.cpp.s
-
 Item.o: Item.cpp.o
 
 .PHONY : Item.o
@@ -213,9 +186,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... OOP"
 	@echo "... edit_cache"
-	@echo "... DoublyLinkedList.o"
-	@echo "... DoublyLinkedList.i"
-	@echo "... DoublyLinkedList.s"
 	@echo "... Item.o"
 	@echo "... Item.i"
 	@echo "... Item.s"
