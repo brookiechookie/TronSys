@@ -22,9 +22,11 @@ class Node
         Node<T>* next;
         Node<T>* prev;
         T ObjectStoredGetter();
+        int NodeItemIDGetter();
 
     private:
         T m_ObjectStored;
+        //int m_ItemIDCode;
 
 };
 
@@ -35,6 +37,8 @@ template <class T>
 Node<T>::Node( const T& object ) : m_ObjectStored( object )
 {
 
+    //_ItemIDCode = object.IDGetter();
+    //std::cout << "[Node]: I can see Item ID = " << _ItemIDCode << std::endl;
     //std::cout << "[DLL ]: Reached here" << std::endl;
 
 
@@ -65,6 +69,15 @@ T Node<T>::ObjectStoredGetter()
     return m_ObjectStored;
 }
 
+/*
+//------------------------------------------------------------------------------
+// Getter function returning the item ID's of each Item object
+template <class T>
+int Node<T>::NodeItemIDGetter()
+{
+    return _ItemIDCode;
+}
+*/
 
 
 #endif

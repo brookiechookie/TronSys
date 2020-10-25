@@ -11,6 +11,7 @@
 int main()
 {
 
+
     // Variable to store the number of objects that are in the list
     int NumberOfItems = 0;
 
@@ -24,12 +25,7 @@ int main()
     std::endl;
     intList.printList();
 
-    a++;
-    intList.push_back( a );
-    NumberOfItems = intList.Size();
-    std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
-    std::endl;
-    intList.printList();
+
 
     a++;
     intList.push_back( a );
@@ -45,19 +41,28 @@ int main()
     std::endl;
     intList.printList();
 
+    a++;
+    intList.push_back( a );
+    NumberOfItems = intList.Size();
+    std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
+    std::endl;
+    intList.printList();
+
     intList.pop_front( );
     intList.pop_front( );
     intList.pop_front( );
     intList.pop_front( );
     intList.pop_front( );
+
+
 /*
     // Create the new item object
-    int a = 1;
-    int b = 2;
-    int c = 3;
-    Item ItemLolly  ( a );
-    Item ItemBanana ( b );
-    Item ItemNut    ( c );
+    int ID1 = 1;
+    int ID2 = 2;
+    int ID3 = 3;
+    Item ItemLolly  ( ID1 );
+    Item ItemBanana ( ID2 );
+    Item ItemNut    ( ID3 );
 
     // Create the list of Item references
     DoublyLinkedList<Item> ItemList;
@@ -66,12 +71,14 @@ int main()
     ItemList.push_back( ItemLolly );
     ItemList.push_back( ItemBanana );
     ItemList.push_back( ItemNut );
+    ItemList.printItemList();
+*/
 
-
+/*
     int NumberOfItems = ItemList.Size();
     std::cout<< "[Main]: Number of items in the list = " << NumberOfItems <<
     std::endl;
-//    ItemList.printList();
+    ItemList.printItemList();
 
     ItemList.pop_front( );
     ItemList.pop_front( );

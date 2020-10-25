@@ -19,11 +19,18 @@ class DoublyLinkedList
         void pop_front( );
         void printList( );
         int Size();
+        void printItemList();
+
+        DoublyLinkedList( const DoublyLinkedList& other );
+        ~DoublyLinkedList( );
+        DoublyLinkedList& operator=( const DoublyLinkedList& other );
+
 
     private:
         Node<T>* _HeadRefBase = NULL;
         Node<T>* _HeadRef;
         int m_CountOfItems;
+        //int _ItemIDCode;
 
 };
 
@@ -39,6 +46,32 @@ DoublyLinkedList<T>::DoublyLinkedList() : m_CountOfItems( 0 )
     std::cout << "[Ctor]: The DLL has been created" << std::endl;
 }
 
+//------------------------------------------------------------------------------
+// Copy Constructor for DLL
+template <class T>
+DoublyLinkedList<T>::DoublyLinkedList( const DoublyLinkedList& other ) : _HeadRef(NULL)
+{
+    std::cout << "[FUCKITUP ]: Copy Created " << std::endl;
+    Copy( other._HeadRef );
+}
+
+//------------------------------------------------------------------------------
+// Destructor for DLL
+template <class T>
+DoublyLinkedList<T>::~DoublyLinkedList( )
+{
+    std::cout << "[DTOR]: Destructing List " << std::endl;
+}
+
+//------------------------------------------------------------------------------
+// Assignment Operator
+template <class T>
+DoublyLinkedList<T>& DoublyLinkedList<T>::operator=( const DoublyLinkedList& other )
+{
+    std::cout << "[DTOR]: Assignment " << std::endl;
+    Copy( other._HeadRef );
+    return *this;
+}
 
 //------------------------------------------------------------------------------
 // We want to add a new entry to the list. Feed in a reference to the item
@@ -48,6 +81,9 @@ template <class T>
 void DoublyLinkedList<T>::push_back( T& object )
 {
     std::cout << "[Back]: Push back"  << std::endl;
+
+    //_ItemIDCode = object.IDGetter();
+  //  std::cout << "[Push]: I can see Item ID = " << _ItemIDCode << std::endl;
 
     // We want to increase the number of objects that are being stored
     m_CountOfItems++;
@@ -88,7 +124,6 @@ void DoublyLinkedList<T>::push_back( T& object )
 
   	return;
 
-
 }
 
 //------------------------------------------------------------------------------
@@ -105,19 +140,44 @@ int DoublyLinkedList<T>::Size()
 template <class T>
 void DoublyLinkedList<T>::printList()
 {
+    std::cout << "[DLL ]: Printing contents of list; " << std::endl;
     Node<T>* node = _HeadRef;
     int i = 0;
   	while (node != NULL)
   	{
         T _StoredObjectValue;
         _StoredObjectValue = node->ObjectStoredGetter();
-        std::cout << "[List]: Index:" << i << ", object of value = "<< _StoredObjectValue <<
+//        std::cout << "[List]: Index:" << i << ", object of value = "<< _StoredObjectValue <<
+//        " stored" << std::endl;
+        std::cout << _StoredObjectValue << ", ";
+    		node = node->next;
+        i++;
+  	}
+
+    std::cout << std::endl;
+
+}
+
+/*
+//------------------------------------------------------------------------------
+// This print list function should scan through the list start to end and print
+// to the screen all the values that are being stored in the list
+template <class T>
+void DoublyLinkedList<T>::printItemList()
+{
+    Node<T>* node = _HeadRef;
+    int i = 0;
+  	while (node != NULL)
+  	{
+        //int _SpecialItemIDCode = node->NodeItemIDGetter();
+        std::cout << "[List]: Index:" << i << ", Item ID = "<< _SpecialItemIDCode <<
         " stored" << std::endl;
     		node = node->next;
         i++;
   	}
 
 }
+*/
 
 //------------------------------------------------------------------------------
 template <class T>
@@ -186,6 +246,7 @@ void DoublyLinkedList<T>::pop_front( )
 
     return;
 }
+
 
 
 #endif
