@@ -12,6 +12,8 @@ Modifications:
 #include <stdlib.h>
 #include <string>
 
+#include <vector>
+
 #include "Speaker.h"
 #include "English.h"
 #include "Italian.h"
@@ -22,17 +24,83 @@ int main()
 {
     // Provide a starting message to the terminal asking the user to input a series
     // of number that will determine what speakers go into the array
-    std::cout << "Hi User, you need to input 6 speakers. You get to choose the order" <<
-    " of the speakers. The number identifiers for the speakers are; \n 0: English Speaker" <<
-    "\n 1: Italian Speaker\n 2: Dutch Speaker\n 3: Talkative English Speaker\n" <<
-    "An example appropriate input is; 0 2 3 2 1 2 \nNote: Your input must be between"<<
-    " the numbers 0-3 and you must only enter 6 numbers. Please separate your numbers by a space.\n"<<
-    std::endl;
+    std::cout << "Hi User, you need to input 6 speakers. You get to choose" <<
+    " the order of the speakers. The number identifiers for the speakers" <<
+    " are; \n 0: English Speaker \n 1: Italian Speaker\n 2: Dutch Speaker\n" <<
+    " 3:Talkative English Speaker\n An example appropriate input is;" <<
+    " 0 2 3 2 1 2 \nNote: Your input must be between the numbers 0-3 and" <<
+    " you must only enter 6 numbers. Please separate your numbers by a" <<
+    " space.\n" << std::endl;
 
     //Steps:
     // 1.  Initialise the number of speakers and create an integer array to store the user input
     // 2. Take in the user input, storing it in each element of the integer array
     // 3. Report back to the user what they have entered in
+
+
+    std::vector<int> pSpeakers;
+
+    // The loop runs and takes in all the user input. When the user enters the
+    // symbolic value of -1, The loop is exited.
+    int UserInput = 1;
+    int n;
+    int InputError = 0;
+    while( !( std::cin >> n) || (n < -2 || n > 3) )
+    {
+        std::cout << "Invalid Input: Numbers entered are out of range!" <<
+        std::endl;
+
+        std::cin.clear();
+        std::cin.ignore(132, '\n');
+        //std::cin >> n;
+      //  std::cout << "You have enterred the number " << n << std::endl;
+/*
+        // If the user wants to stop input, they should enter the number -1.
+        // Otherwise, store their input to the back of the vector
+        if( n == -1 )
+        {
+            std::cout << "User has signified end of input. Using " << n <<
+            std::endl;
+            UserInput = 0;
+        }
+        else if( n != 0 && n != 1 && n != 2 && n != 3 )
+        {
+            InputError = 1;
+
+        }
+
+
+        if( UserInput != 0 && InputError != 1 )
+        {
+            pSpeakers.push_back(n);
+        }
+        else
+        {
+            break;
+        }
+*/
+    }
+
+    if( InputError == 1 )
+    {
+        std::cout << "Invalid Input: Numbers entered are out of range!" <<
+        std::endl;
+        exit(0);
+    }
+
+    pSpeakers.push_back(n);
+
+    std::cout << "Exited While loop" << std::endl;
+
+    std::cout << "The size of the vector is: " << pSpeakers.size() <<
+    std::endl;
+    std::cout << "The numbers enterred by the user were; " << std::endl;
+    for( int i = 0; i < pSpeakers.size(); i++ )
+    {
+        std::cout << pSpeakers[i] << ", ";
+    }
+    std::cout << std::endl;
+
     int numOfSpeakers = 6;
     int* pInputString = new int[numOfSpeakers];
     std::cin >> pInputString[0] >> pInputString[1] >> pInputString[2] >> pInputString[3] >> pInputString[4] >> pInputString[5];
